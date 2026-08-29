@@ -3,2951 +3,3900 @@
 
 <head>
 
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-<meta
-  name="description"
-  content="EGT Tahrati - Électricité générale à Bron depuis 2003. Rénovation électrique, sécurité, climatisation, réseaux informatiques et automatismes."
->
+  <meta
+    name="description"
+    content="EGT Tahrati, entreprise d'électricité générale à Bron depuis 2003. Électricité, sécurité, climatisation, réseaux informatiques, automatismes et domotique."
+  >
 
-<meta name="theme-color" content="#190b20">
+  <meta
+    name="theme-color"
+    content="#24102e"
+  >
 
-<title>EGT Tahrati | Électricité générale à Bron</title>
+  <title>
+    EGT Tahrati | Électricité générale à Bron
+  </title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- =========================================================
+       PHOTOS À METTRE SUR GITHUB
+  ==========================================================
 
-<link
-  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
-  rel="stylesheet"
->
+  LOGO / ENTREPRISE
 
+  logo-egt.png
+  monsieur-tahrati.jpg
+  vehicule-egt.jpg
+  clients-egt.jpg
 
-<style>
 
+  PRESTATIONS
 
-/* =========================================================
-   VARIABLES
-========================================================= */
+  renovation-electrique.jpg
+  securite-controle-acces.jpg
+  climatisation.jpg
+  reseaux-informatiques.jpg
+  automatismes-portail.jpg
+  domotique-chauffage.jpg
 
-:root {
 
-  --violet: #8d287e;
-  --violet2: #ae3d99;
-  --violet-dark: #43103f;
+  ÉQUIPE
 
-  --yellow: #f4a72c;
-  --yellow-light: #ffc85c;
+  monsieur-tahrati.jpg
+  equipe-emeric.jpg
+  equipe-thomas.jpg
+  equipe-chloe.jpg
+  equipe-tatie.jpg
 
-  --dark: #120917;
-  --dark2: #201027;
-  --dark3: #301334;
 
-  --white: #ffffff;
-  --paper: #fbfaf8;
+  Pour remplacer une image :
+  tu remplaces simplement le fichier sur GitHub
+  en conservant exactement le même nom.
 
-  --text: #18131d;
-  --muted: #6e6873;
+  ========================================================== -->
 
-  --border: #e9e1e8;
 
-  --shadow:
-    0 30px 80px rgba(35, 14, 43, 0.13);
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
 
-}
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
-/* =========================================================
-   RESET
-========================================================= */
 
-* {
+  <link
+    rel="icon"
+    href="logo-egt.png"
+  >
 
-  box-sizing: border-box;
 
-}
+  <style>
 
-html {
 
-  scroll-behavior: smooth;
+    /* =========================================================
+       VARIABLES
+    ========================================================== */
 
-}
+    :root {
 
-body {
+      --violet: #8e2d82;
+      --violet-light: #b04498;
 
-  margin: 0;
+      --orange: #f6a428;
+      --orange-light: #ffc65c;
 
-  background: var(--paper);
+      --dark: #130b1a;
+      --dark2: #24102e;
 
-  color: var(--text);
+      --white: #ffffff;
 
-  font-family: "DM Sans", sans-serif;
+      --paper: #fbfaf8;
 
-  overflow-x: hidden;
+      --text: #191523;
 
-}
+      --muted: #6e6873;
 
-body.menu-open {
+      --border: #e9e2e9;
 
-  overflow: hidden;
+      --shadow:
+        0 30px 80px rgba(39, 15, 48, 0.14);
 
-}
+    }
 
-img {
 
-  max-width: 100%;
+    /* =========================================================
+       RESET
+    ========================================================== */
 
-  display: block;
+    * {
 
-}
+      box-sizing: border-box;
 
-a {
+    }
 
-  color: inherit;
 
-  text-decoration: none;
+    html {
 
-}
+      scroll-behavior: smooth;
 
-button,
-input,
-textarea,
-select {
+    }
 
-  font: inherit;
 
-}
+    body {
 
-button {
+      margin: 0;
 
-  cursor: pointer;
+      font-family:
+        "DM Sans",
+        sans-serif;
 
-}
+      color: var(--text);
 
-.container {
+      background:
+        var(--paper);
 
-  width: min(1180px, calc(100% - 42px));
+      overflow-x: hidden;
 
-  margin: auto;
+    }
 
-}
 
+    body.menu-open,
+    body.modal-open {
 
-/* =========================================================
-   BARRE DE PROGRESSION
-========================================================= */
+      overflow: hidden;
 
-.page-progress {
+    }
 
-  position: fixed;
 
-  top: 0;
+    img {
 
-  left: 0;
+      display: block;
 
-  width: 100%;
+      max-width: 100%;
 
-  height: 3px;
+    }
 
-  z-index: 9999;
 
-}
+    a {
 
-.page-progress span {
+      color: inherit;
 
-  display: block;
+      text-decoration: none;
 
-  width: 0%;
+    }
 
-  height: 100%;
 
-  background:
-    linear-gradient(
-      90deg,
-      var(--yellow),
-      var(--violet)
-    );
+    button,
+    input,
+    select,
+    textarea {
 
-}
+      font: inherit;
 
+    }
 
-/* =========================================================
-   CURSEUR / HALO
-========================================================= */
 
-.cursor-light {
+    button {
 
-  position: fixed;
+      cursor: pointer;
 
-  width: 400px;
+    }
 
-  height: 400px;
 
-  border-radius: 50%;
+    .container {
 
-  pointer-events: none;
+      width:
+        min(
+          1180px,
+          calc(100% - 42px)
+        );
 
-  z-index: -1;
+      margin: auto;
 
-  transform: translate(-50%, -50%);
+    }
 
-  background:
-    radial-gradient(
-      circle,
-      rgba(142, 45, 130, 0.08),
-      transparent 65%
-    );
 
-}
+    /* =========================================================
+       PROGRESSION PAGE
+    ========================================================== */
 
+    .page-progress {
 
-/* =========================================================
-   HEADER
-========================================================= */
+      position: fixed;
 
-.header {
+      top: 0;
 
-  position: fixed;
+      left: 0;
 
-  top: 0;
+      width: 100%;
 
-  left: 0;
+      height: 3px;
 
-  right: 0;
+      z-index: 9999;
 
-  height: 90px;
+    }
 
-  z-index: 1000;
 
-  background:
-    rgba(255, 255, 255, 0.90);
+    .page-progress span {
 
-  backdrop-filter: blur(20px);
+      display: block;
 
-  border-bottom:
-    1px solid rgba(75, 35, 75, 0.08);
+      width: 0;
 
-  transition: 0.3s;
+      height: 100%;
 
-}
+      background:
+        linear-gradient(
+          90deg,
+          var(--orange),
+          var(--violet)
+        );
 
-.header.scrolled {
+    }
 
-  height: 72px;
 
-  box-shadow:
-    0 15px 45px rgba(25, 10, 30, 0.08);
+    /* =========================================================
+       HEADER
+    ========================================================== */
 
-}
+    .header {
 
-.nav {
+      position: fixed;
 
-  height: 100%;
+      top: 0;
 
-  display: flex;
+      left: 0;
 
-  align-items: center;
+      right: 0;
 
-  gap: 25px;
+      height: 88px;
 
-}
+      z-index: 1000;
 
-.logo {
+      background:
+        rgba(255,255,255,.91);
 
-  width: 190px;
+      backdrop-filter:
+        blur(20px);
 
-}
+      border-bottom:
+        1px solid rgba(70,30,75,.08);
 
-.logo img {
+      transition:
+        .3s ease;
 
-  width: 100%;
+    }
 
-  height: 60px;
 
-  object-fit: contain;
+    .header.scrolled {
 
-  object-position: left center;
+      height: 72px;
 
-}
+      box-shadow:
+        0 15px 45px
+        rgba(30,10,35,.08);
 
-.nav-links {
+    }
 
-  margin-left: auto;
 
-  display: flex;
+    .nav {
 
-  align-items: center;
+      height: 100%;
 
-  gap: 24px;
+      display: flex;
 
-}
+      align-items: center;
 
-.nav-links a {
+      gap: 25px;
 
-  position: relative;
+    }
 
-  font-size: 12px;
 
-  font-weight: 800;
+    .logo {
 
-  text-transform: uppercase;
+      width: 180px;
 
-  letter-spacing: 0.05em;
+      flex-shrink: 0;
 
-}
+    }
 
-.nav-links a::after {
 
-  content: "";
+    .logo img {
 
-  position: absolute;
+      width: 100%;
 
-  left: 0;
+      height: 58px;
 
-  bottom: -8px;
+      object-fit: contain;
 
-  height: 2px;
+      object-position:
+        left center;
 
-  width: 100%;
+    }
 
-  background: var(--yellow);
 
-  transform: scaleX(0);
+    .nav-links {
 
-  transform-origin: left;
+      margin-left: auto;
 
-  transition: 0.25s;
+      display: flex;
 
-}
+      align-items: center;
 
-.nav-links a:hover::after {
+      gap: 21px;
 
-  transform: scaleX(1);
+    }
 
-}
 
-.header-phone {
+    .nav-links a {
 
-  color: white;
+      position: relative;
 
-  background: var(--dark);
+      font-size: 12px;
 
-  border:
-    1px solid rgba(244, 167, 44, 0.55);
+      font-weight: 800;
 
-  padding: 13px 18px;
+      text-transform: uppercase;
 
-  border-radius: 12px;
+      letter-spacing: .045em;
 
-  font-weight: 800;
+    }
 
-  font-size: 13px;
 
-}
+    .nav-links a:not(.review-link)::after {
 
-.menu-button {
+      content: "";
 
-  display: none;
+      position: absolute;
 
-  border: none;
+      left: 0;
 
-  background: transparent;
+      bottom: -8px;
 
-  padding: 10px;
+      width: 100%;
 
-}
+      height: 2px;
 
-.menu-button span {
+      background:
+        var(--orange);
 
-  display: block;
+      transform:
+        scaleX(0);
 
-  width: 25px;
+      transform-origin:
+        left;
 
-  height: 2px;
+      transition:
+        .25s;
 
-  margin: 6px 0;
+    }
 
-  background: var(--dark);
 
-}
+    .nav-links a:hover::after {
 
+      transform:
+        scaleX(1);
 
-/* =========================================================
-   HERO
-========================================================= */
+    }
 
-.hero {
 
-  min-height: 850px;
+    .review-link {
 
-  padding:
-    150px 0 55px;
+      padding:
+        10px 13px;
 
-  position: relative;
+      border-radius: 999px;
 
-  overflow: hidden;
+      background:
+        linear-gradient(
+          135deg,
+          var(--orange),
+          #f5b842
+        );
 
-  background:
+      color:
+        #2c102c;
 
-    radial-gradient(
-      circle at 82% 17%,
-      rgba(174, 61, 153, 0.18),
-      transparent 30%
-    ),
+      white-space: nowrap;
 
-    radial-gradient(
-      circle at 5% 80%,
-      rgba(244, 167, 44, 0.10),
-      transparent 30%
-    ),
+    }
 
-    linear-gradient(
-      180deg,
-      white,
-      #faf7fb
-    );
 
-}
+    .phone-header {
 
-.hero-grid {
+      flex-shrink: 0;
 
-  position: absolute;
+      padding:
+        13px 18px;
 
-  inset: 0;
+      border-radius: 12px;
 
-  opacity: 0.25;
+      border:
+        1px solid rgba(246,164,40,.55);
 
-  background-image:
+      color: white;
 
-    linear-gradient(
-      rgba(142, 45, 130, 0.05) 1px,
-      transparent 1px
-    ),
+      background:
+        var(--dark);
 
-    linear-gradient(
-      90deg,
-      rgba(142, 45, 130, 0.05) 1px,
-      transparent 1px
-    );
+      font-size: 13px;
 
-  background-size:
-    55px 55px;
+      font-weight: 800;
 
-  mask-image:
-    linear-gradient(
-      to bottom,
-      black,
-      transparent 85%
-    );
+    }
 
-}
 
-.hero-layout {
+    .menu-button {
 
-  position: relative;
+      display: none;
 
-  z-index: 2;
+      border: none;
 
-  display: grid;
+      background:
+        transparent;
 
-  grid-template-columns:
-    1.03fr 0.97fr;
+      padding: 10px;
 
-  align-items: center;
+    }
 
-  gap: 55px;
 
-}
+    .menu-button span {
 
-.eyebrow {
+      display: block;
 
-  color: var(--violet);
+      width: 25px;
 
-  text-transform: uppercase;
+      height: 2px;
 
-  font-size: 12px;
+      margin: 6px 0;
 
-  font-weight: 800;
+      background:
+        var(--dark);
 
-  letter-spacing: 0.12em;
+    }
 
-}
 
-.hero h1 {
+    /* =========================================================
+       BOUTONS
+    ========================================================== */
 
-  font-family:
-    "Manrope",
-    sans-serif;
+    .btn {
 
-  font-size:
-    clamp(55px, 6.3vw, 88px);
+      display: inline-flex;
 
-  line-height: 0.98;
+      justify-content: center;
 
-  letter-spacing: -0.06em;
+      align-items: center;
 
-  margin:
-    22px 0 25px;
+      gap: 13px;
 
-}
+      padding:
+        16px 23px;
 
-.hero h1 span {
+      border-radius: 12px;
 
-  color: var(--violet);
+      border: none;
 
-}
+      font-weight: 800;
 
-.hero-description {
+      transition:
+        .3s ease;
 
-  max-width: 650px;
+    }
 
-  font-size: 19px;
 
-  line-height: 1.65;
+    .btn:hover {
 
-  color: #5d5660;
+      transform:
+        translateY(-3px);
 
-}
+    }
 
-.hero-buttons {
 
-  margin-top: 35px;
+    .btn-primary {
 
-  display: flex;
+      color: white;
 
-  gap: 15px;
+      background:
+        linear-gradient(
+          135deg,
+          var(--violet),
+          var(--violet-light)
+        );
 
-}
+      box-shadow:
+        0 15px 35px
+        rgba(142,45,130,.25);
 
+    }
 
-/* =========================================================
-   BUTTON
-========================================================= */
 
-.btn {
+    .btn-primary strong {
 
-  display: inline-flex;
+      color:
+        var(--orange);
 
-  justify-content: center;
+    }
 
-  align-items: center;
 
-  gap: 15px;
+    .btn-light {
 
-  border: none;
+      color:
+        var(--dark);
 
-  border-radius: 12px;
+      background:
+        white;
 
-  padding: 16px 23px;
+    }
 
-  font-weight: 800;
 
-  transition: 0.3s;
+    .btn-outline {
 
-}
+      color:
+        var(--text);
 
-.btn:hover {
+      background:
+        white;
 
-  transform:
-    translateY(-3px);
+      border:
+        1px solid #d8ced8;
 
-}
+    }
 
-.btn-primary {
 
-  color: white;
+    /* =========================================================
+       HERO
+    ========================================================== */
 
-  background:
-    linear-gradient(
-      135deg,
-      var(--violet),
-      var(--violet2)
-    );
+    .hero {
 
-  box-shadow:
-    0 15px 35px rgba(142, 45, 130, 0.25);
+      position: relative;
 
-}
+      overflow: hidden;
 
-.btn-primary strong {
+      min-height: 850px;
 
-  color: var(--yellow);
+      padding:
+        150px 0 55px;
 
-}
+      background:
 
-.btn-white {
+        radial-gradient(
+          circle at 82% 18%,
+          rgba(176,68,152,.17),
+          transparent 30%
+        ),
 
-  background: white;
+        radial-gradient(
+          circle at 4% 82%,
+          rgba(246,164,40,.11),
+          transparent 28%
+        ),
 
-  border:
-    1px solid #d7cdd7;
+        linear-gradient(
+          180deg,
+          #ffffff,
+          #fbf8fb
+        );
 
-}
+    }
 
-.btn-dark {
 
-  color: white;
+    .hero-grid {
 
-  border:
-    1px solid rgba(255,255,255,.2);
+      position: absolute;
 
-  background:
-    rgba(255,255,255,.08);
+      inset: 0;
 
-}
+      opacity: .27;
 
+      background-image:
 
-/* =========================================================
-   HERO TRUST
-========================================================= */
+        linear-gradient(
+          rgba(142,45,130,.05)
+          1px,
+          transparent 1px
+        ),
 
-.hero-trust {
+        linear-gradient(
+          90deg,
+          rgba(142,45,130,.05)
+          1px,
+          transparent 1px
+        );
 
-  display: flex;
+      background-size:
+        55px 55px;
 
-  flex-wrap: wrap;
+      mask-image:
+        linear-gradient(
+          to bottom,
+          black,
+          transparent 88%
+        );
 
-  gap: 32px;
+    }
 
-  margin-top: 35px;
 
-}
+    .hero-layout {
 
-.hero-trust div {
+      position: relative;
 
-  display: grid;
+      z-index: 2;
 
-  gap: 4px;
+      display: grid;
 
-}
+      grid-template-columns:
+        1.03fr .97fr;
 
-.hero-trust strong {
+      gap: 50px;
 
-  font-family:
-    "Manrope",
-    sans-serif;
+      align-items: center;
 
-  font-size: 18px;
+    }
 
-}
 
-.hero-trust span {
+    .eyebrow,
+    .section-label {
 
-  font-size: 12px;
+      color:
+        var(--violet);
 
-  color: #756d78;
+      text-transform:
+        uppercase;
 
-}
+      font-size: 11px;
 
+      font-weight: 800;
 
-/* =========================================================
-   PHOTO MONSIEUR TAHRATI
-========================================================= */
+      letter-spacing:
+        .13em;
 
-.hero-person {
+    }
 
-  position: relative;
 
-  height: 610px;
+    .hero h1 {
 
-}
+      margin:
+        22px 0 25px;
 
-.person-background {
+      font-family:
+        "Manrope",
+        sans-serif;
 
-  position: absolute;
+      font-size:
+        clamp(
+          55px,
+          6vw,
+          88px
+        );
 
-  width: 515px;
+      line-height: .99;
 
-  height: 515px;
+      letter-spacing:
+        -.055em;
 
-  right: -20px;
+    }
 
-  top: 45px;
 
-  border-radius: 50%;
+    .hero h1 span {
 
-  background:
+      color:
+        var(--violet);
 
-    linear-gradient(
-      140deg,
-      rgba(142, 45, 130, 0.17),
-      rgba(244, 167, 44, 0.11)
-    );
+    }
 
-}
 
-.person-photo {
+    .hero-description {
 
-  position: absolute;
+      max-width:
+        650px;
 
-  width: 430px;
+      color:
+        #5e5761;
 
-  height: 530px;
+      font-size:
+        18px;
 
-  top: 65px;
+      line-height:
+        1.7;
 
-  right: 40px;
+    }
 
-  overflow: hidden;
 
-  border-radius:
-    230px 230px 35px 35px;
+    .hero-buttons {
 
-  border:
-    8px solid rgba(255,255,255,.8);
+      display: flex;
 
-  box-shadow:
-    0 35px 80px rgba(55, 20, 55, 0.20);
+      gap: 14px;
 
-}
+      margin-top: 34px;
 
-.person-photo::after {
+    }
 
-  content: "";
 
-  position: absolute;
+    .hero-trust {
 
-  inset: 0;
+      display: flex;
 
-  background:
-    linear-gradient(
-      to top,
-      rgba(44, 13, 49, 0.20),
-      transparent 45%
-    );
+      flex-wrap: wrap;
 
-}
+      gap: 30px;
 
-.person-photo img {
+      margin-top: 35px;
 
-  width: 100%;
+    }
 
-  height: 100%;
 
-  object-fit: cover;
+    .hero-trust div {
 
-  object-position:
-    center center;
+      display: grid;
 
-}
+      gap: 4px;
 
-.quality {
+    }
 
-  position: absolute;
 
-  z-index: 5;
+    .hero-trust strong {
 
-  display: flex;
+      font-family:
+        "Manrope";
 
-  align-items: center;
+      font-size: 17px;
 
-  gap: 9px;
+    }
 
-  padding:
-    11px 16px;
 
-  border-radius: 14px;
+    .hero-trust span {
 
-  background:
-    rgba(255,255,255,.93);
+      color:
+        #786f7b;
 
-  backdrop-filter:
-    blur(14px);
+      font-size: 11px;
 
-  border:
-    1px solid rgba(142,45,130,.12);
+    }
 
-  box-shadow:
-    0 15px 40px rgba(35, 12, 42, .12);
 
-  font-family:
-    "Manrope",
-    sans-serif;
+    /* =========================================================
+       PORTRAIT TAHRATI
+    ========================================================== */
 
-  font-weight: 700;
+    .hero-person {
 
-  animation:
-    floating 6s ease-in-out infinite;
+      position: relative;
 
-}
+      height: 610px;
 
-.quality b {
+    }
 
-  color: var(--yellow);
 
-}
+    .portrait-circle {
 
-.q1 {
+      position: absolute;
 
-  left: 0;
+      width: 510px;
 
-  top: 110px;
+      height: 510px;
 
-}
+      right: -10px;
 
-.q2 {
+      top: 50px;
 
-  right: -5px;
+      border-radius: 50%;
 
-  top: 145px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(142,45,130,.17),
+          rgba(246,164,40,.11)
+        );
 
-  animation-delay: -1s;
+    }
 
-}
 
-.q3 {
+    .portrait {
 
-  left: -12px;
+      position: absolute;
 
-  top: 285px;
+      width: 430px;
 
-  animation-delay: -2s;
+      height: 530px;
 
-}
+      top: 65px;
 
-.q4 {
+      right: 40px;
 
-  right: -5px;
+      overflow: hidden;
 
-  top: 345px;
+      border-radius:
+        230px
+        230px
+        35px
+        35px;
 
-  animation-delay: -3s;
+      border:
+        8px solid
+        rgba(255,255,255,.85);
 
-}
+      box-shadow:
+        0 35px 80px
+        rgba(55,20,55,.21);
 
-.q5 {
+    }
 
-  left: 25px;
 
-  bottom: 60px;
+    .portrait img {
 
-  animation-delay: -4s;
+      width: 100%;
 
-}
+      height: 100%;
 
-@keyframes floating {
+      object-fit: cover;
 
-  50% {
+      object-position:
+        center;
 
-    transform:
-      translateY(-9px);
+    }
 
-  }
 
-}
+    .quality {
 
+      position: absolute;
 
-/* =========================================================
-   GOOGLE + STATS
-========================================================= */
+      z-index: 5;
 
-.proof {
+      display: flex;
 
-  position: relative;
+      align-items: center;
 
-  z-index: 5;
+      gap: 9px;
 
-  margin-top: 45px;
+      padding:
+        11px 16px;
 
-  display: grid;
+      border-radius: 14px;
 
-  grid-template-columns:
-    1.45fr repeat(3, 1fr);
+      border:
+        1px solid
+        rgba(142,45,130,.12);
 
-  overflow: hidden;
+      background:
+        rgba(255,255,255,.94);
 
-  background: white;
+      backdrop-filter:
+        blur(15px);
 
-  border:
-    1px solid #eee7ee;
+      box-shadow:
+        0 15px 40px
+        rgba(35,12,42,.12);
 
-  border-radius: 24px;
+      font-family:
+        "Manrope";
 
-  box-shadow:
-    var(--shadow);
+      font-weight: 700;
 
-}
+      animation:
+        floating 6s
+        ease-in-out
+        infinite;
 
-.proof > * {
+    }
 
-  min-height: 120px;
 
-  display: flex;
+    .quality b {
 
-  flex-direction: column;
+      color:
+        var(--orange);
 
-  justify-content: center;
+    }
 
-  padding:
-    24px 27px;
 
-}
+    .q1 {
 
-.proof > * + * {
+      left: 0;
 
-  border-left:
-    1px solid var(--border);
+      top: 105px;
 
-}
+    }
 
-.google-box {
 
-  gap: 4px;
+    .q2 {
 
-}
+      right: -5px;
 
-.google {
+      top: 145px;
 
-  font-size: 23px;
+      animation-delay:
+        -1s;
 
-  font-weight: 700;
+    }
 
-}
 
-.google span:nth-child(1) {
+    .q3 {
 
-  color: #4285f4;
+      left: -15px;
 
-}
+      top: 285px;
 
-.google span:nth-child(2) {
+      animation-delay:
+        -2s;
 
-  color: #ea4335;
+    }
 
-}
 
-.google span:nth-child(3) {
+    .q4 {
 
-  color: #fbbc05;
+      right: -5px;
 
-}
+      top: 350px;
 
-.google span:nth-child(4) {
+      animation-delay:
+        -3s;
 
-  color: #4285f4;
+    }
 
-}
 
-.google span:nth-child(5) {
+    .q5 {
 
-  color: #34a853;
+      left: 30px;
 
-}
+      bottom: 55px;
 
-.google span:nth-child(6) {
+      animation-delay:
+        -4s;
 
-  color: #ea4335;
+    }
 
-}
 
-.stars {
+    @keyframes floating {
 
-  color: #f5a623;
+      50% {
 
-  letter-spacing: 2px;
+        transform:
+          translateY(-9px);
 
-}
+      }
 
-.google-box strong {
+    }
 
-  font-size: 25px;
 
-}
+    /* =========================================================
+       GOOGLE / CHIFFRES
+    ========================================================== */
 
-.google-box small {
+    .proof {
 
-  color: var(--muted);
+      position: relative;
 
-}
+      z-index: 5;
 
-.stat strong {
+      margin-top: 45px;
 
-  color: var(--violet);
+      display: grid;
 
-  font-family:
-    "Manrope",
-    sans-serif;
+      grid-template-columns:
+        1.45fr
+        repeat(3,1fr);
 
-  font-size: 32px;
+      overflow: hidden;
 
-}
+      border:
+        1px solid #eee7ee;
 
-.stat span {
+      border-radius:
+        24px;
 
-  font-size: 12px;
+      background:
+        white;
 
-  color: var(--muted);
+      box-shadow:
+        var(--shadow);
 
-}
+    }
 
 
-/* =========================================================
-   CLIENT MARQUEE
-========================================================= */
+    .proof > * {
 
-.clients {
+      min-height: 120px;
 
-  background: white;
+      display: flex;
 
-  padding:
-    38px 0;
+      flex-direction: column;
 
-  border-bottom:
-    1px solid var(--border);
+      justify-content: center;
 
-}
+      padding:
+        24px 28px;
 
-.section-label {
+    }
 
-  color: var(--violet);
 
-  text-transform: uppercase;
+    .proof > * + * {
 
-  font-weight: 800;
+      border-left:
+        1px solid
+        var(--border);
 
-  letter-spacing: 0.12em;
+    }
 
-  font-size: 11px;
 
-}
+    .google-title {
 
-.clients-title {
+      font-size: 22px;
 
-  text-align: center;
+      font-weight: 700;
 
-  margin-bottom: 22px;
+      color:
+        #4285f4;
 
-}
+    }
 
-.marquee {
 
-  overflow: hidden;
+    .stars {
 
-  mask-image:
-    linear-gradient(
-      90deg,
-      transparent,
-      black 8%,
-      black 92%,
-      transparent
-    );
+      color:
+        #f5a623;
 
-}
+      letter-spacing:
+        2px;
 
-.marquee-track {
+    }
 
-  display: flex;
 
-  width: max-content;
+    .google-proof strong {
 
-  animation:
-    marquee 26s linear infinite;
+      font-size:
+        25px;
 
-}
+    }
 
-.marquee:hover
-.marquee-track {
 
-  animation-play-state:
-    paused;
+    .google-proof small {
 
-}
+      color:
+        var(--muted);
 
-.marquee-track img {
+    }
 
-  flex-shrink: 0;
 
-  height: 105px;
+    .proof-stat strong {
 
-  width: auto;
+      color:
+        var(--violet);
 
-}
+      font-family:
+        "Manrope";
 
-@keyframes marquee {
+      font-size:
+        31px;
 
-  to {
+    }
 
-    transform:
-      translateX(-33.333%);
 
-  }
+    .proof-stat span {
 
-}
+      color:
+        var(--muted);
 
+      font-size:
+        11px;
 
-/* =========================================================
-   SECTIONS
-========================================================= */
+    }
 
-.section {
 
-  padding:
-    110px 0;
+    /* =========================================================
+       CLIENTS
+    ========================================================== */
 
-}
+    .clients {
 
-.section-head {
+      padding:
+        36px 0;
 
-  display: flex;
+      background:
+        white;
 
-  justify-content: space-between;
+      border-bottom:
+        1px solid
+        var(--border);
 
-  align-items: flex-end;
+    }
 
-  gap: 60px;
 
-  margin-bottom: 45px;
+    .clients-title {
 
-}
+      text-align: center;
 
-.section-head > div {
+      margin-bottom:
+        20px;
 
-  max-width: 670px;
+    }
 
-}
 
-.section-head > p {
+    .marquee {
 
-  max-width: 430px;
+      overflow: hidden;
 
-  color: var(--muted);
+      mask-image:
+        linear-gradient(
+          90deg,
+          transparent,
+          black 7%,
+          black 93%,
+          transparent
+        );
 
-  line-height: 1.7;
+    }
 
-}
 
-h2 {
+    .marquee-track {
 
-  font-family:
-    "Manrope",
-    sans-serif;
+      display: flex;
 
-  font-size:
-    clamp(38px, 4vw, 58px);
+      width:
+        max-content;
 
-  letter-spacing: -0.045em;
+      animation:
+        marquee 28s
+        linear infinite;
 
-  line-height: 1.03;
+    }
 
-  margin:
-    10px 0;
 
-}
+    .marquee:hover
+    .marquee-track {
 
+      animation-play-state:
+        paused;
 
-/* =========================================================
-   SERVICES
-========================================================= */
+    }
 
-.services-grid {
 
-  display: grid;
+    .marquee img {
 
-  grid-template-columns:
-    repeat(3, 1fr);
+      height: 110px;
 
-  gap: 18px;
+      width: auto;
 
-}
+      flex-shrink: 0;
 
-.service {
+    }
 
-  position: relative;
 
-  min-height: 300px;
+    @keyframes marquee {
 
-  padding: 30px;
+      to {
 
-  border-radius: 22px;
+        transform:
+          translateX(-33.333%);
 
-  border:
-    1px solid var(--border);
+      }
 
-  background: white;
+    }
 
-  overflow: hidden;
 
-  transition: .4s;
+    /* =========================================================
+       SECTIONS
+    ========================================================== */
 
-}
+    .section {
 
-.service:hover {
+      padding:
+        105px 0;
 
-  transform:
-    translateY(-9px);
+    }
 
-  box-shadow:
-    0 28px 60px rgba(35, 14, 43, .10);
 
-}
+    .section-head {
 
-.service-number {
+      display: flex;
 
-  position: absolute;
+      justify-content:
+        space-between;
 
-  right: 24px;
+      align-items:
+        flex-end;
 
-  top: 25px;
+      gap: 60px;
 
-  color: #d8ccd9;
+      margin-bottom:
+        45px;
 
-  font-weight: 800;
+    }
 
-  font-size: 17px;
 
-}
+    .section-head > div {
 
-.service-icon {
+      max-width:
+        670px;
 
-  width: 55px;
+    }
 
-  height: 55px;
 
-  display: grid;
+    .section-head > p {
 
-  place-items: center;
+      max-width:
+        450px;
 
-  border-radius: 16px;
+      color:
+        var(--muted);
 
-  background: #f8eef7;
+      line-height:
+        1.75;
 
-  color: var(--violet);
+    }
 
-  font-size: 27px;
 
-  margin-bottom: 35px;
+    h2 {
 
-}
+      margin:
+        10px 0;
 
-.service h3 {
+      font-family:
+        "Manrope";
 
-  font-family:
-    "Manrope";
+      font-size:
+        clamp(
+          38px,
+          4vw,
+          58px
+        );
 
-  margin:
-    0 0 12px;
+      line-height:
+        1.03;
 
-  font-size: 20px;
+      letter-spacing:
+        -.045em;
 
-}
+    }
 
-.service p {
 
-  font-size: 14px;
+    /* =========================================================
+       SERVICES AVEC PHOTOS
+    ========================================================== */
 
-  line-height: 1.6;
+    .service-grid {
 
-  color: var(--muted);
+      display: grid;
 
-}
+      grid-template-columns:
+        repeat(3,1fr);
 
-.service a {
+      gap: 18px;
 
-  position: absolute;
+    }
 
-  bottom: 27px;
 
-  left: 30px;
+    .service-card {
 
-  color: var(--violet);
+      overflow: hidden;
 
-  font-weight: 800;
+      border:
+        1px solid
+        var(--border);
 
-  font-size: 13px;
+      border-radius:
+        24px;
 
-}
+      background:
+        white;
 
+      transition:
+        .4s ease;
 
-/* =========================================================
-   ENTREPRISE / VEHICULE
-========================================================= */
+    }
 
-.company {
 
-  position: relative;
+    .service-card:hover {
 
-  overflow: hidden;
+      transform:
+        translateY(-8px);
 
-  color: white;
+      box-shadow:
+        0 28px 70px
+        rgba(35,14,43,.11);
 
-  background:
+    }
 
-    radial-gradient(
-      circle at 85% 45%,
-      rgba(244,167,44,.15),
-      transparent 28%
-    ),
 
-    linear-gradient(
-      115deg,
-      #140919,
-      #2a1135 60%,
-      #4b164d
-    );
+    .service-photo {
 
-}
+      position: relative;
 
-.company-layout {
+      width: 100%;
 
-  display: grid;
+      height: 225px;
 
-  grid-template-columns:
-    .9fr 1.1fr;
+      padding: 0;
 
-  align-items: center;
+      border: none;
 
-  gap: 55px;
+      overflow: hidden;
 
-}
+      background:
+        var(--dark);
 
-.company .section-label {
+    }
 
-  color: var(--yellow);
 
-}
+    .service-photo img {
 
-.company-text p {
+      width: 100%;
 
-  line-height: 1.75;
+      height: 100%;
 
-  color: #cfc3d3;
+      object-fit: cover;
 
-}
+      transition:
+        transform .6s ease,
+        filter .5s ease;
 
-.company-values {
+    }
 
-  display: grid;
 
-  grid-template-columns:
-    repeat(3, 1fr);
+    .service-card:hover
+    .service-photo img {
 
-  gap: 13px;
+      transform:
+        scale(1.07);
 
-  margin-top: 35px;
+      filter:
+        saturate(1.08);
 
-}
+    }
 
-.company-values div {
 
-  padding-top: 18px;
+    .service-photo::after {
 
-  border-top:
-    1px solid rgba(255,255,255,.15);
+      content: "";
 
-}
+      position: absolute;
 
-.company-values strong {
+      inset: 0;
 
-  display: block;
+      background:
+        linear-gradient(
+          to top,
+          rgba(22,8,28,.45),
+          transparent 55%
+        );
 
-  font-family:
-    "Manrope";
+    }
 
-  font-size: 20px;
 
-  color: var(--yellow);
+    .photo-details {
 
-}
+      position: absolute;
 
-.company-values span {
+      z-index: 2;
 
-  display: block;
+      bottom: 14px;
 
-  margin-top: 5px;
+      right: 14px;
 
-  color: #c8b9cd;
+      padding:
+        8px 12px;
 
-  font-size: 12px;
+      border-radius:
+        999px;
 
-}
+      color:
+        var(--violet);
 
-.van {
+      background:
+        rgba(255,255,255,.94);
 
-  position: relative;
+      font-size:
+        10px;
 
-  min-height: 430px;
+      font-weight: 800;
 
-  display: flex;
+    }
 
-  align-items: center;
 
-}
+    .service-content {
 
-.van::before {
+      position: relative;
 
-  content: "";
+      min-height: 235px;
 
-  position: absolute;
+      padding:
+        27px;
 
-  width: 500px;
+    }
 
-  height: 300px;
 
-  right: 20px;
+    .service-number {
 
-  bottom: 30px;
+      position: absolute;
 
-  border-radius: 50%;
+      top: 29px;
 
-  background:
+      right: 27px;
 
-    radial-gradient(
-      circle,
-      rgba(244,167,44,.25),
-      rgba(142,45,130,.15),
-      transparent 70%
-    );
+      color:
+        #d9cedb;
 
-}
+      font-family:
+        "Manrope";
 
-.van img {
+      font-weight:
+        800;
 
-  position: relative;
+    }
 
-  z-index: 2;
 
-  width: 100%;
+    .service-icon {
 
-  max-height: 420px;
+      width: 52px;
 
-  object-fit: contain;
+      height: 52px;
 
-  mix-blend-mode: screen;
+      margin-bottom:
+        20px;
 
-  filter:
-    drop-shadow(
-      0 35px 50px rgba(0,0,0,.45)
-    );
+      display: grid;
 
-}
+      place-items: center;
 
+      border-radius:
+        15px;
 
-/* =========================================================
-   METHODE
-========================================================= */
+      color:
+        var(--violet);
 
-.steps {
+      background:
+        #f7edf6;
 
-  display: grid;
+      font-size:
+        24px;
 
-  grid-template-columns:
-    repeat(4, 1fr);
+    }
 
-  gap: 1px;
 
-  background:
-    var(--border);
+    .service-content h3 {
 
-  border:
-    1px solid var(--border);
+      margin:
+        0 0 10px;
 
-  overflow: hidden;
+      font-family:
+        "Manrope";
 
-  border-radius: 22px;
+      font-size:
+        20px;
 
-}
+    }
 
-.step {
 
-  min-height: 280px;
+    .service-content p {
 
-  padding: 30px 27px;
+      color:
+        var(--muted);
 
-  background: white;
+      font-size:
+        13px;
 
-}
+      line-height:
+        1.6;
 
-.step b {
+    }
 
-  color: #ddcfdd;
 
-  font-family:
-    "Manrope";
+    .service-more {
 
-  font-size: 39px;
+      padding: 0;
 
-}
+      border: none;
 
-.step h3 {
+      color:
+        var(--violet);
 
-  margin:
-    28px 0 10px;
+      background:
+        none;
 
-  font-family:
-    "Manrope";
+      font-size:
+        12px;
 
-}
+      font-weight: 800;
 
-.step p {
+    }
 
-  color: var(--muted);
 
-  line-height: 1.6;
+    /* =========================================================
+       ENTREPRISE
+    ========================================================== */
 
-  font-size: 14px;
+    .company {
 
-}
+      overflow: hidden;
 
+      color: white;
 
-/* =========================================================
-   REALISATIONS
-========================================================= */
+      background:
 
-.projects {
+        radial-gradient(
+          circle at 85% 45%,
+          rgba(246,164,40,.15),
+          transparent 30%
+        ),
 
-  display: grid;
+        linear-gradient(
+          115deg,
+          #140919,
+          #2a1135 60%,
+          #4b164d
+        );
 
-  grid-template-columns:
-    1.2fr .8fr .8fr;
+    }
 
-  grid-template-rows:
-    270px 270px;
 
-  gap: 16px;
+    .company-layout {
 
-}
+      display: grid;
 
-.project {
+      grid-template-columns:
+        .9fr 1.1fr;
 
-  position: relative;
+      gap: 55px;
 
-  overflow: hidden;
+      align-items: center;
 
-  border-radius: 22px;
+    }
 
-  color: white;
 
-  background:
-    linear-gradient(
-      135deg,
-      var(--violet-dark),
-      var(--dark)
-    );
+    .company .section-label {
 
-}
+      color:
+        var(--orange);
 
-.project::before {
+    }
 
-  content: "";
 
-  position: absolute;
+    .company p {
 
-  inset: 0;
+      color:
+        #d2c6d5;
 
-  transition: .5s;
+      line-height:
+        1.75;
 
-  background:
+    }
 
-    radial-gradient(
-      circle at 75% 20%,
-      rgba(244,167,44,.25),
-      transparent 30%
-    );
 
-}
+    .company-values {
 
-.project:hover::before {
+      display: grid;
 
-  transform: scale(1.1);
+      grid-template-columns:
+        repeat(3,1fr);
 
-}
+      gap: 14px;
 
-.project-content {
+      margin-top:
+        35px;
 
-  position: absolute;
+    }
 
-  bottom: 0;
 
-  left: 0;
+    .company-values div {
 
-  right: 0;
+      padding-top:
+        18px;
 
-  z-index: 2;
+      border-top:
+        1px solid
+        rgba(255,255,255,.15);
 
-  padding: 25px;
+    }
 
-  background:
-    linear-gradient(
-      transparent,
-      rgba(10,4,13,.88)
-    );
 
-}
+    .company-values strong {
 
-.project-content span {
+      display: block;
 
-  color: var(--yellow);
+      color:
+        var(--orange);
 
-  font-size: 11px;
+      font-family:
+        "Manrope";
 
-  font-weight: 800;
+      font-size:
+        19px;
 
-  text-transform: uppercase;
+    }
 
-}
 
-.project-content h3 {
+    .company-values span {
 
-  font-family:
-    "Manrope";
+      font-size:
+        11px;
 
-  font-size: 22px;
+      color:
+        #c9bdcd;
 
-}
+    }
 
-.project-content p {
 
-  color: #d7ccd9;
+    .van {
 
-  font-size: 13px;
+      position: relative;
 
-}
+      min-height:
+        430px;
 
-.project1 {
+      display: flex;
 
-  grid-row:
-    1 / 3;
+      align-items: center;
 
-}
+    }
 
-.project2 {
 
-  background:
-    linear-gradient(
-      135deg,
-      #311334,
-      #7d2472
-    );
+    .van::before {
 
-}
+      content: "";
 
-.project3 {
+      position: absolute;
 
-  background:
-    linear-gradient(
-      135deg,
-      #201027,
-      #53215b
-    );
+      width: 530px;
 
-}
+      height: 310px;
 
-.project4 {
+      right: 0;
 
-  grid-column:
-    2 / 4;
+      bottom: 20px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #3c1541,
-      #6d2763
-    );
+      border-radius:
+        50%;
 
-}
+      background:
+        radial-gradient(
+          circle,
+          rgba(246,164,40,.24),
+          rgba(142,45,130,.15),
+          transparent 70%
+        );
 
-.brands {
+    }
 
-  margin-top: 35px;
 
-  display: flex;
+    .van img {
 
-  flex-wrap: wrap;
+      position: relative;
 
-  gap: 12px;
+      z-index: 2;
 
-  align-items: center;
+      width: 100%;
 
-}
+      max-height:
+        420px;
 
-.brands span {
+      object-fit:
+        contain;
 
-  color: var(--muted);
+      filter:
+        drop-shadow(
+          0 35px 55px
+          rgba(0,0,0,.42)
+        );
 
-  margin-right: 12px;
+    }
 
-}
 
-.brands b {
+    /* =========================================================
+       MÉTHODE
+    ========================================================== */
 
-  padding:
-    10px 14px;
+    .steps {
 
-  border:
-    1px solid var(--border);
+      display: grid;
 
-  background: white;
+      grid-template-columns:
+        repeat(4,1fr);
 
-  border-radius: 9px;
+      gap: 1px;
 
-  font-size: 12px;
+      overflow: hidden;
 
-}
+      border:
+        1px solid
+        var(--border);
 
+      border-radius:
+        22px;
 
-/* =========================================================
-   AVIS
-========================================================= */
+      background:
+        var(--border);
 
-.reviews {
+    }
 
-  color: white;
 
-  background:
+    .step {
 
-    radial-gradient(
-      circle at 80% 30%,
-      rgba(142,45,130,.24),
-      transparent 28%
-    ),
+      min-height:
+        270px;
 
-    var(--dark);
+      padding:
+        30px 27px;
 
-}
+      background:
+        white;
 
-.reviews .section-label {
+    }
 
-  color: var(--yellow);
 
-}
+    .step b {
 
-.reviews .section-head p {
+      color:
+        #ded2df;
 
-  color: #cfc3d2;
+      font-family:
+        "Manrope";
 
-}
+      font-size:
+        40px;
 
-.review-slider {
+    }
 
-  position: relative;
 
-  min-height: 330px;
+    .step h3 {
 
-  overflow: hidden;
+      margin:
+        30px 0 10px;
 
-  border-radius: 28px;
+      font-family:
+        "Manrope";
 
-  background:
-    rgba(255,255,255,.06);
+    }
 
-  border:
-    1px solid rgba(255,255,255,.1);
 
-}
+    .step p {
 
-.review {
+      color:
+        var(--muted);
 
-  position: absolute;
+      font-size:
+        13px;
 
-  inset: 0;
+      line-height:
+        1.65;
 
-  padding:
-    55px 90px;
+    }
 
-  opacity: 0;
 
-  pointer-events: none;
+    /* =========================================================
+       RÉALISATIONS
+    ========================================================== */
 
-  transform:
-    translateX(40px);
+    .projects {
 
-  transition:
-    .55s;
+      display: grid;
 
-}
+      grid-template-columns:
+        repeat(4,1fr);
 
-.review.active {
+      gap: 16px;
 
-  opacity: 1;
+    }
 
-  pointer-events: auto;
 
-  transform:
-    translateX(0);
+    .project {
 
-}
+      position: relative;
 
-.review p {
+      min-height:
+        320px;
 
-  max-width: 850px;
+      display: flex;
 
-  font-family:
-    "Manrope";
+      align-items:
+        flex-end;
 
-  font-size: 27px;
+      overflow: hidden;
 
-  line-height: 1.45;
+      border-radius:
+        24px;
 
-}
+      color: white;
 
-.review strong {
+      cursor: pointer;
 
-  display: block;
+      background-size:
+        cover;
 
-  margin-top: 20px;
+      background-position:
+        center;
 
-}
+      transition:
+        .4s;
 
-.review small {
+    }
 
-  color: #bbaebf;
 
-}
+    .project:hover {
 
-.slider-button {
+      transform:
+        translateY(-8px);
 
-  position: absolute;
+    }
 
-  z-index: 10;
 
-  top: 50%;
+    .project::before {
 
-  width: 45px;
+      content: "";
 
-  height: 45px;
+      position: absolute;
 
-  border: none;
+      inset: 0;
 
-  color: white;
+      background:
+        linear-gradient(
+          to top,
+          rgba(18,6,23,.95),
+          rgba(18,6,23,.15) 70%
+        );
 
-  background:
-    rgba(255,255,255,.12);
+    }
 
-  border-radius: 50%;
 
-  transform:
-    translateY(-50%);
+    .project-content {
 
-}
+      position: relative;
 
-.previous {
+      z-index: 2;
 
-  left: 20px;
+      padding: 25px;
 
-}
+    }
 
-.next {
 
-  right: 20px;
+    .project-content span {
 
-}
+      color:
+        var(--orange-light);
 
+      font-size:
+        10px;
 
-/* =========================================================
-   RECRUTEMENT
-========================================================= */
+      font-weight: 800;
 
-.recruitment {
+      letter-spacing:
+        .12em;
 
-  color: white;
+      text-transform:
+        uppercase;
 
-  background:
+    }
 
-    radial-gradient(
-      circle at 20% 20%,
-      rgba(244,167,44,.12),
-      transparent 25%
-    ),
 
-    linear-gradient(
-      135deg,
-      #230d2a,
-      #56194f
-    );
+    .project-content h3 {
 
-}
+      margin:
+        9px 0;
 
-.recruit-layout {
+      font-family:
+        "Manrope";
 
-  display: grid;
+      font-size:
+        20px;
 
-  grid-template-columns:
-    .8fr 1.2fr;
+    }
 
-  gap: 60px;
 
-  align-items: start;
+    .project-content p {
 
-}
+      color:
+        #ded3df;
 
-.recruit-copy .section-label {
+      font-size:
+        12px;
 
-  color: var(--yellow);
+    }
 
-}
 
-.recruit-copy p {
+    .project1 {
 
-  color: #d5c7d8;
+      background-image:
+        url("renovation-electrique.jpg");
 
-  line-height: 1.7;
+    }
 
-}
 
-.recruit-copy ul {
+    .project2 {
 
-  margin:
-    30px 0;
+      background-image:
+        url("securite-controle-acces.jpg");
 
-  padding: 0;
+    }
 
-  list-style: none;
 
-}
+    .project3 {
 
-.recruit-copy li {
+      background-image:
+        url("reseaux-informatiques.jpg");
 
-  margin: 14px 0;
+    }
 
-}
 
-.recruit-copy li::before {
+    .project4 {
 
-  content: "✓";
+      background-image:
+        url("climatisation.jpg");
 
-  color: var(--yellow);
+    }
 
-  margin-right: 10px;
 
-}
+    .brands {
 
-.recruit-form {
+      display: flex;
 
-  padding: 30px;
+      flex-wrap: wrap;
 
-  color: var(--text);
+      gap: 13px;
 
-  border-radius: 25px;
+      align-items: center;
 
-  background: white;
+      margin-top:
+        35px;
 
-  box-shadow:
-    0 40px 100px rgba(0,0,0,.22);
+    }
 
-}
 
-.form-header {
+    .brands span {
 
-  display: flex;
+      color:
+        var(--muted);
 
-  justify-content: space-between;
+    }
 
-  font-weight: 800;
 
-}
+    .brands b {
 
-.form-progress {
+      padding:
+        10px 14px;
 
-  width: 100%;
+      border:
+        1px solid
+        var(--border);
 
-  height: 5px;
+      border-radius:
+        9px;
 
-  margin:
-    15px 0 30px;
+      background:
+        white;
 
-  overflow: hidden;
+      font-size:
+        11px;
 
-  border-radius: 10px;
+    }
 
-  background: #eee8ef;
 
-}
+    /* =========================================================
+       ÉQUIPE
+    ========================================================== */
 
-.form-progress span {
+    .team-section {
 
-  display: block;
+      background:
+        linear-gradient(
+          180deg,
+          #ffffff,
+          #faf6fb
+        );
 
-  width: 25%;
+    }
 
-  height: 100%;
 
-  transition: .4s;
+    .team-grid {
 
-  background:
+      display: grid;
 
-    linear-gradient(
-      90deg,
-      var(--yellow),
-      var(--violet)
-    );
+      grid-template-columns:
+        repeat(5,1fr);
 
-}
+      gap: 16px;
 
-.form-step {
+    }
 
-  display: none;
 
-}
+    .team-card {
 
-.form-step.active {
+      --mouse-x: 50%;
+      --mouse-y: 50%;
 
-  display: block;
+      position: relative;
 
-  animation:
-    formAppear .4s ease;
+      overflow: hidden;
 
-}
+      aspect-ratio:
+        .78;
 
-@keyframes formAppear {
+      padding: 0;
 
-  from {
+      border: none;
 
-    opacity: 0;
+      border-radius:
+        24px;
 
-    transform:
-      translateY(15px);
+      background:
+        var(--dark2);
 
-  }
+      text-align: left;
 
-}
+      box-shadow:
+        0 18px 50px
+        rgba(39,15,48,.11);
 
-.form-step h3 {
+      transform-style:
+        preserve-3d;
 
-  font-family:
-    "Manrope";
+      transition:
+        box-shadow .35s,
+        transform .25s;
 
-  font-size: 28px;
+      isolation:
+        isolate;
 
-}
+    }
 
-label {
 
-  display: grid;
+    .team-card::before {
 
-  gap: 7px;
+      content: "";
 
-  margin-bottom: 15px;
+      position: absolute;
 
-  font-size: 12px;
+      z-index: 3;
 
-  font-weight: 700;
+      inset: 0;
 
-}
+      pointer-events: none;
 
-input,
-select,
-textarea {
+      opacity: 0;
 
-  width: 100%;
+      background:
+        radial-gradient(
+          circle at
+          var(--mouse-x)
+          var(--mouse-y),
 
-  padding:
-    14px 15px;
+          rgba(246,164,40,.27),
 
-  border:
-    1px solid #dfd6df;
+          rgba(142,45,130,.12) 27%,
 
-  border-radius: 10px;
+          transparent 55%
+        );
 
-  outline: none;
+      transition:
+        .35s;
 
-  background: white;
+    }
 
-}
 
-input:focus,
-select:focus,
-textarea:focus {
+    .team-card:hover::before {
 
-  border-color:
-    var(--violet);
+      opacity: 1;
 
-  box-shadow:
-    0 0 0 4px rgba(142,45,130,.08);
+    }
 
-}
 
-textarea {
+    .team-card:hover {
 
-  resize: vertical;
+      box-shadow:
+        0 30px 75px
+        rgba(39,15,48,.20);
 
-}
+    }
 
-.fields-two {
 
-  display: grid;
+    .team-photo {
 
-  grid-template-columns:
-    1fr 1fr;
+      position: absolute;
 
-  gap: 14px;
+      inset: 0;
 
-}
+      overflow: hidden;
 
-.choice-grid {
+      background:
+        linear-gradient(
+          145deg,
+          #23102d,
+          #742269
+        );
 
-  display: grid;
+    }
 
-  grid-template-columns:
-    1fr 1fr;
 
-  gap: 10px;
+    .team-photo img {
 
-  margin-bottom: 20px;
+      width: 100%;
 
-}
+      height: 100%;
 
-.choice {
+      object-fit: cover;
 
-  margin: 0;
+      object-position:
+        center;
 
-}
+      transition:
+        transform .65s
+        cubic-bezier(.2,.7,.2,1),
 
-.choice input {
+        filter .45s;
 
-  position: absolute;
+    }
 
-  opacity: 0;
 
-}
+    .team-card:hover
+    .team-photo img {
 
-.choice span {
+      transform:
+        scale(1.08);
 
-  display: block;
+      filter:
+        saturate(1.08)
+        contrast(1.04);
 
-  padding: 15px;
+    }
 
-  text-align: center;
 
-  border:
-    1px solid #ddd2dd;
+    .team-placeholder {
 
-  border-radius: 11px;
+      display: none;
 
-  cursor: pointer;
+      place-items: center;
 
-}
+      width: 100%;
 
-.choice input:checked + span {
+      height: 100%;
 
-  color: var(--violet);
+      padding: 20px;
 
-  background: #f7edf6;
+      color: white;
 
-  border-color:
-    var(--violet);
+      text-align: center;
 
-}
+      font-family:
+        "Manrope";
 
-.checkbox {
+      font-weight: 800;
 
-  display: flex;
+    }
 
-  align-items: flex-start;
 
-  gap: 10px;
+    .team-overlay {
 
-}
+      position: absolute;
 
-.checkbox input {
+      z-index: 4;
 
-  width: 18px;
+      left: 0;
 
-  margin-top: 2px;
+      right: 0;
 
-}
+      bottom: 0;
 
-.form-buttons {
+      padding:
+        75px 20px 20px;
 
-  margin-top: 20px;
+      color: white;
 
-  display: flex;
+      background:
+        linear-gradient(
+          transparent,
+          rgba(15,5,19,.96)
+        );
 
-  justify-content: flex-end;
+      transition:
+        .35s;
 
-  gap: 10px;
+    }
 
-}
 
-.back {
+    .team-card:hover
+    .team-overlay {
 
-  color: var(--text);
+      padding-bottom:
+        28px;
 
-  background: transparent;
+    }
 
-  border:
-    1px solid var(--border);
 
-}
+    .team-overlay strong {
 
-#backButton {
+      display: block;
 
-  visibility: hidden;
+      font-family:
+        "Manrope";
 
-}
+      font-size:
+        19px;
 
-#submitButton {
+    }
 
-  display: none;
 
-}
+    .team-overlay span {
 
-.form-note {
+      display: block;
 
-  margin-top: 15px;
+      margin-top: 4px;
 
-  font-size: 10px;
+      color:
+        #e7dce8;
 
-  color: #8f8490;
+      font-size:
+        11px;
 
-}
+    }
 
 
-/* =========================================================
-   CONTACT
-========================================================= */
+    .team-overlay b {
 
-.contact {
+      display: block;
 
-  background: #f6f1f6;
+      margin-top: 11px;
 
-}
+      color:
+        var(--orange-light);
 
-.contact-layout {
+      font-size:
+        10px;
 
-  display: grid;
+    }
 
-  grid-template-columns:
-    .9fr 1.1fr;
 
-  gap: 55px;
+    /* =========================================================
+       AVIS
+    ========================================================== */
 
-}
+    .reviews {
 
-.contact-text > p {
+      color: white;
 
-  color: var(--muted);
+      background:
 
-  line-height: 1.7;
+        radial-gradient(
+          circle at 80% 25%,
+          rgba(142,45,130,.28),
+          transparent 30%
+        ),
 
-}
+        var(--dark);
 
-.contact-boxes {
+    }
 
-  display: grid;
 
-  gap: 10px;
+    .reviews .section-label {
 
-  margin-top: 30px;
+      color:
+        var(--orange);
 
-}
+    }
 
-.contact-boxes a {
 
-  display: grid;
+    .review-slider {
 
-  gap: 4px;
+      position: relative;
 
-  padding: 17px 19px;
+      min-height:
+        330px;
 
-  border-radius: 14px;
+      overflow: hidden;
 
-  border:
-    1px solid var(--border);
+      border:
+        1px solid
+        rgba(255,255,255,.10);
 
-  background: white;
+      border-radius:
+        28px;
 
-  transition: .3s;
+      background:
+        rgba(255,255,255,.06);
 
-}
+    }
 
-.contact-boxes a:hover {
 
-  transform:
-    translateX(7px);
+    .review {
 
-}
+      position: absolute;
 
-.contact-boxes small {
+      inset: 0;
 
-  color: var(--violet);
+      padding:
+        55px 90px;
 
-  text-transform: uppercase;
+      opacity: 0;
 
-  font-size: 10px;
+      transform:
+        translateX(40px);
 
-  letter-spacing: .1em;
+      pointer-events: none;
 
-  font-weight: 800;
+      transition:
+        .55s;
 
-}
+    }
 
-.contact-boxes strong {
 
-  font-family:
-    "Manrope";
+    .review.active {
 
-}
+      opacity: 1;
 
-.quote-form {
+      transform: none;
 
-  background: white;
+      pointer-events: auto;
 
-  padding: 30px;
+    }
 
-  border-radius: 25px;
 
-  border:
-    1px solid var(--border);
+    .review p {
 
-  box-shadow:
-    var(--shadow);
+      max-width:
+        850px;
 
-}
+      font-family:
+        "Manrope";
 
-.quote-form h3 {
+      font-size:
+        26px;
 
-  margin-top: 0;
+      line-height:
+        1.45;
 
-  font-family:
-    "Manrope";
+    }
 
-  font-size: 28px;
 
-}
+    .review strong {
 
+      display: block;
 
-/* =========================================================
-   SOCIAL ICONS
-========================================================= */
+      margin-top:
+        20px;
 
-.socials {
+    }
 
-  position: fixed;
 
-  z-index: 800;
+    .review small {
 
-  right: 18px;
+      color:
+        #bbaebf;
 
-  top: 50%;
+    }
 
-  display: grid;
 
-  gap: 7px;
+    .review-button {
 
-  padding: 7px;
+      position: absolute;
 
-  border-radius: 40px;
+      z-index: 5;
 
-  background: white;
+      top: 50%;
 
-  transform:
-    translateY(-50%);
+      width: 45px;
 
-  box-shadow:
-    0 15px 40px rgba(30,10,35,.18);
+      height: 45px;
 
-}
+      border-radius: 50%;
 
-.social {
+      border:
+        1px solid
+        rgba(255,255,255,.2);
 
-  width: 40px;
+      color: white;
 
-  height: 40px;
+      background:
+        rgba(255,255,255,.08);
 
-  display: grid;
+      transform:
+        translateY(-50%);
 
-  place-items: center;
+      font-size:
+        25px;
 
-  border-radius: 50%;
+    }
 
-  background: #f4eef4;
 
-  transition: .3s;
+    .prev {
 
-}
+      left: 20px;
 
-.social:hover {
+    }
 
-  transform:
-    scale(1.12);
 
-  background: #eadcea;
+    .next {
 
-}
+      right: 20px;
 
-.social svg {
+    }
 
-  width: 20px;
 
-  height: 20px;
+    /* =========================================================
+       RECRUTEMENT
+    ========================================================== */
 
-}
+    .recruitment {
 
-.instagram svg {
+      color: white;
 
-  fill: none;
+      background:
 
-  stroke: var(--violet);
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(246,164,40,.12),
+          transparent 26%
+        ),
 
-  stroke-width: 2;
+        linear-gradient(
+          135deg,
+          #230d2a,
+          #601d5c
+        );
 
-}
+    }
 
-.facebook svg {
 
-  fill: var(--violet);
+    .recruit-layout {
 
-}
+      display: grid;
 
-.social-google {
+      grid-template-columns:
+        .8fr 1.2fr;
 
-  font-size: 21px;
+      gap: 60px;
 
-  font-weight: 900;
+      align-items:
+        start;
 
-  color: #4285f4;
+    }
 
-}
 
+    .recruit-copy
+    .section-label {
 
-/* =========================================================
-   FOOTER
-========================================================= */
+      color:
+        var(--orange);
 
-footer {
+    }
 
-  color: #d7cad9;
 
-  background: #100716;
+    .recruit-copy p {
 
-  padding:
-    65px 0 25px;
+      color:
+        #d8cadb;
 
-}
+      line-height:
+        1.7;
 
-.footer-grid {
+    }
 
-  display: grid;
 
-  grid-template-columns:
-    1.3fr .7fr 1fr;
+    .recruit-copy ul {
 
-  gap: 45px;
+      padding: 0;
 
-}
+      margin:
+        30px 0;
 
-.footer-logo {
+      list-style: none;
 
-  width: 190px;
+    }
 
-  padding: 5px;
 
-  background: white;
+    .recruit-copy li {
 
-  border-radius: 10px;
+      margin:
+        13px 0;
 
-}
+    }
 
-footer h4 {
 
-  color: white;
+    .recruit-copy li::before {
 
-}
+      content: "✓";
 
-footer a,
-footer span {
+      margin-right:
+        10px;
 
-  display: block;
+      color:
+        var(--orange);
 
-  margin: 9px 0;
+    }
 
-  color: #ad9eb0;
 
-  font-size: 13px;
+    .recruit-form,
+    .contact-form {
 
-}
+      padding:
+        30px;
 
-footer p {
+      border-radius:
+        25px;
 
-  color: #ad9eb0;
+      color:
+        var(--text);
 
-  font-size: 13px;
+      background:
+        white;
 
-  line-height: 1.7;
+      box-shadow:
+        0 40px 100px
+        rgba(0,0,0,.22);
 
-}
+    }
 
-.footer-bottom {
 
-  margin-top: 45px;
+    .form-header {
 
-  padding-top: 20px;
+      display: flex;
 
-  display: flex;
+      justify-content:
+        space-between;
 
-  justify-content: space-between;
+      font-weight:
+        800;
 
-  gap: 20px;
+    }
 
-  border-top:
-    1px solid rgba(255,255,255,.09);
 
-}
+    .form-progress {
 
+      width: 100%;
 
-/* =========================================================
-   ANIMATIONS SCROLL
-========================================================= */
+      height: 5px;
 
-.reveal {
+      margin:
+        15px 0 30px;
 
-  opacity: 0;
+      overflow: hidden;
 
-  transform:
-    translateY(30px);
+      border-radius:
+        10px;
 
-  transition:
+      background:
+        #eee8ef;
 
-    opacity .8s ease,
+    }
 
-    transform .8s
-    cubic-bezier(.2,.7,.2,1);
 
-}
+    .form-progress span {
 
-.reveal.visible {
+      display: block;
 
-  opacity: 1;
+      width: 25%;
 
-  transform: none;
+      height: 100%;
 
-}
+      background:
+        linear-gradient(
+          90deg,
+          var(--orange),
+          var(--violet)
+        );
 
+      transition:
+        .4s;
 
-/* =========================================================
-   MOBILE
-========================================================= */
+    }
 
-@media(max-width:1050px) {
 
-  .nav-links {
+    .form-step {
 
-    display: none;
+      display: none;
 
-  }
+    }
 
-  .menu-button {
 
-    display: block;
+    .form-step.active {
 
-  }
+      display: block;
 
-  .header-phone {
+      animation:
+        formAppear .4s ease;
 
-    margin-left: auto;
+    }
 
-  }
 
-  .nav-links.open {
+    @keyframes formAppear {
 
-    position: fixed;
+      from {
 
-    display: flex;
+        opacity: 0;
 
-    top: 72px;
+        transform:
+          translateY(15px);
 
-    left: 0;
+      }
 
-    right: 0;
+    }
 
-    flex-direction: column;
 
-    align-items: flex-start;
+    .form-step h3,
+    .contact-form h3 {
 
-    padding: 30px;
+      margin:
+        0 0 20px;
 
-    background: white;
+      font-family:
+        "Manrope";
 
-    box-shadow:
-      0 30px 60px rgba(20,10,25,.15);
+      font-size:
+        27px;
 
-  }
+    }
 
-  .hero-layout,
-  .company-layout,
-  .recruit-layout,
-  .contact-layout {
 
-    grid-template-columns:
-      1fr;
+    label {
 
-  }
+      display: grid;
 
-  .hero-person {
+      gap: 7px;
 
-    order: -1;
+      margin-bottom:
+        15px;
 
-    width: 100%;
+      font-size:
+        11px;
 
-    max-width: 650px;
+      font-weight: 700;
 
-    margin: auto;
+    }
 
-    height: 520px;
 
-  }
+    input,
+    select,
+    textarea {
 
-  .hero-copy {
+      width: 100%;
 
-    text-align: center;
+      padding:
+        14px;
 
-  }
+      border:
+        1px solid #ded5df;
 
-  .hero-buttons,
-  .hero-trust {
+      border-radius:
+        10px;
 
-    justify-content: center;
+      outline: none;
 
-  }
+      background:
+        white;
 
-  .hero-description {
+    }
 
-    margin: auto;
 
-  }
+    input:focus,
+    select:focus,
+    textarea:focus {
 
-  .proof {
+      border-color:
+        var(--violet);
 
-    grid-template-columns:
-      1fr 1fr;
+      box-shadow:
+        0 0 0 4px
+        rgba(142,45,130,.08);
 
-  }
+    }
 
-  .proof > * + * {
 
-    border-left: none;
+    textarea {
 
-  }
+      resize:
+        vertical;
 
-  .proof > *:nth-child(even) {
+    }
 
-    border-left:
-      1px solid var(--border);
 
-  }
+    .field-two {
 
-  .proof > *:nth-child(n+3) {
+      display: grid;
 
-    border-top:
-      1px solid var(--border);
+      grid-template-columns:
+        1fr 1fr;
 
-  }
+      gap: 14px;
 
-  .services-grid {
+    }
 
-    grid-template-columns:
-      repeat(2,1fr);
 
-  }
+    .choice-grid {
 
-  .steps {
+      display: grid;
 
-    grid-template-columns:
-      1fr 1fr;
+      grid-template-columns:
+        1fr 1fr;
 
-  }
+      gap: 10px;
 
-  .projects {
+    }
 
-    grid-template-columns:
-      1fr 1fr;
 
-    grid-template-rows:
-      repeat(2,260px);
+    .choice {
 
-  }
+      margin: 0;
 
-  .project1 {
+    }
 
-    grid-row: auto;
 
-  }
+    .choice input {
 
-  .project4 {
+      position: absolute;
 
-    grid-column: auto;
+      opacity: 0;
 
-  }
+    }
 
-}
 
+    .choice span {
 
-@media(max-width:720px) {
+      display: block;
 
-  .container {
+      padding: 14px;
 
-    width:
-      calc(100% - 28px);
+      text-align:
+        center;
 
-  }
+      border:
+        1px solid #ddd2dd;
 
-  .header {
+      border-radius:
+        11px;
 
-    height: 72px;
+      cursor: pointer;
 
-  }
+    }
 
-  .logo {
 
-    width: 145px;
+    .choice input:checked
+    + span {
 
-  }
+      color:
+        var(--violet);
 
-  .header-phone {
+      border-color:
+        var(--violet);
 
-    display: none;
+      background:
+        #f7edf6;
 
-  }
+    }
 
-  .hero {
 
-    padding-top: 95px;
+    .checkbox {
 
-  }
+      display: flex;
 
-  .hero h1 {
+      gap: 10px;
 
-    font-size: 48px;
+      align-items:
+        flex-start;
 
-  }
+    }
 
-  .hero-description {
 
-    font-size: 16px;
+    .checkbox input {
 
-  }
+      width: 18px;
 
-  .hero-person {
+    }
 
-    height: 440px;
 
-  }
+    .form-buttons {
 
-  .person-background {
+      display: flex;
 
-    width: 355px;
+      justify-content:
+        flex-end;
 
-    height: 355px;
+      gap: 10px;
 
-    right: 50%;
+      margin-top:
+        20px;
 
-    transform:
-      translateX(50%);
+    }
 
-  }
 
-  .person-photo {
+    .back-button {
 
-    width: 305px;
+      color:
+        var(--text);
 
-    height: 385px;
+      background:
+        white;
 
-    right: 50%;
+      border:
+        1px solid
+        var(--border);
 
-    transform:
-      translateX(50%);
+    }
 
-    top: 45px;
 
-  }
+    #backButton {
 
-  .quality {
+      visibility:
+        hidden;
 
-    font-size: 11px;
+    }
 
-    padding:
-      8px 10px;
 
-  }
+    #submitButton {
 
-  .q1 {
+      display: none;
 
-    left: 0;
+    }
 
-    top: 75px;
 
-  }
+    /* =========================================================
+       CONTACT
+    ========================================================== */
 
-  .q2 {
+    .contact {
 
-    right: 0;
+      background:
+        #f6f1f6;
 
-    top: 110px;
+    }
 
-  }
 
-  .q3 {
+    .contact-layout {
 
-    left: 0;
+      display: grid;
 
-    top: 230px;
+      grid-template-columns:
+        .9fr 1.1fr;
 
-  }
+      gap: 55px;
 
-  .q4 {
+    }
 
-    right: 0;
 
-    top: 260px;
+    .contact-text > p {
 
-  }
+      color:
+        var(--muted);
 
-  .q5 {
+      line-height:
+        1.7;
 
-    left: 15px;
+    }
 
-    bottom: 48px;
 
-  }
+    .contact-links {
 
-  .hero-buttons {
+      display: grid;
 
-    flex-direction: column;
+      gap: 10px;
 
-  }
+      margin-top:
+        30px;
 
-  .hero-trust {
+    }
 
-    gap: 15px;
 
-  }
+    .contact-links a {
 
-  .proof {
+      display: grid;
 
-    grid-template-columns:
-      1fr;
+      gap: 4px;
 
-  }
+      padding:
+        17px 19px;
 
-  .proof > * {
+      border:
+        1px solid
+        var(--border);
 
-    min-height: 95px;
+      border-radius:
+        14px;
 
-  }
+      background:
+        white;
 
-  .proof > * + * {
+      transition:
+        .3s;
 
-    border-left: none !important;
+    }
 
-    border-top:
-      1px solid var(--border);
 
-  }
+    .contact-links a:hover {
 
-  .section {
+      transform:
+        translateX(7px);
 
-    padding:
-      75px 0;
+    }
 
-  }
 
-  .section-head {
+    .contact-links small {
 
-    display: block;
+      color:
+        var(--violet);
 
-  }
+      font-size:
+        9px;
 
-  .services-grid {
+      font-weight:
+        800;
 
-    grid-template-columns:
-      1fr;
+      text-transform:
+        uppercase;
 
-  }
+    }
 
-  .company-values {
 
-    grid-template-columns:
-      1fr;
+    /* =========================================================
+       MODALES
+    ========================================================== */
 
-  }
+    .modal {
 
-  .steps {
+      position: fixed;
 
-    grid-template-columns:
-      1fr;
+      inset: 0;
 
-  }
+      z-index: 3000;
 
-  .projects {
+      display: none;
 
-    grid-template-columns:
-      1fr;
+      align-items: center;
 
-    grid-template-rows:
-      repeat(4,230px);
+      justify-content: center;
 
-  }
+      padding: 22px;
 
-  .fields-two,
-  .choice-grid {
+    }
 
-    grid-template-columns:
-      1fr;
 
-  }
+    .modal.open {
 
-  .review {
+      display: flex;
 
-    padding:
-      45px 35px;
+    }
 
-  }
 
-  .review p {
+    .modal-background {
 
-    font-size: 19px;
+      position: absolute;
 
-  }
+      inset: 0;
 
-  .slider-button {
+      background:
+        rgba(12,5,16,.78);
 
-    display: none;
+      backdrop-filter:
+        blur(12px);
 
-  }
+    }
 
-  .socials {
 
-    top: auto;
+    .modal-window {
 
-    bottom: 15px;
+      position: relative;
 
-    right: 10px;
+      z-index: 2;
 
-    transform: none;
+      width:
+        min(920px,100%);
 
-    display: flex;
+      max-height:
+        calc(100vh - 45px);
 
-  }
+      overflow: auto;
 
-  .footer-grid {
+      border-radius:
+        28px;
 
-    grid-template-columns:
-      1fr;
+      background:
+        white;
 
-  }
+      box-shadow:
+        0 40px 120px
+        rgba(0,0,0,.4);
 
-  .footer-bottom {
+      animation:
+        modalAppear .3s ease;
 
-    display: block;
+    }
 
-  }
 
-  .marquee-track img {
+    @keyframes modalAppear {
 
-    height: 80px;
+      from {
 
-  }
+        opacity: 0;
 
-}
+        transform:
+          translateY(20px)
+          scale(.98);
 
+      }
 
-</style>
+    }
+
+
+    .modal-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        .95fr 1.05fr;
+
+    }
+
+
+    .modal-image {
+
+      min-height:
+        520px;
+
+      background:
+        var(--dark);
+
+    }
+
+
+    .modal-image img {
+
+      width: 100%;
+
+      height: 100%;
+
+      min-height:
+        520px;
+
+      object-fit: cover;
+
+    }
+
+
+    .modal-content {
+
+      padding:
+        42px;
+
+    }
+
+
+    .modal-content h3 {
+
+      margin:
+        8px 0 16px;
+
+      font-family:
+        "Manrope";
+
+      font-size:
+        34px;
+
+      line-height:
+        1.1;
+
+    }
+
+
+    .modal-content p {
+
+      color:
+        var(--muted);
+
+      line-height:
+        1.7;
+
+    }
+
+
+    .modal-content ul {
+
+      padding-left:
+        20px;
+
+      color:
+        #504753;
+
+      line-height:
+        1.75;
+
+    }
+
+
+    .modal-close {
+
+      position: absolute;
+
+      z-index: 5;
+
+      top: 15px;
+
+      right: 15px;
+
+      width: 43px;
+
+      height: 43px;
+
+      display: grid;
+
+      place-items: center;
+
+      border: none;
+
+      border-radius: 50%;
+
+      background:
+        white;
+
+      box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.17);
+
+      font-size:
+        24px;
+
+    }
+
+
+    .team-meta {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 12px;
+
+      margin:
+        22px 0;
+
+    }
+
+
+    .team-meta div {
+
+      padding:
+        15px;
+
+      border-radius:
+        14px;
+
+      background:
+        #f8f2f8;
+
+    }
+
+
+    .team-meta small {
+
+      display: block;
+
+      color:
+        var(--violet);
+
+      font-size:
+        9px;
+
+      font-weight:
+        800;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .team-meta strong {
+
+      display: block;
+
+      margin-top: 5px;
+
+      font-family:
+        "Manrope";
+
+    }
+
+
+    /* =========================================================
+       SOCIAL
+    ========================================================== */
+
+    .socials {
+
+      position: fixed;
+
+      z-index: 850;
+
+      top: 50%;
+
+      right: 17px;
+
+      display: grid;
+
+      gap: 7px;
+
+      padding: 7px;
+
+      border-radius:
+        40px;
+
+      background:
+        white;
+
+      box-shadow:
+        0 15px 40px
+        rgba(30,10,35,.18);
+
+      transform:
+        translateY(-50%);
+
+    }
+
+
+    .social {
+
+      width: 40px;
+
+      height: 40px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 50%;
+
+      background:
+        #f4eef4;
+
+      font-weight: 800;
+
+      transition:
+        .3s;
+
+    }
+
+
+    .social:hover {
+
+      transform:
+        scale(1.12);
+
+    }
+
+
+    .social-google {
+
+      color:
+        #4285f4;
+
+    }
+
+
+    .social-instagram,
+    .social-facebook {
+
+      color:
+        var(--violet);
+
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================== */
+
+    footer {
+
+      padding:
+        65px 0 25px;
+
+      color:
+        #d7cad9;
+
+      background:
+        #100716;
+
+    }
+
+
+    .footer-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1.3fr .7fr 1fr;
+
+      gap: 45px;
+
+    }
+
+
+    .footer-logo {
+
+      width: 190px;
+
+      padding: 5px;
+
+      border-radius: 10px;
+
+      background:
+        white;
+
+    }
+
+
+    footer h4 {
+
+      color: white;
+
+    }
+
+
+    footer p,
+    footer a {
+
+      color:
+        #ad9eb0;
+
+      font-size:
+        12px;
+
+      line-height:
+        1.7;
+
+    }
+
+
+    footer a {
+
+      display: block;
+
+      margin:
+        8px 0;
+
+    }
+
+
+    .footer-bottom {
+
+      display: flex;
+
+      justify-content:
+        space-between;
+
+      margin-top:
+        45px;
+
+      padding-top:
+        20px;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,.09);
+
+      color:
+        #8f8094;
+
+      font-size:
+        11px;
+
+    }
+
+
+    /* =========================================================
+       APPARITION SCROLL
+    ========================================================== */
+
+    .reveal {
+
+      opacity: 0;
+
+      transform:
+        translateY(28px);
+
+      transition:
+
+        opacity .8s,
+
+        transform .8s
+        cubic-bezier(.2,.7,.2,1);
+
+    }
+
+
+    .reveal.visible {
+
+      opacity: 1;
+
+      transform: none;
+
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================== */
+
+    @media(max-width: 1180px) {
+
+      .nav-links {
+
+        gap: 12px;
+
+      }
+
+      .nav-links a {
+
+        font-size: 10px;
+
+      }
+
+      .review-link {
+
+        display: none;
+
+      }
+
+    }
+
+
+    @media(max-width: 1000px) {
+
+      .nav-links {
+
+        display: none;
+
+      }
+
+
+      .menu-button {
+
+        display: block;
+
+      }
+
+
+      .phone-header {
+
+        margin-left: auto;
+
+      }
+
+
+      .nav-links.open {
+
+        position: fixed;
+
+        top: 72px;
+
+        left: 0;
+
+        right: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items:
+          flex-start;
+
+        padding: 30px;
+
+        background:
+          white;
+
+        box-shadow:
+          0 30px 70px
+          rgba(20,10,25,.15);
+
+      }
+
+
+      .nav-links.open
+      .review-link {
+
+        display: block;
+
+      }
+
+
+      .hero-layout,
+      .company-layout,
+      .recruit-layout,
+      .contact-layout {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .hero-person {
+
+        order: -1;
+
+        width: 100%;
+
+        max-width:
+          650px;
+
+        height: 520px;
+
+        margin: auto;
+
+      }
+
+
+      .hero-copy {
+
+        text-align:
+          center;
+
+      }
+
+
+      .hero-description {
+
+        margin: auto;
+
+      }
+
+
+      .hero-buttons,
+      .hero-trust {
+
+        justify-content:
+          center;
+
+      }
+
+
+      .proof {
+
+        grid-template-columns:
+          1fr 1fr;
+
+      }
+
+
+      .proof > * {
+
+        border-top:
+          1px solid
+          var(--border);
+
+      }
+
+
+      .service-grid {
+
+        grid-template-columns:
+          1fr 1fr;
+
+      }
+
+
+      .team-grid {
+
+        grid-template-columns:
+          repeat(3,1fr);
+
+      }
+
+
+      .steps {
+
+        grid-template-columns:
+          1fr 1fr;
+
+      }
+
+
+      .projects {
+
+        grid-template-columns:
+          1fr 1fr;
+
+      }
+
+    }
+
+
+    @media(max-width: 700px) {
+
+      .container {
+
+        width:
+          calc(100% - 28px);
+
+      }
+
+
+      .header {
+
+        height: 72px;
+
+      }
+
+
+      .logo {
+
+        width: 145px;
+
+      }
+
+
+      .phone-header {
+
+        display: none;
+
+      }
+
+
+      .hero {
+
+        padding-top:
+          95px;
+
+      }
+
+
+      .hero h1 {
+
+        font-size:
+          47px;
+
+      }
+
+
+      .hero-description {
+
+        font-size:
+          15px;
+
+      }
+
+
+      .hero-person {
+
+        height: 440px;
+
+      }
+
+
+      .portrait-circle {
+
+        width: 355px;
+
+        height: 355px;
+
+        right: 50%;
+
+        transform:
+          translateX(50%);
+
+      }
+
+
+      .portrait {
+
+        width: 305px;
+
+        height: 385px;
+
+        right: 50%;
+
+        top: 45px;
+
+        transform:
+          translateX(50%);
+
+      }
+
+
+      .quality {
+
+        font-size: 10px;
+
+        padding:
+          8px 10px;
+
+      }
+
+
+      .q1 {
+
+        left: 0;
+
+        top: 75px;
+
+      }
+
+
+      .q2 {
+
+        right: 0;
+
+        top: 110px;
+
+      }
+
+
+      .q3 {
+
+        left: 0;
+
+        top: 230px;
+
+      }
+
+
+      .q4 {
+
+        right: 0;
+
+        top: 260px;
+
+      }
+
+
+      .q5 {
+
+        left: 14px;
+
+        bottom: 46px;
+
+      }
+
+
+      .hero-buttons {
+
+        flex-direction:
+          column;
+
+      }
+
+
+      .proof,
+      .service-grid,
+      .team-grid,
+      .steps,
+      .projects,
+      .field-two,
+      .choice-grid,
+      .footer-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .section {
+
+        padding:
+          75px 0;
+
+      }
+
+
+      .section-head {
+
+        display: block;
+
+      }
+
+
+      .team-card {
+
+        aspect-ratio:
+          1.05;
+
+      }
+
+
+      .modal-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .modal-image,
+      .modal-image img {
+
+        min-height:
+          260px;
+
+        height: 260px;
+
+      }
+
+
+      .modal-content {
+
+        padding:
+          28px 22px;
+
+      }
+
+
+      .modal-content h3 {
+
+        font-size:
+          27px;
+
+      }
+
+
+      .team-meta {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .review {
+
+        padding:
+          45px 32px;
+
+      }
+
+
+      .review p {
+
+        font-size:
+          18px;
+
+      }
+
+
+      .review-button {
+
+        display: none;
+
+      }
+
+
+      .socials {
+
+        top: auto;
+
+        bottom: 15px;
+
+        right: 10px;
+
+        display: flex;
+
+        transform: none;
+
+      }
+
+
+      .footer-bottom {
+
+        display: block;
+
+      }
+
+    }
+
+
+  </style>
 
 
 </head>
@@ -2956,1649 +3905,2616 @@ footer p {
 <body>
 
 
-<div class="page-progress">
+  <div class="page-progress">
 
-  <span></span>
-
-</div>
-
-
-<div class="cursor-light"></div>
-
-
-<!-- =======================================================
-     HEADER
-======================================================= -->
-
-<header class="header" id="top">
-
-  <div class="container nav">
-
-    <a
-      class="logo"
-      href="#accueil"
-    >
-
-      <img
-        src="logo-egt.png"
-        alt="Logo EGT Tahrati"
-      >
-
-    </a>
-
-
-    <nav class="nav-links">
-
-      <a href="#accueil">
-        Accueil
-      </a>
-
-      <a href="#entreprise">
-        À propos
-      </a>
-
-      <a href="#services">
-        Services
-      </a>
-
-      <a href="#realisations">
-        Réalisations
-      </a>
-
-      <a href="#avis">
-        Avis
-      </a>
-
-      <a href="#recrutement">
-        EGT recrute
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-
-    </nav>
-
-
-    <a
-      class="header-phone"
-      href="tel:+33472378357"
-    >
-
-      ☎ 04 72 37 83 57
-
-    </a>
-
-
-    <button
-      class="menu-button"
-      aria-label="Menu"
-    >
-
-      <span></span>
-      <span></span>
-      <span></span>
-
-    </button>
+    <span></span>
 
   </div>
 
-</header>
 
 
+  <!-- =======================================================
+       HEADER
+  ======================================================== -->
 
-<main>
-
-
-<!-- =======================================================
-     HERO
-======================================================= -->
-
-<section
-  class="hero"
-  id="accueil"
->
-
-  <div class="hero-grid"></div>
+  <header
+    class="header"
+    id="top"
+  >
 
 
-  <div class="container hero-layout">
+    <div class="container nav">
 
 
-    <div class="hero-copy reveal">
-
-      <p class="eyebrow">
-
-        Électricité générale • Sécurité • Climatisation • Réseaux • Automatismes
-
-      </p>
-
-
-      <h1>
-
-        Votre électricien
-
-        <br>
-
-        <span>
-          de confiance
-        </span>
-
-        <br>
-
-        à Bron depuis 2003.
-
-      </h1>
-
-
-      <p class="hero-description">
-
-        EGT Tahrati accompagne les particuliers,
-        professionnels, régies et bailleurs sociaux
-        dans leurs projets électriques avec exigence,
-        proximité et réactivité.
-
-      </p>
-
-
-      <div class="hero-buttons">
-
-        <a
-          class="btn btn-primary magnetic"
-          href="#contact"
-        >
-
-          Demander un devis
-
-          <strong>
-            →
-          </strong>
-
-        </a>
-
-
-        <a
-          class="btn btn-white"
-          href="tel:+33472378357"
-        >
-
-          ☎ Appeler maintenant
-
-        </a>
-
-      </div>
-
-
-      <div class="hero-trust">
-
-        <div>
-
-          <strong>
-            +20 ans
-          </strong>
-
-          <span>
-            d'expérience
-          </span>
-
-        </div>
-
-
-        <div>
-
-          <strong>
-            Bron
-          </strong>
-
-          <span>
-            entreprise locale
-          </span>
-
-        </div>
-
-
-        <div>
-
-          <strong>
-            Équipe qualifiée
-          </strong>
-
-          <span>
-            travail professionnel
-          </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-
-    <div
-      class="hero-person reveal"
-      data-parallax="0.05"
-    >
-
-
-      <div class="person-background"></div>
-
-
-      <div class="person-photo">
+      <a
+        href="#accueil"
+        class="logo"
+      >
 
         <img
-          src="monsieur-tahrati.jpg"
-          alt="Monsieur Tahrati, gérant de EGT Tahrati"
+          src="logo-egt.png"
+          alt="Logo EGT Tahrati"
         >
 
-      </div>
+      </a>
 
 
-      <div class="quality q1">
+      <nav class="nav-links">
 
-        <b>✓</b>
 
-        Expertise
+        <a href="#accueil">
+          Accueil
+        </a>
 
-      </div>
 
+        <a href="#entreprise">
+          À propos
+        </a>
 
-      <div class="quality q2">
 
-        <b>✓</b>
+        <a href="#services">
+          Services
+        </a>
 
-        Clarté
 
-      </div>
+        <a href="#equipe">
+          Notre équipe
+        </a>
 
 
-      <div class="quality q3">
+        <a href="#realisations">
+          Réalisations
+        </a>
 
-        <b>✓</b>
 
-        Réactivité
+        <a href="#avis">
+          Avis
+        </a>
 
-      </div>
 
+        <a href="#recrutement">
+          EGT recrute
+        </a>
 
-      <div class="quality q4">
 
-        <b>✓</b>
+        <a href="#contact">
+          Contact
+        </a>
 
-        Fiabilité
 
-      </div>
+        <a
+          class="review-link"
+          href="https://search.google.com/local/writereview?placeid=ChIJIVqOoHfB9EcRzVAehUyg7SQ"
+          target="_blank"
+          rel="noopener"
+        >
 
+          ★ Noter notre prestation
 
-      <div class="quality q5">
+        </a>
 
-        <b>✓</b>
 
-        Qualité
+      </nav>
 
-      </div>
 
-
-    </div>
-
-
-  </div>
-
-
-
-  <div class="container proof reveal">
-
-
-    <a
-      class="google-box"
-      href="https://www.google.com/search?q=EGT+TAHRATI+Bron+avis"
-      target="_blank"
-    >
-
-      <div class="google">
-
-        <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
-
-      </div>
-
-      <div class="stars">
-        ★★★★★
-      </div>
-
-      <strong>
-        4,6 / 5
-      </strong>
-
-      <small>
-        31 avis
-      </small>
-
-    </a>
-
-
-    <div class="stat">
-
-      <strong
-        class="counter"
-        data-value="20"
-      >
-        0
-      </strong>
-
-      <span>
-        + années d'expérience
-      </span>
-
-    </div>
-
-
-    <div class="stat">
-
-      <strong>
-        2003
-      </strong>
-
-      <span>
-        année de création
-      </span>
-
-    </div>
-
-
-    <div class="stat">
-
-      <strong>
-        6
-      </strong>
-
-      <span>
-        domaines d'expertise
-      </span>
-
-    </div>
-
-
-  </div>
-
-
-</section>
-
-
-
-<!-- =======================================================
-     CLIENTS
-======================================================= -->
-
-<section class="clients">
-
-  <p class="section-label clients-title">
-
-    Ils nous ont fait confiance
-
-  </p>
-
-
-  <div class="marquee">
-
-
-    <div class="marquee-track">
-
-
-      <img
-        src="clients-egt.jpg"
-        alt="Clients EGT Tahrati"
+      <a
+        class="phone-header"
+        href="tel:+33472378357"
       >
 
+        ☎ 04 72 37 83 57
 
-      <img
-        src="clients-egt.jpg"
-        alt=""
+      </a>
+
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="Menu"
       >
 
+        <span></span>
+        <span></span>
+        <span></span>
 
-      <img
-        src="clients-egt.jpg"
-        alt=""
-      >
-
-
-    </div>
-
-
-  </div>
-
-
-</section>
-
-
-
-<!-- =======================================================
-     SERVICES
-======================================================= -->
-
-<section
-  class="section"
-  id="services"
->
-
-
-  <div class="container">
-
-
-    <div class="section-head reveal">
-
-
-      <div>
-
-        <p class="section-label">
-          Nos domaines d'expertise
-        </p>
-
-        <h2>
-
-          Des solutions complètes
-
-          <br>
-
-          pour tous vos projets.
-
-        </h2>
-
-      </div>
-
-
-      <p>
-
-        EGT Tahrati intervient pour l'installation,
-        la rénovation, la maintenance et le dépannage
-        des équipements électriques et techniques.
-
-      </p>
+      </button>
 
 
     </div>
 
 
+  </header>
 
-    <div class="services-grid">
 
 
-      <article class="service reveal">
+  <main>
 
-        <span class="service-number">
-          01
-        </span>
 
-        <div class="service-icon">
-          ⚡
-        </div>
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-        <h3>
-          Rénovation électrique
-        </h3>
-
-        <p>
-
-          Mise aux normes, tableaux électriques,
-          rénovation complète ou partielle et dépannage.
-
-        </p>
-
-        <a href="#contact">
-          Parler de mon projet →
-        </a>
-
-      </article>
-
-
-
-      <article class="service reveal">
-
-        <span class="service-number">
-          02
-        </span>
-
-        <div class="service-icon">
-          ◈
-        </div>
-
-        <h3>
-          Sécurité & contrôle d'accès
-        </h3>
-
-        <p>
-
-          Interphones, portiers vidéo,
-          alarmes intrusion et solutions
-          de contrôle d'accès.
-
-        </p>
-
-        <a href="#contact">
-          Parler de mon projet →
-        </a>
-
-      </article>
-
-
-
-      <article class="service reveal">
-
-        <span class="service-number">
-          03
-        </span>
-
-        <div class="service-icon">
-          ❄
-        </div>
-
-        <h3>
-          Climatisation
-        </h3>
-
-        <p>
-
-          Installation, entretien et dépannage
-          de systèmes de climatisation.
-
-        </p>
-
-        <a href="#contact">
-          Parler de mon projet →
-        </a>
-
-      </article>
-
-
-
-      <article class="service reveal">
-
-        <span class="service-number">
-          04
-        </span>
-
-        <div class="service-icon">
-          ◉
-        </div>
-
-        <h3>
-          Réseaux informatiques
-        </h3>
-
-        <p>
-
-          Câblage réseau, prises RJ45,
-          baies informatiques et installations
-          professionnelles.
-
-        </p>
-
-        <a href="#contact">
-          Parler de mon projet →
-        </a>
-
-      </article>
-
-
-
-      <article class="service reveal">
-
-        <span class="service-number">
-          05
-        </span>
-
-        <div class="service-icon">
-          ▥
-        </div>
-
-        <h3>
-          Automatismes de portail
-        </h3>
-
-        <p>
-
-          Motorisation, installation,
-          maintenance et dépannage
-          des automatismes.
-
-        </p>
-
-        <a href="#contact">
-          Parler de mon projet →
-        </a>
-
-      </article>
-
-
-
-      <article class="service reveal">
-
-        <span class="service-number">
-          06
-        </span>
-
-        <div class="service-icon">
-          ⌂
-        </div>
-
-        <h3>
-          Domotique & chauffage
-        </h3>
-
-        <p>
-
-          Chauffage électrique, commandes
-          et solutions permettant d'améliorer
-          le confort des installations.
-
-        </p>
-
-        <a href="#contact">
-          Parler de mon projet →
-        </a>
-
-      </article>
-
-
-    </div>
-
-
-  </div>
-
-
-</section>
-
-
-
-<!-- =======================================================
-     ENTREPRISE
-======================================================= -->
-
-<section
-  class="section company"
-  id="entreprise"
->
-
-
-  <div class="container company-layout">
-
-
-    <div class="company-text reveal">
-
-
-      <p class="section-label">
-        À propos d'EGT
-      </p>
-
-
-      <h2>
-
-        Plus de 20 ans
-
-        <br>
-
-        d'engagement et de proximité.
-
-      </h2>
-
-
-      <p>
-
-        Créée à Bron en 2003 par Monsieur Tahrati,
-        EGT s'est développée autour d'une exigence :
-        proposer des interventions professionnelles,
-        durables et adaptées aux besoins de chaque client.
-
-      </p>
-
-
-      <p>
-
-        L'entreprise accompagne aujourd'hui
-        particuliers, professionnels, régies
-        et bailleurs sociaux.
-
-      </p>
-
-
-      <div class="company-values">
-
-
-        <div>
-
-          <strong>
-            Qualité
-          </strong>
-
-          <span>
-            Travail propre et durable
-          </span>
-
-        </div>
-
-
-        <div>
-
-          <strong>
-            Réactivité
-          </strong>
-
-          <span>
-            Une équipe de proximité
-          </span>
-
-        </div>
-
-
-        <div>
-
-          <strong>
-            Sécurité
-          </strong>
-
-          <span>
-            Respect des installations
-          </span>
-
-        </div>
-
-
-      </div>
-
-
-    </div>
-
-
-
-    <div
-      class="van reveal"
-      data-parallax="0.025"
+    <section
+      class="hero"
+      id="accueil"
     >
 
 
-      <img
-        src="vehicule-egt.jpg"
-        alt="Véhicule de l'entreprise EGT Tahrati"
-      >
+      <div class="hero-grid"></div>
 
 
-    </div>
+      <div class="container hero-layout">
 
 
-  </div>
+        <div class="reveal">
 
 
-</section>
+          <p class="eyebrow">
 
-
-
-<!-- =======================================================
-     METHODE
-======================================================= -->
-
-<section class="section">
-
-
-  <div class="container">
-
-
-    <div class="section-head reveal">
-
-
-      <div>
-
-        <p class="section-label">
-          Notre méthode
-        </p>
-
-        <h2>
-
-          Un accompagnement
-
-          <br>
-
-          simple et efficace.
-
-        </h2>
-
-      </div>
-
-
-      <p>
-
-        Une organisation pensée pour comprendre
-        votre besoin, réaliser les travaux
-        et assurer le suivi de vos installations.
-
-      </p>
-
-
-    </div>
-
-
-
-    <div class="steps">
-
-
-      <article class="step reveal">
-
-        <b>
-          01
-        </b>
-
-        <h3>
-          Écoute & analyse
-        </h3>
-
-        <p>
-
-          Nous prenons le temps de comprendre
-          votre besoin et vos contraintes.
-
-        </p>
-
-      </article>
-
-
-
-      <article class="step reveal">
-
-        <b>
-          02
-        </b>
-
-        <h3>
-          Étude & devis
-        </h3>
-
-        <p>
-
-          Une proposition adaptée
-          et une organisation claire
-          de votre intervention.
-
-        </p>
-
-      </article>
-
-
-
-      <article class="step reveal">
-
-        <b>
-          03
-        </b>
-
-        <h3>
-          Réalisation
-        </h3>
-
-        <p>
-
-          Nos équipes interviennent
-          avec rigueur et professionnalisme.
-
-        </p>
-
-      </article>
-
-
-
-      <article class="step reveal">
-
-        <b>
-          04
-        </b>
-
-        <h3>
-          Suivi & maintenance
-        </h3>
-
-        <p>
-
-          Nous restons disponibles
-          pour l'entretien et le suivi
-          de vos installations.
-
-        </p>
-
-      </article>
-
-
-    </div>
-
-
-  </div>
-
-
-</section>
-
-
-
-<!-- =======================================================
-     REALISATIONS
-======================================================= -->
-
-<section
-  class="section"
-  id="realisations"
->
-
-
-  <div class="container">
-
-
-    <div class="section-head reveal">
-
-
-      <div>
-
-        <p class="section-label">
-          Nos réalisations
-        </p>
-
-        <h2>
-
-          Des interventions
-
-          <br>
-
-          qui inspirent confiance.
-
-        </h2>
-
-      </div>
-
-
-      <p>
-
-        De l'installation électrique
-        aux systèmes techniques professionnels,
-        EGT Tahrati accompagne ses clients
-        dans de nombreux environnements.
-
-      </p>
-
-
-    </div>
-
-
-
-    <div class="projects">
-
-
-      <article class="project project1 reveal">
-
-        <div class="project-content">
-
-          <span>
-            Électricité
-          </span>
-
-          <h3>
-            Rénovation & mise aux normes
-          </h3>
-
-          <p>
-
-            Tableaux électriques,
-            installations et sécurisation.
+            Électricité générale • Sécurité • Climatisation • Réseaux • Automatismes
 
           </p>
 
+
+          <h1>
+
+            Votre électricien
+
+            <br>
+
+            <span>
+              de confiance
+            </span>
+
+            <br>
+
+            à Bron depuis 2003.
+
+          </h1>
+
+
+          <p class="hero-description">
+
+            EGT Tahrati accompagne les particuliers,
+            professionnels, régies et bailleurs sociaux
+            dans leurs projets techniques avec exigence,
+            proximité et réactivité.
+
+          </p>
+
+
+          <div class="hero-buttons">
+
+
+            <a
+              class="btn btn-primary"
+              href="#contact"
+            >
+
+              Demander un devis
+
+              <strong>
+                →
+              </strong>
+
+            </a>
+
+
+            <a
+              class="btn btn-outline"
+              href="tel:+33472378357"
+            >
+
+              ☎ Appeler maintenant
+
+            </a>
+
+
+          </div>
+
+
+          <div class="hero-trust">
+
+
+            <div>
+
+              <strong>
+                +20 ans
+              </strong>
+
+              <span>
+                d'expérience
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <strong>
+                Depuis 2003
+              </strong>
+
+              <span>
+                à Bron
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <strong>
+                Équipe qualifiée
+              </strong>
+
+              <span>
+                expertise de terrain
+              </span>
+
+            </div>
+
+
+          </div>
+
+
         </div>
 
-      </article>
 
 
+        <div class="hero-person reveal">
 
-      <article class="project project2 reveal">
 
-        <div class="project-content">
+          <div class="portrait-circle"></div>
 
-          <span>
-            Sécurité
-          </span>
 
-          <h3>
-            Contrôle d'accès
-          </h3>
+          <div class="portrait">
+
+            <img
+              src="monsieur-tahrati.jpg"
+              alt="Monsieur Tahrati"
+            >
+
+          </div>
+
+
+          <div class="quality q1">
+
+            <b>✓</b>
+            Expertise
+
+          </div>
+
+
+          <div class="quality q2">
+
+            <b>✓</b>
+            Clarté
+
+          </div>
+
+
+          <div class="quality q3">
+
+            <b>✓</b>
+            Réactivité
+
+          </div>
+
+
+          <div class="quality q4">
+
+            <b>✓</b>
+            Fiabilité
+
+          </div>
+
+
+          <div class="quality q5">
+
+            <b>✓</b>
+            Qualité
+
+          </div>
+
 
         </div>
 
-      </article>
-
-
-
-      <article class="project project3 reveal">
-
-        <div class="project-content">
-
-          <span>
-            Réseau
-          </span>
-
-          <h3>
-            Installations informatiques
-          </h3>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="project project4 reveal">
-
-        <div class="project-content">
-
-          <span>
-            Confort
-          </span>
-
-          <h3>
-            Climatisation & automatismes
-          </h3>
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-
-
-    <div class="brands reveal">
-
-      <span>
-        Marques utilisées :
-      </span>
-
-      <b>HAGER</b>
-
-      <b>LEGRAND</b>
-
-      <b>SCHNEIDER ELECTRIC</b>
-
-      <b>ATLANTIC</b>
-
-      <b>BFT</b>
-
-      <b>ACOVA</b>
-
-    </div>
-
-
-  </div>
-
-
-</section>
-
-
-
-<!-- =======================================================
-     AVIS
-======================================================= -->
-
-<section
-  class="section reviews"
-  id="avis"
->
-
-
-  <div class="container">
-
-
-    <div class="section-head reveal">
-
-
-      <div>
-
-        <p class="section-label">
-          Avis clients
-        </p>
-
-        <h2>
-          Ils parlent de nous.
-        </h2>
 
       </div>
 
 
-      <a
-        class="btn btn-white"
-        href="https://www.google.com/search?q=EGT+TAHRATI+Bron+avis"
-        target="_blank"
-      >
 
-        Voir les avis Google
-
-      </a>
+      <div class="container proof reveal">
 
 
-    </div>
+        <a
+          class="google-proof"
+          href="https://search.google.com/local/writereview?placeid=ChIJIVqOoHfB9EcRzVAehUyg7SQ"
+          target="_blank"
+          rel="noopener"
+        >
 
 
-
-    <div class="review-slider reveal">
-
-
-      <button
-        class="slider-button previous"
-        type="button"
-      >
-
-        ‹
-
-      </button>
+          <span class="google-title">
+            Google
+          </span>
 
 
-      <article class="review active">
+          <span class="stars">
+            ★★★★★
+          </span>
 
-        <div class="stars">
-          ★★★★★
+
+          <strong>
+            4,7 / 5
+          </strong>
+
+
+          <small>
+            Avis Google
+          </small>
+
+
+        </a>
+
+
+        <div class="proof-stat">
+
+          <strong
+            class="counter"
+            data-value="20"
+          >
+            0
+          </strong>
+
+          <span>
+            + années d'expérience
+          </span>
+
         </div>
 
-        <p>
 
-          « Très pro, communication claire
-          et travaux réalisés avec sérieux.
-          Merci encore. »
+        <div class="proof-stat">
 
-        </p>
+          <strong>
+            2003
+          </strong>
 
-        <strong>
-          Einar Z.
-        </strong>
+          <span>
+            année de création
+          </span>
 
-        <small>
-          Lyon
-        </small>
-
-      </article>
-
-
-
-      <article class="review">
-
-        <div class="stars">
-          ★★★★★
         </div>
 
-        <p>
 
-          « Équipe professionnelle et très agréable.
-          Les travaux ont été réalisés avec succès.
-          Je recommande. »
+        <div class="proof-stat">
 
-        </p>
+          <strong>
+            6
+          </strong>
 
-        <strong>
-          Alexandre V.
-        </strong>
+          <span>
+            domaines d'expertise
+          </span>
 
-        <small>
-          Lyon
-        </small>
-
-      </article>
-
-
-
-      <article class="review">
-
-        <div class="stars">
-          ★★★★★
         </div>
 
-        <p>
 
-          « Recherche de panne complexe,
-          problème résolu.
-          Une entreprise sérieuse et compétente. »
-
-        </p>
-
-        <strong>
-          Alain P.
-        </strong>
-
-        <small>
-          Bron
-        </small>
-
-      </article>
+      </div>
 
 
-      <button
-        class="slider-button next"
-        type="button"
-      >
-
-        ›
-
-      </button>
-
-
-    </div>
-
-
-  </div>
-
-
-</section>
+    </section>
 
 
 
-<!-- =======================================================
-     RECRUTEMENT
-======================================================= -->
+    <!-- =====================================================
+         CLIENTS
+    ====================================================== -->
 
-<section
-  class="section recruitment"
-  id="recrutement"
->
+    <section class="clients">
 
 
-  <div class="container recruit-layout">
+      <p class="section-label clients-title">
 
-
-    <div class="recruit-copy reveal">
-
-
-      <p class="section-label">
-        EGT recrute
-      </p>
-
-
-      <h2>
-
-        Rejoignez
-
-        <br>
-
-        l'équipe EGT.
-
-      </h2>
-
-
-      <p>
-
-        Électricien, technicien,
-        apprenti ou profil polyvalent ?
-
-        Présentez votre candidature
-        en quelques étapes.
+        Ils nous ont fait confiance
 
       </p>
 
 
-      <ul>
-
-        <li>
-          Entreprise locale
-        </li>
-
-        <li>
-          Missions variées
-        </li>
-
-        <li>
-          Particuliers et professionnels
-        </li>
-
-        <li>
-          Équipe de terrain
-        </li>
-
-      </ul>
+      <div class="marquee">
 
 
-      <a
-        href="mailto:contact@egt-tahrati.fr?subject=Candidature EGT Tahrati"
-      >
-
-        Envoyer directement un e-mail →
-
-      </a>
+        <div class="marquee-track">
 
 
-    </div>
+          <img
+            src="clients-egt.jpg"
+            alt="Clients EGT Tahrati"
+          >
+
+
+          <img
+            src="clients-egt.jpg"
+            alt=""
+          >
+
+
+          <img
+            src="clients-egt.jpg"
+            alt=""
+          >
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
 
 
 
-    <!--
-    FORMULAIRE RECRUTEMENT
+    <!-- =====================================================
+         SERVICES
+    ====================================================== -->
 
-    Les réponses sont envoyées à :
-    contact@egt-tahrati.fr
-
-    IMPORTANT :
-    lors du premier formulaire reçu,
-    FormSubmit demandera à EGT
-    de valider l'adresse e-mail.
-    -->
-
-
-    <form
-
-      class="recruit-form reveal"
-
-      id="recruitForm"
-
-      action="https://formsubmit.co/contact@egt-tahrati.fr"
-
-      method="POST"
-
-      enctype="multipart/form-data"
-
+    <section
+      class="section"
+      id="services"
     >
 
 
-      <input
-        type="hidden"
-        name="_subject"
-        value="Nouvelle candidature - Site EGT Tahrati"
-      >
+      <div class="container">
 
 
-      <input
-        type="hidden"
-        name="_captcha"
-        value="false"
-      >
+        <div class="section-head reveal">
 
 
-      <input
-        type="hidden"
-        name="_template"
-        value="table"
-      >
+          <div>
+
+            <p class="section-label">
+
+              Nos domaines d'expertise
+
+            </p>
 
 
+            <h2>
 
-      <div class="form-header">
+              Des solutions complètes
 
-        <span>
-          Votre candidature
-        </span>
+              <br>
 
-        <strong id="stepText">
-          Étape 1 / 4
-        </strong>
+              pour tous vos projets.
 
-      </div>
+            </h2>
 
-
-      <div class="form-progress">
-
-        <span id="formProgress"></span>
-
-      </div>
+          </div>
 
 
+          <p>
 
-      <!-- ETAPE 1 -->
+            Cliquez sur la photo d'une prestation
+            pour afficher son résumé et le détail
+            des interventions réalisées par EGT Tahrati.
 
-      <div
-        class="form-step active"
-        data-step="1"
-      >
-
-
-        <h3>
-          Parlons de vous.
-        </h3>
-
-
-        <div class="fields-two">
-
-
-          <label>
-
-            Prénom
-
-            <input
-              name="Prénom"
-              required
-            >
-
-          </label>
-
-
-          <label>
-
-            Nom
-
-            <input
-              name="Nom"
-              required
-            >
-
-          </label>
+          </p>
 
 
         </div>
 
 
-        <label>
 
-          Adresse e-mail
-
-          <input
-            type="email"
-            name="Email"
-            required
-          >
-
-        </label>
+        <div class="service-grid">
 
 
-        <label>
+          <!-- ÉLECTRICITÉ -->
 
-          Téléphone
-
-          <input
-            type="tel"
-            name="Téléphone"
-            required
-          >
-
-        </label>
+          <article class="service-card reveal">
 
 
-      </div>
-
-
-
-      <!-- ETAPE 2 -->
-
-      <div
-        class="form-step"
-        data-step="2"
-      >
-
-
-        <h3>
-          Quel poste recherchez-vous ?
-        </h3>
-
-
-        <div class="choice-grid">
-
-
-          <label class="choice">
-
-            <input
-              type="radio"
-              name="Poste recherché"
-              value="Électricien"
-              required
+            <button
+              class="service-photo service-trigger"
+              data-service="renovation"
+              type="button"
             >
 
-            <span>
-              Électricien
-            </span>
 
-          </label>
+              <img
+                src="renovation-electrique.jpg"
+                alt="Rénovation électrique"
+              >
 
 
-          <label class="choice">
+              <span class="photo-details">
+                Voir les détails +
+              </span>
 
-            <input
-              type="radio"
-              name="Poste recherché"
-              value="Technicien"
+
+            </button>
+
+
+            <div class="service-content">
+
+
+              <span class="service-number">
+                01
+              </span>
+
+
+              <div class="service-icon">
+                ⚡
+              </div>
+
+
+              <h3>
+                Rénovation électrique
+              </h3>
+
+
+              <p>
+
+                Mise aux normes,
+                tableaux électriques,
+                installation et dépannage.
+
+              </p>
+
+
+              <button
+                class="service-more service-trigger"
+                data-service="renovation"
+              >
+
+                Découvrir la prestation →
+
+              </button>
+
+
+            </div>
+
+
+          </article>
+
+
+
+          <!-- SÉCURITÉ -->
+
+          <article class="service-card reveal">
+
+
+            <button
+              class="service-photo service-trigger"
+              data-service="securite"
+              type="button"
             >
 
-            <span>
-              Technicien
-            </span>
 
-          </label>
+              <img
+                src="securite-controle-acces.jpg"
+                alt="Sécurité et contrôle d'accès"
+              >
 
 
-          <label class="choice">
+              <span class="photo-details">
+                Voir les détails +
+              </span>
 
-            <input
-              type="radio"
-              name="Poste recherché"
-              value="Apprenti"
+
+            </button>
+
+
+            <div class="service-content">
+
+
+              <span class="service-number">
+                02
+              </span>
+
+
+              <div class="service-icon">
+                ◈
+              </div>
+
+
+              <h3>
+                Sécurité & contrôle d'accès
+              </h3>
+
+
+              <p>
+
+                Caméras, badges,
+                digicodes, interphones
+                et systèmes de sécurité.
+
+              </p>
+
+
+              <button
+                class="service-more service-trigger"
+                data-service="securite"
+              >
+
+                Découvrir la prestation →
+
+              </button>
+
+
+            </div>
+
+
+          </article>
+
+
+
+          <!-- CLIMATISATION -->
+
+          <article class="service-card reveal">
+
+
+            <button
+              class="service-photo service-trigger"
+              data-service="climatisation"
+              type="button"
             >
 
-            <span>
-              Apprenti
-            </span>
 
-          </label>
+              <img
+                src="climatisation.jpg"
+                alt="Climatisation"
+              >
 
 
-          <label class="choice">
+              <span class="photo-details">
+                Voir les détails +
+              </span>
 
-            <input
-              type="radio"
-              name="Poste recherché"
-              value="Autre"
+
+            </button>
+
+
+            <div class="service-content">
+
+
+              <span class="service-number">
+                03
+              </span>
+
+
+              <div class="service-icon">
+                ❄
+              </div>
+
+
+              <h3>
+                Climatisation
+              </h3>
+
+
+              <p>
+
+                Installation,
+                entretien et dépannage
+                des équipements.
+
+              </p>
+
+
+              <button
+                class="service-more service-trigger"
+                data-service="climatisation"
+              >
+
+                Découvrir la prestation →
+
+              </button>
+
+
+            </div>
+
+
+          </article>
+
+
+
+          <!-- RÉSEAUX -->
+
+          <article class="service-card reveal">
+
+
+            <button
+              class="service-photo service-trigger"
+              data-service="reseaux"
+              type="button"
             >
 
-            <span>
-              Autre
-            </span>
 
-          </label>
+              <img
+                src="reseaux-informatiques.jpg"
+                alt="Réseaux informatiques"
+              >
+
+
+              <span class="photo-details">
+                Voir les détails +
+              </span>
+
+
+            </button>
+
+
+            <div class="service-content">
+
+
+              <span class="service-number">
+                04
+              </span>
+
+
+              <div class="service-icon">
+                ◎
+              </div>
+
+
+              <h3>
+                Réseaux informatiques
+              </h3>
+
+
+              <p>
+
+                Câblage,
+                prises RJ45,
+                baies informatiques
+                et équipements réseau.
+
+              </p>
+
+
+              <button
+                class="service-more service-trigger"
+                data-service="reseaux"
+              >
+
+                Découvrir la prestation →
+
+              </button>
+
+
+            </div>
+
+
+          </article>
+
+
+
+          <!-- PORTAIL -->
+
+          <article class="service-card reveal">
+
+
+            <button
+              class="service-photo service-trigger"
+              data-service="portail"
+              type="button"
+            >
+
+
+              <img
+                src="automatismes-portail.jpg"
+                alt="Automatisme de portail"
+              >
+
+
+              <span class="photo-details">
+                Voir les détails +
+              </span>
+
+
+            </button>
+
+
+            <div class="service-content">
+
+
+              <span class="service-number">
+                05
+              </span>
+
+
+              <div class="service-icon">
+                ▥
+              </div>
+
+
+              <h3>
+                Automatismes de portail
+              </h3>
+
+
+              <p>
+
+                Installation,
+                motorisation,
+                maintenance
+                et dépannage.
+
+              </p>
+
+
+              <button
+                class="service-more service-trigger"
+                data-service="portail"
+              >
+
+                Découvrir la prestation →
+
+              </button>
+
+
+            </div>
+
+
+          </article>
+
+
+
+          <!-- DOMOTIQUE -->
+
+          <article class="service-card reveal">
+
+
+            <button
+              class="service-photo service-trigger"
+              data-service="domotique"
+              type="button"
+            >
+
+
+              <img
+                src="domotique-chauffage.jpg"
+                alt="Domotique et chauffage"
+              >
+
+
+              <span class="photo-details">
+                Voir les détails +
+              </span>
+
+
+            </button>
+
+
+            <div class="service-content">
+
+
+              <span class="service-number">
+                06
+              </span>
+
+
+              <div class="service-icon">
+                ⌂
+              </div>
+
+
+              <h3>
+                Domotique & chauffage
+              </h3>
+
+
+              <p>
+
+                Chauffage électrique,
+                régulation et commandes
+                intelligentes.
+
+              </p>
+
+
+              <button
+                class="service-more service-trigger"
+                data-service="domotique"
+              >
+
+                Découvrir la prestation →
+
+              </button>
+
+
+            </div>
+
+
+          </article>
 
 
         </div>
 
 
-        <label>
-
-          Expérience
-
-          <select name="Expérience">
-
-            <option>
-              Débutant
-            </option>
-
-            <option>
-              1 à 3 ans
-            </option>
-
-            <option>
-              3 à 5 ans
-            </option>
-
-            <option>
-              Plus de 5 ans
-            </option>
-
-          </select>
-
-        </label>
+      </div>
 
 
-        <label>
+    </section>
 
-          Contrat recherché
 
-          <select name="Contrat">
 
-            <option>
-              CDI
-            </option>
+    <!-- =====================================================
+         ENTREPRISE
+    ====================================================== -->
 
-            <option>
-              CDD
-            </option>
+    <section
+      class="section company"
+      id="entreprise"
+    >
 
-            <option>
-              Alternance / apprentissage
-            </option>
 
-            <option>
-              Stage
-            </option>
+      <div class="container company-layout">
 
-            <option>
-              À discuter
-            </option>
 
-          </select>
+        <div class="reveal">
 
-        </label>
+
+          <p class="section-label">
+
+            À propos d'EGT
+
+          </p>
+
+
+          <h2>
+
+            Plus de 20 ans
+
+            <br>
+
+            d'engagement et de proximité.
+
+          </h2>
+
+
+          <p>
+
+            Créée à Bron en 2003,
+            EGT Tahrati accompagne
+            particuliers, professionnels,
+            régies et bailleurs sociaux
+            pour leurs installations électriques
+            et techniques.
+
+          </p>
+
+
+          <p>
+
+            Qualité de réalisation,
+            disponibilité,
+            proximité et suivi
+            sont au cœur de l'activité.
+
+          </p>
+
+
+          <div class="company-values">
+
+
+            <div>
+
+              <strong>
+                Qualité
+              </strong>
+
+              <span>
+                Travail propre et durable
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <strong>
+                Réactivité
+              </strong>
+
+              <span>
+                Entreprise de proximité
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <strong>
+                Sécurité
+              </strong>
+
+              <span>
+                Respect des installations
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="van reveal">
+
+
+          <img
+            src="vehicule-egt.jpg"
+            alt="Véhicule EGT Tahrati"
+          >
+
+
+        </div>
 
 
       </div>
 
 
-
-      <!-- ETAPE 3 -->
-
-      <div
-        class="form-step"
-        data-step="3"
-      >
+    </section>
 
 
-        <h3>
-          Votre profil technique.
-        </h3>
+
+    <!-- =====================================================
+         MÉTHODE
+    ====================================================== -->
+
+    <section class="section">
 
 
-        <label>
-
-          Diplômes / habilitations / spécialités
-
-          <textarea
-            name="Qualifications"
-            rows="4"
-            placeholder="Ex : habilitations électriques, courant faible, climatisation, domotique..."
-          ></textarea>
-
-        </label>
+      <div class="container">
 
 
-        <div class="fields-two">
+        <div class="section-head reveal">
+
+
+          <div>
+
+
+            <p class="section-label">
+              Notre méthode
+            </p>
+
+
+            <h2>
+
+              Un accompagnement
+
+              <br>
+
+              simple et efficace.
+
+            </h2>
+
+
+          </div>
+
+
+          <p>
+
+            Une organisation claire,
+            depuis l'analyse du besoin
+            jusqu'au suivi de l'installation.
+
+          </p>
+
+
+        </div>
+
+
+        <div class="steps">
+
+
+          <article class="step reveal">
+
+            <b>01</b>
+
+            <h3>
+              Écoute & analyse
+            </h3>
+
+            <p>
+
+              Compréhension des besoins
+              et contraintes du projet.
+
+            </p>
+
+          </article>
+
+
+          <article class="step reveal">
+
+            <b>02</b>
+
+            <h3>
+              Étude & devis
+            </h3>
+
+            <p>
+
+              Proposition adaptée
+              et organisation claire
+              de l'intervention.
+
+            </p>
+
+          </article>
+
+
+          <article class="step reveal">
+
+            <b>03</b>
+
+            <h3>
+              Réalisation
+            </h3>
+
+            <p>
+
+              Intervention de terrain
+              avec rigueur
+              et professionnalisme.
+
+            </p>
+
+          </article>
+
+
+          <article class="step reveal">
+
+            <b>04</b>
+
+            <h3>
+              Suivi & maintenance
+            </h3>
+
+            <p>
+
+              Accompagnement
+              pour l'entretien
+              et le suivi des équipements.
+
+            </p>
+
+          </article>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RÉALISATIONS
+    ====================================================== -->
+
+    <section
+      class="section"
+      id="realisations"
+    >
+
+
+      <div class="container">
+
+
+        <div class="section-head reveal">
+
+
+          <div>
+
+
+            <p class="section-label">
+
+              Réalisations
+
+            </p>
+
+
+            <h2>
+
+              Des interventions
+
+              <br>
+
+              qui inspirent confiance.
+
+            </h2>
+
+
+          </div>
+
+
+          <p>
+
+            Cliquez sur une réalisation
+            pour découvrir le détail
+            de la prestation.
+
+          </p>
+
+
+        </div>
+
+
+        <div class="projects">
+
+
+          <article
+            class="project project1 service-trigger"
+            data-service="renovation"
+          >
+
+            <div class="project-content">
+
+              <span>
+                Électricité
+              </span>
+
+              <h3>
+                Rénovation & mise aux normes
+              </h3>
+
+              <p>
+                Voir le détail +
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article
+            class="project project2 service-trigger"
+            data-service="securite"
+          >
+
+            <div class="project-content">
+
+              <span>
+                Sécurité
+              </span>
+
+              <h3>
+                Contrôle d'accès
+              </h3>
+
+              <p>
+                Voir le détail +
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article
+            class="project project3 service-trigger"
+            data-service="reseaux"
+          >
+
+            <div class="project-content">
+
+              <span>
+                Réseau
+              </span>
+
+              <h3>
+                Installations informatiques
+              </h3>
+
+              <p>
+                Voir le détail +
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article
+            class="project project4 service-trigger"
+            data-service="climatisation"
+          >
+
+            <div class="project-content">
+
+              <span>
+                Confort
+              </span>
+
+              <h3>
+                Climatisation
+              </h3>
+
+              <p>
+                Voir le détail +
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+        <div class="brands reveal">
+
+
+          <span>
+            Marques utilisées :
+          </span>
+
+
+          <b>HAGER</b>
+          <b>LEGRAND</b>
+          <b>SCHNEIDER ELECTRIC</b>
+          <b>ATLANTIC</b>
+          <b>BFT</b>
+          <b>ACOVA</b>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ÉQUIPE
+    ====================================================== -->
+
+    <section
+      class="section team-section"
+      id="equipe"
+    >
+
+
+      <div class="container">
+
+
+        <div class="section-head reveal">
+
+
+          <div>
+
+
+            <p class="section-label">
+
+              Notre équipe
+
+            </p>
+
+
+            <h2>
+
+              5 professionnels,
+
+              <br>
+
+              une même équipe.
+
+            </h2>
+
+
+          </div>
+
+
+          <p>
+
+            Cliquez sur une photo
+            pour découvrir le prénom,
+            l'expérience
+            et la spécialité du membre.
+
+          </p>
+
+
+        </div>
+
+
+
+        <div class="team-grid">
+
+
+          <!-- TAHRATI -->
+
+          <button
+            class="team-card reveal team-trigger"
+
+            data-name="M. Tahrati"
+
+            data-experience="Plus de 20 ans d'expérience"
+
+            data-speciality="Gérant • Électricité générale"
+          >
+
+
+            <div class="team-photo">
+
+
+              <img
+                src="monsieur-tahrati.jpg"
+                alt="Monsieur Tahrati"
+              >
+
+
+            </div>
+
+
+            <div class="team-overlay">
+
+
+              <strong>
+                M. Tahrati
+              </strong>
+
+
+              <span>
+                Gérant
+              </span>
+
+
+              <b>
+                Voir le profil +
+              </b>
+
+
+            </div>
+
+
+          </button>
+
+
+
+          <!-- EMERIC -->
+
+          <button
+            class="team-card reveal team-trigger"
+
+            data-name="Emeric"
+
+            data-experience="10 ans d'expérience"
+
+            data-speciality="Prise de muscle"
+          >
+
+
+            <div class="team-photo">
+
+
+              <img
+                src="equipe-emeric.jpg"
+                alt="Emeric"
+                onerror="
+                  this.style.display='none';
+                  this.nextElementSibling.style.display='grid';
+                "
+              >
+
+
+              <span class="team-placeholder">
+
+                Ajoutez
+                equipe-emeric.jpg
+
+              </span>
+
+
+            </div>
+
+
+            <div class="team-overlay">
+
+
+              <strong>
+                Emeric
+              </strong>
+
+
+              <span>
+                10 ans d'expérience
+              </span>
+
+
+              <b>
+                Voir le profil +
+              </b>
+
+
+            </div>
+
+
+          </button>
+
+
+
+          <!-- THOMAS -->
+
+          <button
+            class="team-card reveal team-trigger"
+
+            data-name="Thomas"
+
+            data-experience="5 ans d'expérience"
+
+            data-speciality="Conduite de véhicule EGT"
+          >
+
+
+            <div class="team-photo">
+
+
+              <img
+                src="equipe-thomas.jpg"
+                alt="Thomas"
+                onerror="
+                  this.style.display='none';
+                  this.nextElementSibling.style.display='grid';
+                "
+              >
+
+
+              <span class="team-placeholder">
+
+                Ajoutez
+                equipe-thomas.jpg
+
+              </span>
+
+
+            </div>
+
+
+            <div class="team-overlay">
+
+
+              <strong>
+                Thomas
+              </strong>
+
+
+              <span>
+                5 ans d'expérience
+              </span>
+
+
+              <b>
+                Voir le profil +
+              </b>
+
+
+            </div>
+
+
+          </button>
+
+
+
+          <!-- CHLOÉ -->
+
+          <button
+            class="team-card reveal team-trigger"
+
+            data-name="Chloé"
+
+            data-experience="7 ans d'expérience"
+
+            data-speciality="Dormir"
+          >
+
+
+            <div class="team-photo">
+
+
+              <img
+                src="equipe-chloe.jpg"
+                alt="Chloé"
+                onerror="
+                  this.style.display='none';
+                  this.nextElementSibling.style.display='grid';
+                "
+              >
+
+
+              <span class="team-placeholder">
+
+                Ajoutez
+                equipe-chloe.jpg
+
+              </span>
+
+
+            </div>
+
+
+            <div class="team-overlay">
+
+
+              <strong>
+                Chloé
+              </strong>
+
+
+              <span>
+                7 ans d'expérience
+              </span>
+
+
+              <b>
+                Voir le profil +
+              </b>
+
+
+            </div>
+
+
+          </button>
+
+
+
+          <!-- TATIE -->
+
+          <button
+            class="team-card reveal team-trigger"
+
+            data-name="Tatie"
+
+            data-experience="50 ans d'expérience"
+
+            data-speciality="Crier fort sur l'équipe"
+          >
+
+
+            <div class="team-photo">
+
+
+              <img
+                src="equipe-tatie.jpg"
+                alt="Tatie"
+                onerror="
+                  this.style.display='none';
+                  this.nextElementSibling.style.display='grid';
+                "
+              >
+
+
+              <span class="team-placeholder">
+
+                Ajoutez
+                equipe-tatie.jpg
+
+              </span>
+
+
+            </div>
+
+
+            <div class="team-overlay">
+
+
+              <strong>
+                Tatie
+              </strong>
+
+
+              <span>
+                50 ans d'expérience
+              </span>
+
+
+              <b>
+                Voir le profil +
+              </b>
+
+
+            </div>
+
+
+          </button>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         AVIS
+    ====================================================== -->
+
+    <section
+      class="section reviews"
+      id="avis"
+    >
+
+
+      <div class="container">
+
+
+        <div class="section-head reveal">
+
+
+          <div>
+
+
+            <p class="section-label">
+              Avis clients
+            </p>
+
+
+            <h2>
+              Ils parlent de nous.
+            </h2>
+
+
+          </div>
+
+
+          <a
+            class="btn btn-light"
+            href="https://search.google.com/local/writereview?placeid=ChIJIVqOoHfB9EcRzVAehUyg7SQ"
+            target="_blank"
+            rel="noopener"
+          >
+
+            ★ Noter notre prestation
+
+          </a>
+
+
+        </div>
+
+
+        <div class="review-slider reveal">
+
+
+          <button
+            class="review-button prev"
+            type="button"
+          >
+            ‹
+          </button>
+
+
+          <article class="review active">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p>
+
+              « Très professionnel,
+              communication claire
+              et travaux réalisés
+              avec sérieux. »
+
+            </p>
+
+            <strong>
+              Einar Z.
+            </strong>
+
+            <small>
+              Client EGT
+            </small>
+
+          </article>
+
+
+          <article class="review">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p>
+
+              « Équipe professionnelle
+              et très agréable.
+              Travail réalisé avec succès. »
+
+            </p>
+
+            <strong>
+              Alexandre V.
+            </strong>
+
+            <small>
+              Client EGT
+            </small>
+
+          </article>
+
+
+          <article class="review">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p>
+
+              « Recherche de panne complexe,
+              problème résolu.
+              Entreprise sérieuse et compétente. »
+
+            </p>
+
+            <strong>
+              Alain P.
+            </strong>
+
+            <small>
+              Client EGT
+            </small>
+
+          </article>
+
+
+          <button
+            class="review-button next"
+            type="button"
+          >
+            ›
+          </button>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RECRUTEMENT
+    ====================================================== -->
+
+    <section
+      class="section recruitment"
+      id="recrutement"
+    >
+
+
+      <div class="container recruit-layout">
+
+
+        <div class="recruit-copy reveal">
+
+
+          <p class="section-label">
+
+            EGT recrute
+
+          </p>
+
+
+          <h2>
+
+            Rejoignez
+
+            <br>
+
+            l'équipe EGT.
+
+          </h2>
+
+
+          <p>
+
+            Vous recherchez une entreprise
+            de terrain à Bron ?
+
+            Présentez votre candidature
+            en quelques étapes.
+
+          </p>
+
+
+          <ul>
+
+            <li>
+              Entreprise locale
+            </li>
+
+            <li>
+              Missions variées
+            </li>
+
+            <li>
+              Particuliers et professionnels
+            </li>
+
+            <li>
+              Équipe de terrain
+            </li>
+
+          </ul>
+
+
+          <a
+            href="mailto:contact@egt-tahrati.fr?subject=Candidature EGT Tahrati"
+          >
+
+            Envoyer directement un e-mail →
+
+          </a>
+
+
+        </div>
+
+
+
+        <form
+
+          class="recruit-form reveal"
+
+          id="recruitForm"
+
+          action="https://formsubmit.co/contact@egt-tahrati.fr"
+
+          method="POST"
+
+          enctype="multipart/form-data"
+
+        >
+
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nouvelle candidature - Site EGT Tahrati"
+          >
+
+
+          <input
+            type="hidden"
+            name="_captcha"
+            value="false"
+          >
+
+
+          <input
+            type="hidden"
+            name="_template"
+            value="table"
+          >
+
+
+
+          <div class="form-header">
+
+
+            <span>
+              Votre candidature
+            </span>
+
+
+            <strong id="stepText">
+              Étape 1 / 4
+            </strong>
+
+
+          </div>
+
+
+          <div class="form-progress">
+
+            <span id="formProgress"></span>
+
+          </div>
+
+
+
+          <!-- ÉTAPE 1 -->
+
+          <div
+            class="form-step active"
+            data-step="1"
+          >
+
+
+            <h3>
+              Parlons de vous.
+            </h3>
+
+
+            <div class="field-two">
+
+
+              <label>
+
+                Prénom
+
+                <input
+                  required
+                  name="Prénom"
+                >
+
+              </label>
+
+
+              <label>
+
+                Nom
+
+                <input
+                  required
+                  name="Nom"
+                >
+
+              </label>
+
+
+            </div>
+
+
+            <label>
+
+              E-mail
+
+              <input
+                required
+                type="email"
+                name="Email"
+              >
+
+            </label>
+
+
+            <label>
+
+              Téléphone
+
+              <input
+                required
+                type="tel"
+                name="Téléphone"
+              >
+
+            </label>
+
+
+          </div>
+
+
+
+          <!-- ÉTAPE 2 -->
+
+          <div
+            class="form-step"
+            data-step="2"
+          >
+
+
+            <h3>
+              Quel poste recherchez-vous ?
+            </h3>
+
+
+            <div class="choice-grid">
+
+
+              <label class="choice">
+
+                <input
+                  required
+                  type="radio"
+                  name="Poste"
+                  value="Électricien"
+                >
+
+                <span>
+                  Électricien
+                </span>
+
+              </label>
+
+
+              <label class="choice">
+
+                <input
+                  type="radio"
+                  name="Poste"
+                  value="Technicien"
+                >
+
+                <span>
+                  Technicien
+                </span>
+
+              </label>
+
+
+              <label class="choice">
+
+                <input
+                  type="radio"
+                  name="Poste"
+                  value="Apprenti"
+                >
+
+                <span>
+                  Apprenti
+                </span>
+
+              </label>
+
+
+              <label class="choice">
+
+                <input
+                  type="radio"
+                  name="Poste"
+                  value="Autre"
+                >
+
+                <span>
+                  Autre
+                </span>
+
+              </label>
+
+
+            </div>
+
+
+            <label>
+
+              Expérience
+
+              <select name="Expérience">
+
+                <option>
+                  Débutant
+                </option>
+
+                <option>
+                  1 à 3 ans
+                </option>
+
+                <option>
+                  3 à 5 ans
+                </option>
+
+                <option>
+                  Plus de 5 ans
+                </option>
+
+              </select>
+
+            </label>
+
+
+          </div>
+
+
+
+          <!-- ÉTAPE 3 -->
+
+          <div
+            class="form-step"
+            data-step="3"
+          >
+
+
+            <h3>
+              Votre profil technique.
+            </h3>
+
+
+            <label>
+
+              Diplômes / habilitations / spécialités
+
+              <textarea
+                name="Qualifications"
+                rows="5"
+              ></textarea>
+
+            </label>
+
+
+            <div class="field-two">
+
+
+              <label>
+
+                Permis B
+
+                <select name="Permis B">
+
+                  <option>
+                    Oui
+                  </option>
+
+                  <option>
+                    Non
+                  </option>
+
+                  <option>
+                    En cours
+                  </option>
+
+                </select>
+
+              </label>
+
+
+              <label>
+
+                Disponibilité
+
+                <input
+                  name="Disponibilité"
+                  placeholder="Immédiate, 1 mois..."
+                >
+
+              </label>
+
+
+            </div>
+
+
+          </div>
+
+
+
+          <!-- ÉTAPE 4 -->
+
+          <div
+            class="form-step"
+            data-step="4"
+          >
+
+
+            <h3>
+              Dernière étape.
+            </h3>
+
+
+            <label>
+
+              Pourquoi souhaitez-vous rejoindre EGT ?
+
+              <textarea
+                required
+                name="Motivation"
+                rows="5"
+              ></textarea>
+
+            </label>
+
+
+            <label>
+
+              Votre CV
+
+              <input
+                type="file"
+                name="CV"
+                accept=".pdf,.doc,.docx"
+              >
+
+            </label>
+
+
+            <label class="checkbox">
+
+              <input
+                required
+                type="checkbox"
+                name="Consentement"
+                value="Oui"
+              >
+
+              <span>
+
+                J'accepte que mes informations
+                soient utilisées pour traiter
+                ma candidature.
+
+              </span>
+
+            </label>
+
+
+          </div>
+
+
+
+          <div class="form-buttons">
+
+
+            <button
+              type="button"
+              class="btn back-button"
+              id="backButton"
+            >
+
+              Retour
+
+            </button>
+
+
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="nextButton"
+            >
+
+              Continuer →
+
+            </button>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary"
+              id="submitButton"
+            >
+
+              Envoyer ma candidature →
+
+            </button>
+
+
+          </div>
+
+
+        </form>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section
+      class="section contact"
+      id="contact"
+    >
+
+
+      <div class="container contact-layout">
+
+
+        <div class="contact-text reveal">
+
+
+          <p class="section-label">
+            Contact
+          </p>
+
+
+          <h2>
+
+            Un projet,
+
+            <br>
+
+            un besoin technique ?
+
+          </h2>
+
+
+          <p>
+
+            Contactez EGT Tahrati
+            pour étudier votre projet
+            et obtenir une réponse adaptée.
+
+          </p>
+
+
+          <div class="contact-links">
+
+
+            <a href="tel:+33472378357">
+
+              <small>
+                Téléphone
+              </small>
+
+              <strong>
+                04 72 37 83 57
+              </strong>
+
+            </a>
+
+
+            <a href="tel:+33660616104">
+
+              <small>
+                Mobile
+              </small>
+
+              <strong>
+                06 60 61 61 04
+              </strong>
+
+            </a>
+
+
+            <a href="mailto:contact@egt-tahrati.fr">
+
+              <small>
+                E-mail
+              </small>
+
+              <strong>
+                contact@egt-tahrati.fr
+              </strong>
+
+            </a>
+
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=6+All%C3%A9e+des+Sorbiers+69500+Bron"
+              target="_blank"
+            >
+
+              <small>
+                Adresse
+              </small>
+
+              <strong>
+                6 Allée des Sorbiers
+                69500 Bron
+              </strong>
+
+            </a>
+
+
+          </div>
+
+
+        </div>
+
+
+
+        <form
+
+          class="contact-form reveal"
+
+          action="https://formsubmit.co/contact@egt-tahrati.fr"
+
+          method="POST"
+
+        >
+
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nouvelle demande de devis - Site EGT"
+          >
+
+
+          <input
+            type="hidden"
+            name="_captcha"
+            value="false"
+          >
+
+
+          <h3>
+            Demander un devis
+          </h3>
+
+
+          <div class="field-two">
+
+
+            <label>
+
+              Nom
+
+              <input
+                required
+                name="Nom"
+              >
+
+            </label>
+
+
+            <label>
+
+              Téléphone
+
+              <input
+                required
+                type="tel"
+                name="Téléphone"
+              >
+
+            </label>
+
+
+          </div>
 
 
           <label>
 
-            Permis B
+            E-mail
 
-            <select name="Permis B">
+            <input
+              required
+              type="email"
+              name="Email"
+            >
+
+          </label>
+
+
+          <label>
+
+            Votre besoin
+
+            <select name="Prestation">
 
               <option>
-                Oui
+                Rénovation électrique
               </option>
 
               <option>
-                Non
+                Sécurité & contrôle d'accès
               </option>
 
               <option>
-                En cours
+                Climatisation
+              </option>
+
+              <option>
+                Réseaux informatiques
+              </option>
+
+              <option>
+                Automatismes de portail
+              </option>
+
+              <option>
+                Domotique & chauffage
+              </option>
+
+              <option>
+                Autre
               </option>
 
             </select>
@@ -4608,266 +6524,117 @@ footer p {
 
           <label>
 
-            Disponibilité
+            Message
 
-            <input
-              name="Disponibilité"
-              placeholder="Immédiate, 1 mois..."
-            >
+            <textarea
+              required
+              name="Message"
+              rows="5"
+            ></textarea>
 
           </label>
+
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+          >
+
+            Envoyer ma demande →
+
+          </button>
+
+
+        </form>
+
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =======================================================
+       MODALE SERVICES
+  ======================================================== -->
+
+  <div
+    class="modal"
+    id="serviceModal"
+  >
+
+
+    <div
+      class="modal-background modal-service-close"
+    ></div>
+
+
+    <div class="modal-window">
+
+
+      <button
+        class="modal-close modal-service-close"
+        type="button"
+      >
+        ×
+      </button>
+
+
+      <div class="modal-grid">
+
+
+        <div class="modal-image">
+
+
+          <img
+            id="modalServiceImage"
+            src="renovation-electrique.jpg"
+            alt=""
+          >
 
 
         </div>
 
 
-        <label>
-
-          Mobilité sur Lyon et alentours
-
-          <select name="Mobilité">
-
-            <option>
-              Oui
-            </option>
-
-            <option>
-              Partiellement
-            </option>
-
-            <option>
-              À discuter
-            </option>
-
-          </select>
-
-        </label>
+        <div class="modal-content">
 
 
-      </div>
+          <p
+            class="section-label"
+            id="modalServiceCategory"
+          >
+            Prestation
+          </p>
 
 
-
-      <!-- ETAPE 4 -->
-
-      <div
-        class="form-step"
-        data-step="4"
-      >
+          <h3 id="modalServiceTitle"></h3>
 
 
-        <h3>
-          Dernière étape.
-        </h3>
+          <p id="modalServiceSummary"></p>
 
 
-        <label>
-
-          Pourquoi souhaitez-vous rejoindre EGT ?
-
-          <textarea
-            name="Motivation"
-            rows="5"
-            required
-          ></textarea>
-
-        </label>
+          <ul id="modalServiceList"></ul>
 
 
-        <label>
-
-          CV
-
-          <input
-            type="file"
-            name="CV"
-            accept=".pdf,.doc,.docx"
+          <a
+            class="btn btn-primary modal-service-close"
+            href="#contact"
           >
 
-        </label>
+            Demander un devis
 
+            <strong>
+              →
+            </strong>
 
-        <label class="checkbox">
+          </a>
 
-          <input
-            type="checkbox"
-            name="Consentement"
-            value="Oui"
-            required
-          >
 
-          <span>
-
-            J'accepte que ces informations
-            soient utilisées afin de traiter
-            ma candidature.
-
-          </span>
-
-        </label>
-
-
-      </div>
-
-
-
-      <div class="form-buttons">
-
-
-        <button
-          id="backButton"
-          class="btn back"
-          type="button"
-        >
-
-          Retour
-
-        </button>
-
-
-        <button
-          id="nextButton"
-          class="btn btn-primary"
-          type="button"
-        >
-
-          Continuer →
-
-        </button>
-
-
-        <button
-          id="submitButton"
-          class="btn btn-primary"
-          type="submit"
-        >
-
-          Envoyer ma candidature →
-
-        </button>
-
-
-      </div>
-
-
-      <p class="form-note">
-
-        Lors de la première utilisation,
-        FormSubmit enverra un e-mail à EGT
-        pour confirmer l'autorisation de réception.
-
-      </p>
-
-
-    </form>
-
-
-  </div>
-
-
-</section>
-
-
-
-<!-- =======================================================
-     CONTACT
-======================================================= -->
-
-<section
-  class="section contact"
-  id="contact"
->
-
-
-  <div class="container contact-layout">
-
-
-    <div class="contact-text reveal">
-
-
-      <p class="section-label">
-        Contact
-      </p>
-
-
-      <h2>
-
-        Un projet,
-
-        <br>
-
-        un besoin technique ?
-
-      </h2>
-
-
-      <p>
-
-        Contactez EGT Tahrati
-        pour étudier votre projet
-        et obtenir une réponse adaptée
-        à votre installation.
-
-      </p>
-
-
-      <div class="contact-boxes">
-
-
-        <a href="tel:+33472378357">
-
-          <small>
-            Téléphone
-          </small>
-
-          <strong>
-            04 72 37 83 57
-          </strong>
-
-        </a>
-
-
-        <a href="tel:+33660616104">
-
-          <small>
-            Mobile
-          </small>
-
-          <strong>
-            06 60 61 61 04
-          </strong>
-
-        </a>
-
-
-        <a href="mailto:contact@egt-tahrati.fr">
-
-          <small>
-            E-mail
-          </small>
-
-          <strong>
-            contact@egt-tahrati.fr
-          </strong>
-
-        </a>
-
-
-        <a
-          href="https://www.google.com/maps/search/?api=1&query=6+All%C3%A9e+des+Sorbiers+69500+Bron"
-          target="_blank"
-        >
-
-          <small>
-            Adresse
-          </small>
-
-          <strong>
-            6 Allée des Sorbiers
-            69500 Bron
-          </strong>
-
-        </a>
+        </div>
 
 
       </div>
@@ -4876,375 +6643,119 @@ footer p {
     </div>
 
 
-
-    <form
-
-      class="quote-form reveal"
-
-      action="https://formsubmit.co/contact@egt-tahrati.fr"
-
-      method="POST"
-
-    >
+  </div>
 
 
-      <input
-        type="hidden"
-        name="_subject"
-        value="Nouvelle demande de devis - Site EGT"
-      >
+
+  <!-- =======================================================
+       MODALE ÉQUIPE
+  ======================================================== -->
+
+  <div
+    class="modal"
+    id="teamModal"
+  >
 
 
-      <input
-        type="hidden"
-        name="_captcha"
-        value="false"
-      >
+    <div
+      class="modal-background modal-team-close"
+    ></div>
 
 
-      <input
-        type="hidden"
-        name="_template"
-        value="table"
-      >
-
-
-      <h3>
-        Demander un devis
-      </h3>
-
-
-      <div class="fields-two">
-
-
-        <label>
-
-          Nom
-
-          <input
-            name="Nom"
-            required
-          >
-
-        </label>
-
-
-        <label>
-
-          Téléphone
-
-          <input
-            type="tel"
-            name="Téléphone"
-            required
-          >
-
-        </label>
-
-
-      </div>
-
-
-      <label>
-
-        E-mail
-
-        <input
-          type="email"
-          name="Email"
-          required
-        >
-
-      </label>
-
-
-      <label>
-
-        Votre besoin
-
-        <select name="Prestation">
-
-          <option>
-            Rénovation électrique
-          </option>
-
-          <option>
-            Mise aux normes
-          </option>
-
-          <option>
-            Dépannage
-          </option>
-
-          <option>
-            Contrôle d'accès
-          </option>
-
-          <option>
-            Alarme
-          </option>
-
-          <option>
-            Climatisation
-          </option>
-
-          <option>
-            Réseau informatique
-          </option>
-
-          <option>
-            Automatisme de portail
-          </option>
-
-          <option>
-            Domotique
-          </option>
-
-          <option>
-            Autre
-          </option>
-
-        </select>
-
-      </label>
-
-
-      <label>
-
-        Votre message
-
-        <textarea
-          name="Message"
-          rows="5"
-          required
-        ></textarea>
-
-      </label>
+    <div class="modal-window">
 
 
       <button
-        class="btn btn-primary"
-        type="submit"
+        class="modal-close modal-team-close"
+        type="button"
       >
-
-        Envoyer ma demande →
-
+        ×
       </button>
 
 
-    </form>
+      <div class="modal-grid">
 
 
-  </div>
+        <div class="modal-image">
 
 
-</section>
+          <img
+            id="modalTeamImage"
+            src="monsieur-tahrati.jpg"
+            alt=""
+          >
 
 
-</main>
+        </div>
 
 
+        <div class="modal-content">
 
-<!-- =======================================================
-     GOOGLE + INSTAGRAM + FACEBOOK
-======================================================= -->
 
-<div
-  class="socials"
-  aria-label="Réseaux sociaux"
->
+          <p class="section-label">
 
+            Notre équipe
 
-  <!-- GOOGLE -->
+          </p>
 
-  <a
-    class="social social-google"
-    href="https://www.google.com/search?q=EGT+TAHRATI+Bron+avis"
-    target="_blank"
-    aria-label="EGT Tahrati sur Google"
-  >
 
-    G
+          <h3 id="modalTeamName"></h3>
 
-  </a>
 
+          <p>
 
+            Membre de l'équipe
+            EGT Tahrati.
 
-  <!--
-  INSTAGRAM
+          </p>
 
-  Remplace uniquement l'adresse href
-  lorsque tu possèdes le lien Instagram officiel.
-  -->
 
+          <div class="team-meta">
 
-  <a
-    class="social instagram"
-    href="https://www.google.com/search?q=site%3Ainstagram.com+%22EGT+TAHRATI%22"
-    target="_blank"
-    aria-label="Instagram EGT Tahrati"
-  >
 
+            <div>
 
-    <svg viewBox="0 0 24 24">
+              <small>
+                Expérience
+              </small>
 
-      <rect
-        x="3"
-        y="3"
-        width="18"
-        height="18"
-        rx="5"
-      />
+              <strong id="modalTeamExperience"></strong>
 
-      <circle
-        cx="12"
-        cy="12"
-        r="4"
-      />
+            </div>
 
-      <circle
-        cx="17.5"
-        cy="6.5"
-        r="1"
-      />
 
-    </svg>
+            <div>
 
+              <small>
+                Spécialité
+              </small>
 
-  </a>
+              <strong id="modalTeamSpeciality"></strong>
 
+            </div>
 
 
-  <!-- FACEBOOK -->
+          </div>
 
-  <a
-    class="social facebook"
-    href="https://www.google.com/search?q=site%3Afacebook.com+%22EGT+TAHRATI%22"
-    target="_blank"
-    aria-label="Facebook EGT Tahrati"
-  >
 
+          <a
+            class="btn btn-primary modal-team-close"
+            href="#contact"
+          >
 
-    <svg viewBox="0 0 24 24">
+            Contacter EGT
 
-      <path
-        d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.7.3-1 1-1Z"
-      />
+            <strong>
+              →
+            </strong>
 
-    </svg>
+          </a>
 
 
-  </a>
+        </div>
 
 
-</div>
-
-
-
-<!-- =======================================================
-     FOOTER
-======================================================= -->
-
-<footer>
-
-
-  <div class="container footer-grid">
-
-
-    <div>
-
-
-      <img
-        class="footer-logo"
-        src="logo-egt.png"
-        alt="Logo EGT Tahrati"
-      >
-
-
-      <p>
-
-        Électricité générale
-        à Bron depuis 2003.
-
-        <br>
-
-        Qualité, proximité
-        et professionnalisme.
-
-      </p>
-
-
-    </div>
-
-
-
-    <div>
-
-
-      <h4>
-        Navigation
-      </h4>
-
-
-      <a href="#services">
-        Services
-      </a>
-
-      <a href="#entreprise">
-        Entreprise
-      </a>
-
-      <a href="#avis">
-        Avis
-      </a>
-
-      <a href="#recrutement">
-        EGT recrute
-      </a>
-
-
-    </div>
-
-
-
-    <div>
-
-
-      <h4>
-        Coordonnées
-      </h4>
-
-
-      <a href="tel:+33472378357">
-
-        04 72 37 83 57
-
-      </a>
-
-
-      <a href="tel:+33660616104">
-
-        06 60 61 61 04
-
-      </a>
-
-
-      <a href="mailto:contact@egt-tahrati.fr">
-
-        contact@egt-tahrati.fr
-
-      </a>
-
-
-      <span>
-
-        6 Allée des Sorbiers
-
-        <br>
-
-        69500 Bron
-
-      </span>
+      </div>
 
 
     </div>
@@ -5254,28 +6765,46 @@ footer p {
 
 
 
-  <div class="container footer-bottom">
+  <!-- =======================================================
+       SOCIAL
+  ======================================================== -->
+
+  <div class="socials">
 
 
-    <span>
+    <a
+      class="social social-google"
+      href="https://search.google.com/local/writereview?placeid=ChIJIVqOoHfB9EcRzVAehUyg7SQ"
+      target="_blank"
+      rel="noopener"
+      aria-label="Google"
+    >
 
-      ©
-      <span id="year"></span>
-      EGT Tahrati
+      G
 
-    </span>
-
-
-    <span>
-
-      Tous droits réservés
-
-    </span>
+    </a>
 
 
-    <a href="#top">
+    <a
+      class="social social-instagram"
+      href="https://www.google.com/search?q=site%3Ainstagram.com+%22EGT+TAHRATI%22"
+      target="_blank"
+      aria-label="Instagram"
+    >
 
-      Retour en haut ↑
+      ◎
+
+    </a>
+
+
+    <a
+      class="social social-facebook"
+      href="https://www.google.com/search?q=site%3Afacebook.com+%22EGT+TAHRATI%22"
+      target="_blank"
+      aria-label="Facebook"
+    >
+
+      f
 
     </a>
 
@@ -5283,717 +6812,1405 @@ footer p {
   </div>
 
 
-</footer>
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+
+    <div class="container footer-grid">
+
+
+      <div>
+
+
+        <img
+          class="footer-logo"
+          src="logo-egt.png"
+          alt="EGT Tahrati"
+        >
+
+
+        <p>
+
+          Électricité générale
+          à Bron depuis 2003.
+
+          <br>
+
+          Qualité, proximité
+          et professionnalisme.
+
+        </p>
+
+
+      </div>
+
+
+      <div>
+
+
+        <h4>
+          Navigation
+        </h4>
+
+
+        <a href="#services">
+          Services
+        </a>
+
+
+        <a href="#equipe">
+          Notre équipe
+        </a>
+
+
+        <a href="#avis">
+          Avis
+        </a>
+
+
+        <a href="#recrutement">
+          EGT recrute
+        </a>
+
+
+      </div>
+
+
+      <div>
+
+
+        <h4>
+          Coordonnées
+        </h4>
+
+
+        <a href="tel:+33472378357">
+          04 72 37 83 57
+        </a>
+
+
+        <a href="tel:+33660616104">
+          06 60 61 61 04
+        </a>
+
+
+        <a href="mailto:contact@egt-tahrati.fr">
+          contact@egt-tahrati.fr
+        </a>
+
+
+        <p>
+
+          6 Allée des Sorbiers
+
+          <br>
+
+          69500 Bron
+
+        </p>
+
+
+      </div>
+
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+
+      <span>
+
+        ©
+        <span id="year"></span>
+        EGT Tahrati
+
+      </span>
+
+
+      <span>
+        Tous droits réservés
+      </span>
+
+
+      <a href="#top">
+        Retour en haut ↑
+      </a>
+
+
+    </div>
+
+
+  </footer>
 
 
 
-<script>
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
+  <script>
 
 
-/* =========================================================
-   ELEMENTS
-========================================================= */
+    /* =======================================================
+       MENU
+    ======================================================== */
 
-const header =
-document.querySelector(".header");
-
-const progress =
-document.querySelector(".page-progress span");
-
-const menuButton =
-document.querySelector(".menu-button");
-
-const navigation =
-document.querySelector(".nav-links");
+    const header =
+      document.querySelector(".header");
 
 
-
-/* =========================================================
-   MENU MOBILE
-========================================================= */
-
-menuButton.addEventListener(
-  "click",
-  () => {
-
-    navigation.classList.toggle("open");
-
-    document.body.classList.toggle("menu-open");
-
-  }
-);
+    const nav =
+      document.querySelector(".nav-links");
 
 
-document
-.querySelectorAll(".nav-links a")
-.forEach(link => {
-
-  link.addEventListener(
-    "click",
-    () => {
-
-      navigation.classList.remove("open");
-
-      document.body.classList.remove("menu-open");
-
-    }
-  );
-
-});
+    const menuButton =
+      document.querySelector(".menu-button");
 
 
-
-/* =========================================================
-   SCROLL HEADER + PROGRESS
-========================================================= */
-
-function updateScroll() {
-
-  header.classList.toggle(
-    "scrolled",
-    window.scrollY > 20
-  );
+    const progress =
+      document.querySelector(".page-progress span");
 
 
-  const documentHeight =
+    menuButton.addEventListener(
+      "click",
+      () => {
 
-    document.documentElement.scrollHeight
+        nav.classList.toggle("open");
 
-    - window.innerHeight;
-
-
-  const percentage =
-
-    documentHeight > 0
-
-    ? window.scrollY
-      / documentHeight
-      * 100
-
-    : 0;
-
-
-  progress.style.width =
-    percentage + "%";
-
-
-
-  /* PARALLAX */
-
-  document
-  .querySelectorAll("[data-parallax]")
-  .forEach(element => {
-
-    if(window.innerWidth > 900) {
-
-      const speed =
-        Number(
-          element.dataset.parallax
+        document.body.classList.toggle(
+          "menu-open"
         );
-
-      element.style.transform =
-
-        "translateY("
-
-        + window.scrollY
-        * speed
-
-        + "px)";
-
-    }
-
-  });
-
-}
-
-
-window.addEventListener(
-  "scroll",
-  updateScroll,
-  { passive:true }
-);
-
-
-updateScroll();
-
-
-
-/* =========================================================
-   APPARITION AU SCROLL
-========================================================= */
-
-const revealObserver =
-new IntersectionObserver(
-
-  entries => {
-
-    entries.forEach(
-      entry => {
-
-        if(entry.isIntersecting) {
-
-          entry.target
-          .classList
-          .add("visible");
-
-        }
 
       }
     );
 
-  },
 
-  {
-    threshold: 0.12
-  }
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(link => {
 
-);
+        link.addEventListener(
+          "click",
+          () => {
 
+            nav.classList.remove("open");
 
-document
-.querySelectorAll(".reveal")
-.forEach(element => {
+            document.body
+              .classList
+              .remove("menu-open");
 
-  revealObserver.observe(element);
+          }
+        );
 
-});
-
-
-
-/* =========================================================
-   COMPTEUR
-========================================================= */
-
-const counters =
-document.querySelectorAll(".counter");
+      });
 
 
-const counterObserver =
-new IntersectionObserver(
+    /* =======================================================
+       SCROLL
+    ======================================================== */
 
-  entries => {
+    function updateScroll() {
 
-    entries.forEach(
-      entry => {
 
-        if(!entry.isIntersecting) {
-          return;
+      header.classList.toggle(
+
+        "scrolled",
+
+        window.scrollY > 20
+
+      );
+
+
+      const max =
+
+        document.documentElement
+          .scrollHeight
+
+        - window.innerHeight;
+
+
+      const percent =
+
+        max > 0
+
+        ? window.scrollY
+          / max
+          * 100
+
+        : 0;
+
+
+      progress.style.width =
+        percent + "%";
+
+
+    }
+
+
+    window.addEventListener(
+
+      "scroll",
+
+      updateScroll,
+
+      { passive: true }
+
+    );
+
+
+    updateScroll();
+
+
+    /* =======================================================
+       APPARITION AU SCROLL
+    ======================================================== */
+
+    const revealObserver =
+      new IntersectionObserver(
+
+        entries => {
+
+          entries.forEach(
+            entry => {
+
+              if(
+                entry.isIntersecting
+              ) {
+
+                entry.target
+                  .classList
+                  .add("visible");
+
+              }
+
+            }
+          );
+
+        },
+
+        {
+          threshold: .12
         }
 
-
-        const element =
-          entry.target;
+      );
 
 
-        const target =
-          Number(
-            element.dataset.value
+    document
+      .querySelectorAll(".reveal")
+      .forEach(element => {
+
+        revealObserver
+          .observe(element);
+
+      });
+
+
+    /* =======================================================
+       COMPTEUR
+    ======================================================== */
+
+    const counters =
+      document.querySelectorAll(
+        ".counter"
+      );
+
+
+    const counterObserver =
+      new IntersectionObserver(
+
+        entries => {
+
+
+          entries.forEach(
+            entry => {
+
+
+              if(
+                !entry.isIntersecting
+              ) {
+
+                return;
+
+              }
+
+
+              const element =
+                entry.target;
+
+
+              const target =
+                Number(
+                  element.dataset.value
+                );
+
+
+              let value = 0;
+
+
+              const interval =
+                setInterval(
+                  () => {
+
+
+                    value++;
+
+
+                    element.textContent =
+                      value;
+
+
+                    if(
+                      value >= target
+                    ) {
+
+                      clearInterval(
+                        interval
+                      );
+
+                    }
+
+
+                  },
+
+                  45
+                );
+
+
+              counterObserver
+                .unobserve(element);
+
+
+            }
           );
 
 
-        const duration =
-          1200;
+        },
 
-
-        const startTime =
-          performance.now();
-
-
-        function animate(time) {
-
-          const progress =
-
-            Math.min(
-              (time - startTime)
-              / duration,
-              1
-            );
-
-
-          const value =
-
-            Math.floor(
-
-              target
-
-              * (
-                  1
-                  -
-                  Math.pow(
-                    1 - progress,
-                    3
-                  )
-                )
-
-            );
-
-
-          element.textContent =
-            value;
-
-
-          if(progress < 1) {
-
-            requestAnimationFrame(
-              animate
-            );
-
-          }
-
+        {
+          threshold: .6
         }
 
+      );
 
-        requestAnimationFrame(
-          animate
-        );
 
+    counters.forEach(
+      counter => {
 
         counterObserver
-        .unobserve(element);
+          .observe(counter);
 
       }
     );
 
-  },
 
-  {
-    threshold: .6
-  }
+    /* =======================================================
+       DONNÉES SERVICES
+    ======================================================== */
 
-);
-
-
-counters.forEach(
-  counter => {
-
-    counterObserver
-    .observe(counter);
-
-  }
-);
+    const services = {
 
 
+      renovation: {
 
-/* =========================================================
-   AVIS CLIENTS
-========================================================= */
+        category:
+          "Électricité",
 
-const reviews =
-[
-  ...document.querySelectorAll(
-    ".review"
-  )
-];
+        title:
+          "Rénovation électrique & mise aux normes",
+
+        image:
+          "renovation-electrique.jpg",
+
+        summary:
+          "EGT Tahrati intervient sur les installations électriques existantes afin de les moderniser, les sécuriser et les adapter aux besoins du bâtiment.",
+
+        details: [
+
+          "Rénovation de tableaux électriques",
+
+          "Mise aux normes des installations",
+
+          "Création et modification de circuits",
+
+          "Installation de prises et éclairages",
+
+          "Recherche de panne et dépannage",
+
+          "Rénovation complète ou partielle"
+
+        ]
+
+      },
 
 
-let currentReview = 0;
+      securite: {
+
+        category:
+          "Sécurité",
+
+        title:
+          "Sécurité & contrôle d'accès",
+
+        image:
+          "securite-controle-acces.jpg",
+
+        summary:
+          "Des équipements permettant de contrôler les accès, identifier les visiteurs et renforcer la sécurité des bâtiments.",
+
+        details: [
+
+          "Caméras de vidéosurveillance",
+
+          "Digicodes",
+
+          "Badges et lecteurs d'accès",
+
+          "Portiers vidéo",
+
+          "Interphones",
+
+          "Alarmes intrusion"
+
+        ]
+
+      },
 
 
-function showReview(index) {
+      climatisation: {
 
-  reviews.forEach(
-    (review, reviewIndex) => {
+        category:
+          "Confort",
 
-      review.classList.toggle(
-        "active",
-        reviewIndex === index
+        title:
+          "Climatisation",
+
+        image:
+          "climatisation.jpg",
+
+        summary:
+          "Installation et entretien de solutions de climatisation adaptées aux logements et espaces professionnels.",
+
+        details: [
+
+          "Étude du besoin",
+
+          "Installation des unités",
+
+          "Mise en service",
+
+          "Réglages",
+
+          "Entretien",
+
+          "Diagnostic et dépannage"
+
+        ]
+
+      },
+
+
+      reseaux: {
+
+        category:
+          "Réseaux",
+
+        title:
+          "Réseaux informatiques",
+
+        image:
+          "reseaux-informatiques.jpg",
+
+        summary:
+          "Installation d'infrastructures réseau fiables et organisées pour les environnements professionnels.",
+
+        details: [
+
+          "Câblage informatique",
+
+          "Prises RJ45",
+
+          "Baies de brassage",
+
+          "Switchs",
+
+          "Organisation du câblage",
+
+          "Infrastructure réseau"
+
+        ]
+
+      },
+
+
+      portail: {
+
+        category:
+          "Automatismes",
+
+        title:
+          "Automatismes de portail",
+
+        image:
+          "automatismes-portail.jpg",
+
+        summary:
+          "Motorisation et automatisation des accès pour améliorer confort, sécurité et facilité d'utilisation.",
+
+        details: [
+
+          "Portails battants",
+
+          "Portails coulissants",
+
+          "Motorisation",
+
+          "Télécommandes",
+
+          "Maintenance",
+
+          "Dépannage des automatismes"
+
+        ]
+
+      },
+
+
+      domotique: {
+
+        category:
+          "Domotique",
+
+        title:
+          "Domotique & chauffage",
+
+        image:
+          "domotique-chauffage.jpg",
+
+        summary:
+          "Solutions de commande et de régulation permettant d'améliorer le confort et le pilotage des équipements.",
+
+        details: [
+
+          "Chauffage électrique",
+
+          "Thermostats",
+
+          "Régulation",
+
+          "Commandes intelligentes",
+
+          "Pilotage des équipements",
+
+          "Solutions connectées"
+
+        ]
+
+      }
+
+
+    };
+
+
+    /* =======================================================
+       MODALE SERVICES
+    ======================================================== */
+
+    const serviceModal =
+      document.getElementById(
+        "serviceModal"
       );
 
-    }
-  );
 
-
-  currentReview =
-    index;
-
-}
-
-
-document
-.querySelector(".next")
-.addEventListener(
-  "click",
-  () => {
-
-    showReview(
-
-      (
-        currentReview + 1
-      )
-
-      % reviews.length
-
-    );
-
-  }
-);
-
-
-document
-.querySelector(".previous")
-.addEventListener(
-  "click",
-  () => {
-
-    showReview(
-
-      (
-        currentReview
-        - 1
-        + reviews.length
-      )
-
-      % reviews.length
-
-    );
-
-  }
-);
-
-
-
-setInterval(
-
-  () => {
-
-    if(
-      document.visibilityState
-      === "visible"
-    ) {
-
-      showReview(
-
-        (
-          currentReview + 1
-        )
-
-        % reviews.length
-
+    const modalServiceImage =
+      document.getElementById(
+        "modalServiceImage"
       );
 
-    }
 
-  },
-
-  6000
-
-);
-
-
-
-/* =========================================================
-   QUESTIONNAIRE RECRUTEMENT
-========================================================= */
-
-const recruitmentSteps =
-[
-  ...document.querySelectorAll(
-    ".form-step"
-  )
-];
-
-
-const backButton =
-document.querySelector(
-  "#backButton"
-);
-
-
-const nextButton =
-document.querySelector(
-  "#nextButton"
-);
-
-
-const submitButton =
-document.querySelector(
-  "#submitButton"
-);
-
-
-const stepText =
-document.querySelector(
-  "#stepText"
-);
-
-
-const formProgress =
-document.querySelector(
-  "#formProgress"
-);
-
-
-let currentStep = 0;
-
-
-
-function validateStep() {
-
-  const fields =
-
-    recruitmentSteps[
-      currentStep
-    ]
-
-    .querySelectorAll(
-      "input, select, textarea"
-    );
-
-
-  for(
-    const field
-    of fields
-  ) {
-
-    if(
-      !field.checkValidity()
-    ) {
-
-      field.reportValidity();
-
-      return false;
-
-    }
-
-  }
-
-
-  return true;
-
-}
-
-
-
-function displayStep() {
-
-  recruitmentSteps
-  .forEach(
-    (step, index) => {
-
-      step.classList.toggle(
-        "active",
-        index === currentStep
+    const modalServiceCategory =
+      document.getElementById(
+        "modalServiceCategory"
       );
 
-    }
-  );
+
+    const modalServiceTitle =
+      document.getElementById(
+        "modalServiceTitle"
+      );
 
 
-  stepText.textContent =
-
-    "Étape "
-
-    + (
-        currentStep + 1
-      )
-
-    + " / "
-
-    + recruitmentSteps.length;
+    const modalServiceSummary =
+      document.getElementById(
+        "modalServiceSummary"
+      );
 
 
-  formProgress.style.width =
-
-    (
-      (
-        currentStep + 1
-      )
-
-      / recruitmentSteps.length
-
-      * 100
-    )
-
-    + "%";
+    const modalServiceList =
+      document.getElementById(
+        "modalServiceList"
+      );
 
 
-  backButton.style.visibility =
-
-    currentStep === 0
-
-    ? "hidden"
-
-    : "visible";
-
-
-  nextButton.style.display =
-
-    currentStep
-    ===
-    recruitmentSteps.length - 1
-
-    ? "none"
-
-    : "inline-flex";
-
-
-  submitButton.style.display =
-
-    currentStep
-    ===
-    recruitmentSteps.length - 1
-
-    ? "inline-flex"
-
-    : "none";
-
-}
-
-
-
-nextButton.addEventListener(
-  "click",
-  () => {
-
-    if(
-      validateStep()
-      &&
-      currentStep
-      <
-      recruitmentSteps.length - 1
+    function openService(
+      serviceName
     ) {
 
-      currentStep++;
 
-      displayStep();
-
-    }
-
-  }
-);
+      const service =
+        services[
+          serviceName
+        ];
 
 
-backButton.addEventListener(
-  "click",
-  () => {
-
-    if(currentStep > 0) {
-
-      currentStep--;
-
-      displayStep();
-
-    }
-
-  }
-);
-
-
-displayStep();
-
-
-
-/* =========================================================
-   BOUTON MAGNETIQUE
-========================================================= */
-
-document
-.querySelectorAll(".magnetic")
-.forEach(button => {
-
-
-  button.addEventListener(
-    "mousemove",
-    event => {
-
-      if(
-        window.innerWidth
-        < 900
-      ) {
+      if(!service) {
 
         return;
 
       }
 
 
-      const rectangle =
-        button.getBoundingClientRect();
+      modalServiceImage.src =
+        service.image;
 
 
-      const x =
-
-        event.clientX
-
-        - rectangle.left
-
-        - rectangle.width / 2;
+      modalServiceCategory.textContent =
+        service.category;
 
 
-      const y =
-
-        event.clientY
-
-        - rectangle.top
-
-        - rectangle.height / 2;
+      modalServiceTitle.textContent =
+        service.title;
 
 
-      button.style.transform =
+      modalServiceSummary.textContent =
+        service.summary;
 
-        "translate("
 
-        + x * .08
+      modalServiceList.innerHTML =
 
-        + "px,"
+        service.details
+          .map(
+            item =>
+              `<li>${item}</li>`
+          )
+          .join("");
 
-        + y * .12
 
-        + "px)";
+      serviceModal
+        .classList
+        .add("open");
+
+
+      document.body
+        .classList
+        .add("modal-open");
+
 
     }
-  );
 
 
-  button.addEventListener(
-    "mouseleave",
-    () => {
+    function closeService() {
 
-      button.style.transform = "";
+
+      serviceModal
+        .classList
+        .remove("open");
+
+
+      document.body
+        .classList
+        .remove("modal-open");
+
 
     }
-  );
 
 
-});
+    document
+      .querySelectorAll(
+        ".service-trigger"
+      )
+      .forEach(
+        element => {
 
 
+          element.addEventListener(
+            "click",
+            () => {
 
-/* =========================================================
-   HALO SOURIS
-========================================================= */
+              openService(
+                element.dataset.service
+              );
 
-const cursor =
-document.querySelector(
-  ".cursor-light"
-);
-
-
-window.addEventListener(
-  "mousemove",
-  event => {
-
-    cursor.style.left =
-      event.clientX + "px";
-
-    cursor.style.top =
-      event.clientY + "px";
-
-  }
-);
+            }
+          );
 
 
-
-/* =========================================================
-   ANNEE AUTOMATIQUE
-========================================================= */
-
-document
-.querySelector("#year")
-.textContent =
-new Date().getFullYear();
+        }
+      );
 
 
-</script>
+    document
+      .querySelectorAll(
+        ".modal-service-close"
+      )
+      .forEach(
+        element => {
+
+          element.addEventListener(
+            "click",
+            closeService
+          );
+
+        }
+      );
+
+
+    /* =======================================================
+       ÉQUIPE
+    ======================================================== */
+
+    const teamModal =
+      document.getElementById(
+        "teamModal"
+      );
+
+
+    const modalTeamImage =
+      document.getElementById(
+        "modalTeamImage"
+      );
+
+
+    const modalTeamName =
+      document.getElementById(
+        "modalTeamName"
+      );
+
+
+    const modalTeamExperience =
+      document.getElementById(
+        "modalTeamExperience"
+      );
+
+
+    const modalTeamSpeciality =
+      document.getElementById(
+        "modalTeamSpeciality"
+      );
+
+
+    document
+      .querySelectorAll(
+        ".team-trigger"
+      )
+      .forEach(
+        card => {
+
+
+          card.addEventListener(
+            "click",
+            () => {
+
+
+              const image =
+                card.querySelector(
+                  "img"
+                );
+
+
+              if(
+                image
+                &&
+                image.style.display
+                !== "none"
+              ) {
+
+                modalTeamImage.style.display =
+                  "block";
+
+
+                modalTeamImage.src =
+                  image.src;
+
+              }
+
+              else {
+
+                modalTeamImage.style.display =
+                  "none";
+
+              }
+
+
+              modalTeamName.textContent =
+                card.dataset.name;
+
+
+              modalTeamExperience.textContent =
+                card.dataset.experience;
+
+
+              modalTeamSpeciality.textContent =
+                card.dataset.speciality;
+
+
+              teamModal
+                .classList
+                .add("open");
+
+
+              document.body
+                .classList
+                .add("modal-open");
+
+
+            }
+          );
+
+
+        }
+      );
+
+
+    function closeTeam() {
+
+
+      teamModal
+        .classList
+        .remove("open");
+
+
+      document.body
+        .classList
+        .remove("modal-open");
+
+
+    }
+
+
+    document
+      .querySelectorAll(
+        ".modal-team-close"
+      )
+      .forEach(
+        element => {
+
+          element.addEventListener(
+            "click",
+            closeTeam
+          );
+
+        }
+      );
+
+
+    /* =======================================================
+       EFFET 3D ÉQUIPE
+    ======================================================== */
+
+    if(
+      matchMedia(
+        "(pointer:fine)"
+      ).matches
+    ) {
+
+
+      document
+        .querySelectorAll(
+          ".team-card"
+        )
+        .forEach(
+          card => {
+
+
+            card.addEventListener(
+              "mousemove",
+              event => {
+
+
+                const rect =
+                  card
+                    .getBoundingClientRect();
+
+
+                const x =
+
+                  (
+                    event.clientX
+                    - rect.left
+                  )
+                  /
+                  rect.width;
+
+
+                const y =
+
+                  (
+                    event.clientY
+                    - rect.top
+                  )
+                  /
+                  rect.height;
+
+
+                const rotateX =
+
+                  (
+                    .5 - y
+                  )
+
+                  * 6;
+
+
+                const rotateY =
+
+                  (
+                    x - .5
+                  )
+
+                  * 7;
+
+
+                card.style
+                  .setProperty(
+
+                    "--mouse-x",
+
+                    `${x * 100}%`
+
+                  );
+
+
+                card.style
+                  .setProperty(
+
+                    "--mouse-y",
+
+                    `${y * 100}%`
+
+                  );
+
+
+                card.style.transform =
+
+                  `translateY(-8px)
+                  perspective(900px)
+                  rotateX(${rotateX}deg)
+                  rotateY(${rotateY}deg)`;
+
+
+              }
+            );
+
+
+            card.addEventListener(
+              "mouseleave",
+              () => {
+
+                card.style.transform =
+                  "";
+
+              }
+            );
+
+
+          }
+        );
+
+
+    }
+
+
+    /* =======================================================
+       AVIS SLIDER
+    ======================================================== */
+
+    const reviews =
+      [
+        ...document.querySelectorAll(
+          ".review"
+        )
+      ];
+
+
+    let currentReview = 0;
+
+
+    function showReview(index) {
+
+
+      reviews.forEach(
+        (
+          review,
+          reviewIndex
+        ) => {
+
+
+          review
+            .classList
+            .toggle(
+
+              "active",
+
+              reviewIndex
+              ===
+              index
+
+            );
+
+
+        }
+      );
+
+
+      currentReview =
+        index;
+
+
+    }
+
+
+    document
+      .querySelector(".next")
+      .addEventListener(
+        "click",
+        () => {
+
+
+          showReview(
+
+            (
+              currentReview + 1
+            )
+
+            % reviews.length
+
+          );
+
+
+        }
+      );
+
+
+    document
+      .querySelector(".prev")
+      .addEventListener(
+        "click",
+        () => {
+
+
+          showReview(
+
+            (
+              currentReview
+              - 1
+              + reviews.length
+            )
+
+            % reviews.length
+
+          );
+
+
+        }
+      );
+
+
+    setInterval(
+
+      () => {
+
+
+        showReview(
+
+          (
+            currentReview + 1
+          )
+
+          % reviews.length
+
+        );
+
+
+      },
+
+      6500
+
+    );
+
+
+    /* =======================================================
+       QUESTIONNAIRE RECRUTEMENT
+    ======================================================== */
+
+    const formSteps =
+      [
+        ...document.querySelectorAll(
+          ".form-step"
+        )
+      ];
+
+
+    const backButton =
+      document.getElementById(
+        "backButton"
+      );
+
+
+    const nextButton =
+      document.getElementById(
+        "nextButton"
+      );
+
+
+    const submitButton =
+      document.getElementById(
+        "submitButton"
+      );
+
+
+    const stepText =
+      document.getElementById(
+        "stepText"
+      );
+
+
+    const formProgress =
+      document.getElementById(
+        "formProgress"
+      );
+
+
+    let currentStep =
+      0;
+
+
+    function validateStep() {
+
+
+      const fields =
+
+        formSteps[
+          currentStep
+        ]
+        .querySelectorAll(
+          "input,select,textarea"
+        );
+
+
+      for(
+        const field
+        of fields
+      ) {
+
+
+        if(
+          !field.checkValidity()
+        ) {
+
+
+          field.reportValidity();
+
+
+          return false;
+
+
+        }
+
+
+      }
+
+
+      return true;
+
+
+    }
+
+
+    function displayStep() {
+
+
+      formSteps.forEach(
+        (
+          step,
+          index
+        ) => {
+
+
+          step
+            .classList
+            .toggle(
+
+              "active",
+
+              index
+              ===
+              currentStep
+
+            );
+
+
+        }
+      );
+
+
+      stepText.textContent =
+
+        `Étape
+        ${currentStep + 1}
+        /
+        ${formSteps.length}`;
+
+
+      formProgress.style.width =
+
+        (
+          (
+            currentStep + 1
+          )
+
+          /
+          formSteps.length
+
+          * 100
+        )
+
+        + "%";
+
+
+      backButton.style.visibility =
+
+        currentStep === 0
+
+        ? "hidden"
+
+        : "visible";
+
+
+      nextButton.style.display =
+
+        currentStep
+        ===
+        formSteps.length - 1
+
+        ? "none"
+
+        : "inline-flex";
+
+
+      submitButton.style.display =
+
+        currentStep
+        ===
+        formSteps.length - 1
+
+        ? "inline-flex"
+
+        : "none";
+
+
+    }
+
+
+    nextButton.addEventListener(
+      "click",
+      () => {
+
+
+        if(
+          validateStep()
+          &&
+          currentStep
+          <
+          formSteps.length - 1
+        ) {
+
+
+          currentStep++;
+
+
+          displayStep();
+
+
+        }
+
+
+      }
+    );
+
+
+    backButton.addEventListener(
+      "click",
+      () => {
+
+
+        if(
+          currentStep > 0
+        ) {
+
+
+          currentStep--;
+
+
+          displayStep();
+
+
+        }
+
+
+      }
+    );
+
+
+    displayStep();
+
+
+    /* =======================================================
+       ESCAPE POUR FERMER MODALES
+    ======================================================== */
+
+    window.addEventListener(
+      "keydown",
+      event => {
+
+
+        if(
+          event.key === "Escape"
+        ) {
+
+
+          closeService();
+
+
+          closeTeam();
+
+
+        }
+
+
+      }
+    );
+
+
+    /* =======================================================
+       ANNÉE AUTOMATIQUE
+    ======================================================== */
+
+    document
+      .getElementById(
+        "year"
+      )
+      .textContent =
+
+        new Date()
+          .getFullYear();
+
+
+  </script>
 
 
 </body>
