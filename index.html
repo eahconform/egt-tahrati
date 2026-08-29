@@ -5,10 +5,7 @@
 
 <meta charset="UTF-8">
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta
   name="description"
@@ -21,7 +18,9 @@
 
 
 <!-- =========================================================
-     PHOTOS À CONSERVER SUR GITHUB
+     IMAGES À METTRE SUR GITHUB
+
+     accueil-egt-premium.jpg
 
      logo-egt.png
      monsieur-tahrati.jpg
@@ -39,34 +38,22 @@
      equipe-thomas.jpg
      equipe-chloe.jpg
      equipe-tatie.jpg
-
-     Pour changer une photo :
-     remplace simplement le fichier sur GitHub
-     en gardant exactement le même nom.
 ========================================================= -->
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link
-  rel="preconnect"
-  href="https://fonts.gstatic.com"
-  crossorigin
->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
   href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
   rel="stylesheet"
 >
 
-<link
-  rel="icon"
-  href="logo-egt.png"
->
+<link rel="icon" href="logo-egt.png">
 
 
 <style>
-
 
 /* =========================================================
    VARIABLES
@@ -74,26 +61,25 @@
 
 :root {
 
-  --violet: #8e2d82;
-  --violet2: #ad4098;
+  --violet: #8d287e;
+  --violet-light: #ad4098;
 
-  --violet-dark: #24102e;
-  --violet-deep: #130819;
+  --violet-dark: #2a0d31;
+  --violet-deep: #120718;
 
-  --orange: #f6a428;
-  --orange-light: #ffc45b;
+  --orange: #f4a62a;
+  --orange-light: #ffc45a;
 
   --white: #ffffff;
   --paper: #fbfaf8;
 
-  --text: #191522;
+  --text: #1b1720;
   --muted: #716a73;
 
-  --line: #e9e1e9;
+  --border: #e9e1e9;
 
   --shadow:
-    0 30px 80px
-    rgba(38, 13, 44, 0.14);
+    0 28px 75px rgba(45, 15, 52, 0.13);
 
 }
 
@@ -103,18 +89,12 @@
 ========================================================= */
 
 * {
-
   box-sizing: border-box;
-
 }
-
 
 html {
-
   scroll-behavior: smooth;
-
 }
-
 
 body {
 
@@ -132,14 +112,10 @@ body {
 
 }
 
-
 body.menu-open,
 body.modal-open {
-
   overflow: hidden;
-
 }
-
 
 img {
 
@@ -149,7 +125,6 @@ img {
 
 }
 
-
 a {
 
   color: inherit;
@@ -158,23 +133,16 @@ a {
 
 }
 
-
 button,
 input,
 select,
 textarea {
-
   font: inherit;
-
 }
-
 
 button {
-
   cursor: pointer;
-
 }
-
 
 .container {
 
@@ -190,7 +158,7 @@ button {
 
 
 /* =========================================================
-   PROGRESSION
+   BARRE DE PROGRESSION
 ========================================================= */
 
 .page-progress {
@@ -200,7 +168,6 @@ button {
   z-index: 9999;
 
   top: 0;
-
   left: 0;
 
   width: 100%;
@@ -208,7 +175,6 @@ button {
   height: 3px;
 
 }
-
 
 .page-progress span {
 
@@ -219,7 +185,6 @@ button {
   height: 100%;
 
   background:
-
     linear-gradient(
       90deg,
       var(--orange),
@@ -240,40 +205,34 @@ button {
   z-index: 1000;
 
   top: 0;
-
-  right: 0;
-
   left: 0;
+  right: 0;
 
   height: 88px;
 
   background:
-    rgba(255, 255, 255, 0.91);
+    rgba(255,255,255,.93);
 
   backdrop-filter:
     blur(20px);
 
   border-bottom:
-    1px solid
-    rgba(70, 30, 75, .07);
+    1px solid rgba(70,30,75,.07);
 
   transition:
-    .3s ease;
+    height .3s ease,
+    box-shadow .3s ease;
 
 }
-
 
 .header.scrolled {
 
   height: 72px;
 
   box-shadow:
-
-    0 15px 45px
-    rgba(30, 10, 35, .08);
+    0 15px 45px rgba(30,10,35,.08);
 
 }
-
 
 .nav {
 
@@ -283,10 +242,9 @@ button {
 
   align-items: center;
 
-  gap: 24px;
+  gap: 22px;
 
 }
-
 
 .logo {
 
@@ -296,7 +254,6 @@ button {
 
 }
 
-
 .logo img {
 
   width: 100%;
@@ -305,11 +262,9 @@ button {
 
   object-fit: contain;
 
-  object-position:
-    left center;
+  object-position: left center;
 
 }
-
 
 .nav-links {
 
@@ -319,10 +274,9 @@ button {
 
   align-items: center;
 
-  gap: 20px;
+  gap: 19px;
 
 }
-
 
 .nav-links a {
 
@@ -332,21 +286,19 @@ button {
 
   font-weight: 800;
 
-  letter-spacing: .04em;
+  letter-spacing: .045em;
 
   text-transform: uppercase;
 
 }
 
-
-.nav-links a:not(.google-review-button)::after {
+.nav-links a:not(.review-header)::after {
 
   content: "";
 
   position: absolute;
 
   left: 0;
-
   bottom: -8px;
 
   width: 100%;
@@ -363,27 +315,19 @@ button {
 
 }
 
-
 .nav-links a:hover::after {
-
   transform: scaleX(1);
-
 }
 
+.review-header {
 
-.google-review-button {
+  padding: 10px 14px;
 
-  padding:
-    10px 13px;
+  border-radius: 999px;
 
-  border-radius:
-    999px;
-
-  color:
-    var(--violet-dark);
+  color: var(--violet-dark);
 
   background:
-
     linear-gradient(
       135deg,
       var(--orange),
@@ -394,24 +338,20 @@ button {
 
 }
 
-
 .phone-header {
 
-  padding:
-    13px 18px;
+  padding: 13px 18px;
 
   flex-shrink: 0;
 
   border:
-    1px solid
-    rgba(246, 164, 40, .55);
+    1px solid rgba(244,166,42,.5);
 
   border-radius: 12px;
 
   color: white;
 
-  background:
-    var(--violet-deep);
+  background: var(--violet-deep);
 
   font-size: 13px;
 
@@ -419,14 +359,12 @@ button {
 
 }
 
-
 .mobile-menu {
 
   display: none;
 
-  width: 45px;
-
-  height: 45px;
+  width: 46px;
+  height: 46px;
 
   border: none;
 
@@ -434,19 +372,17 @@ button {
 
 }
 
-
 .mobile-menu span {
 
   display: block;
 
-  width: 25px;
+  width: 26px;
 
   height: 2px;
 
   margin: 6px auto;
 
-  background:
-    var(--violet-dark);
+  background: var(--violet-dark);
 
 }
 
@@ -459,661 +395,214 @@ button {
 
   display: inline-flex;
 
-  justify-content: center;
-
   align-items: center;
 
-  gap: 14px;
+  justify-content: center;
 
-  padding:
-    16px 23px;
+  gap: 13px;
+
+  padding: 16px 23px;
 
   border: none;
 
-  border-radius: 12px;
+  border-radius: 13px;
 
   font-weight: 800;
 
   transition:
-    .3s ease;
+    transform .3s ease,
+    box-shadow .3s ease;
 
 }
-
 
 .btn:hover {
 
-  transform:
-    translateY(-3px);
+  transform: translateY(-3px);
 
 }
-
 
 .btn-primary {
 
   color: white;
 
   background:
-
     linear-gradient(
       135deg,
       var(--violet),
-      var(--violet2)
+      var(--violet-light)
     );
 
   box-shadow:
-
-    0 16px 35px
-    rgba(142, 45, 130, .25);
+    0 16px 38px rgba(142,45,130,.27);
 
 }
-
 
 .btn-primary span {
-
-  color:
-    var(--orange-light);
-
+  color: var(--orange-light);
 }
 
-
 .btn-white {
+
+  color: var(--violet-dark);
 
   background: white;
 
   border:
-    1px solid
-    #d9cfda;
+    1px solid rgba(255,255,255,.45);
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.08);
 
 }
 
 
 /* =========================================================
-   HERO
+   ACCUEIL PREMIUM
 ========================================================= */
 
 .hero {
 
   position: relative;
 
-  min-height: 850px;
+  min-height: 890px;
 
   padding:
-    145px 0 55px;
+    130px 0 60px;
 
   overflow: hidden;
 
   background:
-
-    radial-gradient(
-      circle at 85% 15%,
-      rgba(174, 61, 153, .17),
-      transparent 29%
-    ),
-
-    radial-gradient(
-      circle at 3% 80%,
-      rgba(246, 164, 40, .10),
-      transparent 27%
-    ),
-
     linear-gradient(
       180deg,
-      #fff,
-      #fbf7fb
+      #ffffff,
+      #faf6fa
     );
 
 }
 
-
-.hero-grid-bg {
-
-  position: absolute;
-
-  inset: 0;
-
-  opacity: .22;
-
-  background-image:
-
-    linear-gradient(
-      rgba(142, 45, 130, .05)
-      1px,
-      transparent 1px
-    ),
-
-    linear-gradient(
-      90deg,
-      rgba(142, 45, 130, .05)
-      1px,
-      transparent 1px
-    );
-
-  background-size:
-    55px 55px;
-
-  mask-image:
-
-    linear-gradient(
-      to bottom,
-      #000,
-      transparent 88%
-    );
-
-}
-
-
-.hero-layout {
-
-  position: relative;
-
-  z-index: 2;
-
-  display: grid;
-
-  grid-template-columns:
-    1.03fr .97fr;
-
-  gap: 48px;
-
-  align-items: center;
-
-}
-
-
-.eyebrow,
-.section-kicker {
-
-  color:
-    var(--violet);
-
-  font-size: 11px;
-
-  font-weight: 800;
-
-  letter-spacing: .13em;
-
-  text-transform: uppercase;
-
-}
-
-
-.hero h1 {
-
-  margin:
-    22px 0 24px;
-
-  font-family:
-    "Manrope",
-    sans-serif;
-
-  font-size:
-    clamp(
-      53px,
-      6vw,
-      86px
-    );
-
-  line-height: .99;
-
-  letter-spacing:
-    -.055em;
-
-}
-
-
-.hero h1 span {
-
-  color:
-    var(--violet);
-
-}
-
-
-.hero-description {
-
-  max-width: 650px;
-
-  color:
-    #5d5660;
-
-  font-size: 18px;
-
-  line-height: 1.7;
-
-}
-
-
-.hero-buttons {
-
-  display: flex;
-
-  gap: 14px;
-
-  margin-top: 34px;
-
-}
-
-
-.hero-trust {
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 30px;
-
-  margin-top: 34px;
-
-}
-
-
-.hero-trust div {
-
-  display: grid;
-
-  gap: 3px;
-
-}
-
-
-.hero-trust strong {
-
-  font-family:
-    "Manrope";
-
-  font-size: 17px;
-
-}
-
-
-.hero-trust span {
-
-  color:
-    #786f7b;
-
-  font-size: 11px;
-
-}
-
-
-/* =========================================================
-   PHOTO TAHRATI INTÉGRÉE AU DÉCOR
-========================================================= */
-
-.hero-person {
-
-  position: relative;
-
-  display: flex;
-
-  align-items: flex-end;
-
-  justify-content: center;
-
-  min-height: 610px;
-
-  padding:
-    38px 20px 12px;
-
-}
-
-
-.hero-person::before {
+.hero::before {
 
   content: "";
 
   position: absolute;
 
-  inset:
-    35px 15px 10px;
+  width: 520px;
+  height: 520px;
 
-  border-radius:
-    42px 42px 20px 20px;
+  top: 80px;
+  left: -260px;
+
+  border-radius: 50%;
 
   background:
+    rgba(142,45,130,.13);
 
-    radial-gradient(
-      circle at 58% 30%,
-      rgba(246, 164, 40, .18),
-      transparent 26%
-    ),
-
-    radial-gradient(
-      circle at 40% 45%,
-      rgba(142, 45, 130, .18),
-      transparent 42%
-    ),
-
-    linear-gradient(
-      145deg,
-      #f9f2f9,
-      #eee1ef 50%,
-      #fff
-    );
-
-  box-shadow:
-    inset 0 0 0 1px
-    rgba(142, 45, 130, .07),
-
-    0 35px 90px
-    rgba(48, 17, 53, .13);
+  filter: blur(40px);
 
 }
 
+.hero::after {
 
-.hero-decoration {
+  content: "";
 
   position: absolute;
 
-  inset:
-    62px 44px 40px;
+  width: 450px;
+  height: 450px;
 
-  border-radius: 34px;
+  right: -180px;
+  bottom: 0;
 
-  opacity: .45;
-
-  background-image:
-
-    linear-gradient(
-      rgba(142, 45, 130, .06)
-      1px,
-      transparent 1px
-    ),
-
-    linear-gradient(
-      90deg,
-      rgba(142, 45, 130, .06)
-      1px,
-      transparent 1px
-    );
-
-  background-size:
-    42px 42px;
-
-}
-
-
-.hero-photo {
-
-  position: relative;
-
-  z-index: 2;
-
-  width: min(100%, 480px);
-
-  overflow: hidden;
-
-  border-radius:
-    220px 220px 26px 26px;
-
-  border:
-    7px solid
-    rgba(255,255,255,.72);
+  border-radius: 50%;
 
   background:
-    linear-gradient(
-      145deg,
-      #e9dce9,
-      white
-    );
+    rgba(244,166,42,.10);
 
-  box-shadow:
-
-    0 35px 80px
-    rgba(45,16,49,.18);
-
-}
-
-
-.hero-photo img {
-
-  width: 100%;
-
-  height: auto;
-
-  max-height: 540px;
-
-  object-fit: contain;
-
-  object-position:
-    center bottom;
-
-  transition:
-    transform .8s
-    cubic-bezier(.2,.7,.2,1);
-
-}
-
-
-.hero-person:hover
-.hero-photo img {
-
-  transform:
-    scale(1.025);
-
-}
-
-
-.hero-badge {
-
-  position: absolute;
-
-  z-index: 5;
-
-  right: 25px;
-
-  bottom: 35px;
-
-  display: grid;
-
-  min-width: 115px;
-
-  padding:
-    14px 17px;
-
-  border-radius: 17px;
-
-  color: white;
-
-  background:
-
-    linear-gradient(
-      145deg,
-      var(--violet-dark),
-      var(--violet)
-    );
-
-  box-shadow:
-
-    0 16px 40px
-    rgba(40,15,45,.25);
-
-}
-
-
-.hero-badge small {
-
-  color:
-    #e7dbe8;
-
-}
-
-
-.hero-badge strong {
-
-  color:
-    var(--orange-light);
-
-  font-family:
-    "Manrope";
-
-  font-size: 27px;
-
-}
-
-
-.quality {
-
-  position: absolute;
-
-  z-index: 5;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  padding:
-    10px 14px;
-
-  border:
-    1px solid
-    rgba(142,45,130,.12);
-
-  border-radius: 14px;
-
-  background:
-    rgba(255,255,255,.94);
-
-  backdrop-filter:
-    blur(12px);
-
-  box-shadow:
-
-    0 14px 38px
-    rgba(35,12,42,.11);
-
-  font-family:
-    "Manrope";
-
-  font-size: 13px;
-
-  font-weight: 700;
-
-  animation:
-    floating
-    6s
-    ease-in-out
-    infinite;
-
-}
-
-
-.quality b {
-
-  color:
-    var(--orange);
-
-}
-
-
-.q1 {
-
-  left: 0;
-
-  top: 110px;
-
-}
-
-
-.q2 {
-
-  right: 0;
-
-  top: 145px;
-
-  animation-delay:
-    -1s;
-
-}
-
-
-.q3 {
-
-  left: -5px;
-
-  top: 285px;
-
-  animation-delay:
-    -2s;
-
-}
-
-
-.q4 {
-
-  right: -3px;
-
-  top: 330px;
-
-  animation-delay:
-    -3s;
-
-}
-
-
-.q5 {
-
-  left: 25px;
-
-  bottom: 65px;
-
-  animation-delay:
-    -4s;
-
-}
-
-
-@keyframes floating {
-
-  50% {
-
-    transform:
-      translateY(-8px);
-
-  }
+  filter: blur(50px);
 
 }
 
 
 /* =========================================================
-   GOOGLE / STATS
+   GRANDE PHOTO ACCUEIL
 ========================================================= */
 
-.hero-proof {
+.hero-stage {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  min-height: 650px;
+
+  overflow: hidden;
+
+  border-radius: 35px;
+
+  background: var(--violet-dark);
+
+  box-shadow:
+    0 35px 100px rgba(35,10,40,.24);
+
+}
+
+.hero-stage-image {
+
+  position: absolute;
+
+  inset: 0;
+
+}
+
+.hero-stage-image img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+}
+
+.hero-stage::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(15,5,19,.93) 0%,
+      rgba(24,7,29,.77) 32%,
+      rgba(35,10,39,.35) 57%,
+      rgba(20,5,25,.05) 100%
+    ),
+
+    linear-gradient(
+      to top,
+      rgba(18,5,23,.42),
+      transparent 45%
+    );
+
+}
+
+.hero-content {
 
   position: relative;
 
   z-index: 5;
 
-  display: grid;
+  max-width: 620px;
 
-  grid-template-columns:
-    1.4fr
-    repeat(3,1fr);
-
-  margin-top: 48px;
-
-  overflow: hidden;
-
-  border:
-    1px solid
-    #eee7ee;
-
-  border-radius: 24px;
-
-  background: white;
-
-  box-shadow:
-    var(--shadow);
-
-}
-
-
-.hero-proof > * {
-
-  min-height: 115px;
+  min-height: 650px;
 
   display: flex;
 
@@ -1122,75 +611,315 @@ button {
   justify-content: center;
 
   padding:
-    24px 27px;
+    55px 0 55px 55px;
+
+  color: white;
 
 }
 
+.eyebrow {
+
+  color: var(--orange-light);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: .14em;
+
+  text-transform: uppercase;
+
+}
+
+.hero h1 {
+
+  margin:
+    18px 0 22px;
+
+  font-family:
+    "Manrope";
+
+  font-size:
+    clamp(
+      50px,
+      5.8vw,
+      81px
+    );
+
+  line-height: .98;
+
+  letter-spacing: -.055em;
+
+}
+
+.hero h1 span {
+
+  color: var(--orange-light);
+
+}
+
+.hero-description {
+
+  max-width: 570px;
+
+  color:
+    rgba(255,255,255,.86);
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+}
+
+.hero-buttons {
+
+  display: flex;
+
+  gap: 13px;
+
+  margin-top: 29px;
+
+}
+
+.hero-points {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 25px;
+
+  margin-top: 32px;
+
+}
+
+.hero-points div {
+
+  display: grid;
+
+  gap: 3px;
+
+}
+
+.hero-points strong {
+
+  color: white;
+
+  font-family: "Manrope";
+
+  font-size: 16px;
+
+}
+
+.hero-points span {
+
+  color:
+    rgba(255,255,255,.68);
+
+  font-size: 10px;
+
+}
+
+
+/* =========================================================
+   EFFETS DÉCOR ACCUEIL
+========================================================= */
+
+.hero-glow {
+
+  position: absolute;
+
+  z-index: 4;
+
+  width: 300px;
+  height: 300px;
+
+  right: 20%;
+  bottom: -130px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(244,166,42,.17);
+
+  filter:
+    blur(60px);
+
+}
+
+.hero-line {
+
+  position: absolute;
+
+  z-index: 4;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--orange),
+      var(--violet),
+      transparent
+    );
+
+}
+
+.hero-badge {
+
+  position: absolute;
+
+  z-index: 5;
+
+  right: 25px;
+  bottom: 25px;
+
+  padding:
+    13px 17px;
+
+  border:
+    1px solid rgba(255,255,255,.15);
+
+  border-radius: 17px;
+
+  color: white;
+
+  background:
+    rgba(40,12,45,.74);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.22);
+
+}
+
+.hero-badge small {
+
+  display: block;
+
+  color:
+    rgba(255,255,255,.72);
+
+  font-size: 10px;
+
+}
+
+.hero-badge strong {
+
+  display: block;
+
+  margin-top: 2px;
+
+  color: var(--orange-light);
+
+  font-family: "Manrope";
+
+  font-size: 24px;
+
+}
+
+
+/* =========================================================
+   GOOGLE / CHIFFRES ACCUEIL
+========================================================= */
+
+.hero-proof {
+
+  position: relative;
+
+  z-index: 4;
+
+  display: grid;
+
+  grid-template-columns:
+    1.35fr
+    repeat(3,1fr);
+
+  margin-top: 25px;
+
+  overflow: hidden;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 24px;
+
+  background: white;
+
+  box-shadow: var(--shadow);
+
+}
+
+.hero-proof > * {
+
+  min-height: 110px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 22px 26px;
+
+}
 
 .hero-proof > * + * {
 
   border-left:
-    1px solid
-    var(--line);
+    1px solid var(--border);
 
 }
-
 
 .google {
 
-  color:
-    #4285f4;
+  color: #4285f4;
 
-  font-size: 21px;
+  font-size: 20px;
 
-  font-weight: 700;
+  font-weight: 800;
 
 }
 
-
 .stars {
 
-  color:
-    #f5a623;
+  color: #f5a623;
 
   letter-spacing: 2px;
 
 }
 
-
 .google-score strong {
 
-  font-size:
-    25px;
+  font-size: 24px;
 
 }
-
 
 .google-score small {
 
-  color:
-    var(--muted);
+  color: var(--muted);
 
 }
-
 
 .proof-stat strong {
 
-  color:
-    var(--violet);
+  color: var(--violet);
 
-  font-family:
-    "Manrope";
+  font-family: "Manrope";
 
-  font-size: 31px;
+  font-size: 30px;
 
 }
 
-
 .proof-stat span {
 
-  color:
-    var(--muted);
+  color: var(--muted);
 
   font-size: 11px;
 
@@ -1203,17 +932,28 @@ button {
 
 .clients {
 
-  padding:
-    36px 0;
-
-  border-bottom:
-    1px solid
-    var(--line);
+  padding: 38px 0;
 
   background: white;
 
+  border-bottom:
+    1px solid var(--border);
+
 }
 
+.section-kicker {
+
+  color: var(--violet);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: .14em;
+
+  text-transform: uppercase;
+
+}
 
 .clients-title {
 
@@ -1223,13 +963,11 @@ button {
 
 }
 
-
 .marquee {
 
   overflow: hidden;
 
   mask-image:
-
     linear-gradient(
       90deg,
       transparent,
@@ -1240,7 +978,6 @@ button {
 
 }
 
-
 .marquee-track {
 
   display: flex;
@@ -1248,11 +985,9 @@ button {
   width: max-content;
 
   animation:
-    marquee
-    28s linear infinite;
+    marquee 27s linear infinite;
 
 }
-
 
 .marquee:hover
 .marquee-track {
@@ -1260,7 +995,6 @@ button {
   animation-play-state: paused;
 
 }
-
 
 .marquee img {
 
@@ -1274,14 +1008,10 @@ button {
 
 }
 
-
 @keyframes marquee {
 
   to {
-
-    transform:
-      translateX(-33.333%);
-
+    transform: translateX(-33.333%);
   }
 
 }
@@ -1293,96 +1023,82 @@ button {
 
 .section {
 
-  padding:
-    105px 0;
+  padding: 105px 0;
 
 }
-
 
 .section-head {
 
   display: flex;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
-  align-items:
-    flex-end;
+  align-items: flex-end;
 
-  gap: 60px;
+  gap: 55px;
 
   margin-bottom: 44px;
 
 }
 
-
 .section-head > div {
 
-  max-width: 680px;
+  max-width: 690px;
 
 }
-
 
 .section-head > p {
 
-  max-width: 450px;
+  max-width: 460px;
 
-  color:
-    var(--muted);
+  color: var(--muted);
 
-  line-height:
-    1.75;
+  line-height: 1.7;
 
 }
-
 
 h2 {
 
   margin:
-    10px 0;
+    9px 0;
 
-  font-family:
-    "Manrope";
+  font-family: "Manrope";
 
   font-size:
-
     clamp(
       37px,
       4vw,
       58px
     );
 
-  line-height: 1.03;
+  line-height: 1.04;
 
-  letter-spacing:
-    -.045em;
+  letter-spacing: -.045em;
 
 }
 
 
 /* =========================================================
-   SERVICES VERSION VISUELLE
+   SERVICES VISUELS
 ========================================================= */
 
 .services {
 
   background:
-
     linear-gradient(
       180deg,
-      #fff,
-      #fbf8fb
+      white,
+      #faf6fa
     );
 
 }
 
-
-.service-showcase {
+.service-grid {
 
   display: grid;
 
   grid-template-columns:
-    repeat(12, 1fr);
+    repeat(12,1fr);
 
   grid-auto-rows: 270px;
 
@@ -1390,8 +1106,7 @@ h2 {
 
 }
 
-
-.service-tile {
+.service-card {
 
   position: relative;
 
@@ -1405,82 +1120,60 @@ h2 {
 
   border: none;
 
-  border-radius: 26px;
+  border-radius: 27px;
 
   color: white;
 
-  background:
-    var(--violet-dark);
+  background: var(--violet-dark);
 
   text-align: left;
 
-  cursor: pointer;
-
   box-shadow:
+    0 18px 50px rgba(38,12,45,.09);
 
-    0 18px 45px
-    rgba(34,13,39,.09);
-
-  transition:
-    .4s ease;
+  transition: .4s ease;
 
 }
 
+.service-card:hover {
 
-.service-tile:hover {
-
-  transform:
-    translateY(-7px);
+  transform: translateY(-7px);
 
   box-shadow:
-
-    0 30px 75px
-    rgba(40,13,46,.18);
+    0 30px 78px rgba(38,12,45,.18);
 
 }
 
-
-.service-tile img {
+.service-card img {
 
   position: absolute;
 
   inset: 0;
 
   width: 100%;
-
   height: 100%;
 
   object-fit: cover;
 
-  object-position: center;
-
   transition:
-
-    transform .7s
-    cubic-bezier(.2,.7,.2,1),
-
-    filter .45s;
+    transform .7s ease,
+    filter .5s ease;
 
 }
 
+.service-card:hover img {
 
-.service-tile:hover img {
-
-  transform:
-    scale(1.06);
+  transform: scale(1.06);
 
   filter:
-    saturate(1.07)
+    saturate(1.08)
     contrast(1.03);
 
 }
 
-
-.service-overlay {
+.service-shade {
 
   position: absolute;
-
-  z-index: 1;
 
   inset: 0;
 
@@ -1488,90 +1181,74 @@ h2 {
 
     linear-gradient(
       to top,
-      rgba(18,5,23,.96),
-      rgba(38,10,42,.50) 43%,
-      transparent 78%
+      rgba(17,5,22,.96),
+      rgba(35,10,40,.55) 45%,
+      transparent 80%
     ),
 
     linear-gradient(
       135deg,
-      rgba(142,45,130,.13),
-      transparent 55%
+      rgba(142,45,130,.12),
+      transparent
     );
 
 }
 
-
-.service-copy {
+.service-content {
 
   position: relative;
 
   z-index: 2;
 
-  display: block;
-
-  width: 100%;
-
-  padding:
-    27px 28px;
+  padding: 27px;
 
 }
 
-
-.service-copy small {
+.service-content small {
 
   display: block;
 
   margin-bottom: 8px;
 
-  color:
-    var(--orange);
+  color: var(--orange);
 
   font-size: 10px;
 
   font-weight: 800;
 
-  letter-spacing:
-    .12em;
+  letter-spacing: .12em;
 
 }
 
-
-.service-copy strong {
+.service-content strong {
 
   display: block;
 
-  font-family:
-    "Manrope";
+  font-family: "Manrope";
 
-  font-size: 24px;
+  font-size: 23px;
 
-  line-height: 1.08;
+  line-height: 1.1;
 
 }
 
+.service-content p {
 
-.service-copy em {
+  max-width: 420px;
 
-  display: block;
-
-  max-width: 430px;
-
-  margin-top: 9px;
+  margin:
+    8px 0 0;
 
   color:
-    #e6dce7;
+    rgba(255,255,255,.77);
 
   font-size: 12px;
-
-  font-style: normal;
 
   line-height: 1.5;
 
 }
 
-
-.service-copy b {
+.service-content b {
 
   display: inline-block;
 
@@ -1581,79 +1258,47 @@ h2 {
 
   font-size: 11px;
 
-  transition: .3s;
+}
+
+.service-card:hover
+.service-content b {
+
+  color: var(--orange-light);
 
 }
 
+.service-electric {
 
-.service-tile:hover
-.service-copy b {
+  grid-column: span 5;
 
-  color:
-    var(--orange-light);
-
-  transform:
-    translateX(5px);
+  grid-row: span 2;
 
 }
-
-
-.service-main {
-
-  grid-column:
-    span 5;
-
-  grid-row:
-    span 2;
-
-}
-
 
 .service-security {
-
-  grid-column:
-    span 3;
-
+  grid-column: span 3;
 }
-
 
 .service-network {
-
-  grid-column:
-    span 4;
-
+  grid-column: span 4;
 }
-
 
 .service-climate {
-
-  grid-column:
-    span 7;
-
+  grid-column: span 7;
 }
-
 
 .service-gate {
-
-  grid-column:
-    span 6;
-
+  grid-column: span 6;
 }
 
-
-.service-home {
-
-  grid-column:
-    span 6;
-
+.service-domotic {
+  grid-column: span 6;
 }
 
+.service-electric
+.service-content strong {
 
-.service-main
-.service-copy strong {
-
-  font-size:
-    31px;
+  font-size: 30px;
 
 }
 
@@ -1666,39 +1311,27 @@ h2 {
 
   display: flex;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
   align-items: center;
 
   gap: 30px;
 
-  margin-top: 28px;
+  margin-top: 30px;
 
-  padding:
-    25px 27px;
+  padding: 25px;
 
   border:
-    1px solid
-    var(--line);
+    1px solid var(--border);
 
   border-radius: 22px;
 
-  background:
-
-    linear-gradient(
-      135deg,
-      #fff,
-      #faf4fa
-    );
+  background: white;
 
   box-shadow:
-
-    0 15px 45px
-    rgba(40,15,46,.05);
+    0 15px 45px rgba(40,15,46,.05);
 
 }
-
 
 .brands-title {
 
@@ -1708,11 +1341,9 @@ h2 {
 
 }
 
-
 .brands-title span {
 
-  color:
-    var(--violet);
+  color: var(--violet);
 
   font-size: 9px;
 
@@ -1724,50 +1355,40 @@ h2 {
 
 }
 
-
 .brands-title strong {
 
-  font-family:
-    "Manrope";
+  font-family: "Manrope";
 
   font-size: 17px;
 
 }
 
-
 .brands-list {
 
   display: flex;
 
-  justify-content:
-    flex-end;
-
   flex-wrap: wrap;
+
+  justify-content: flex-end;
 
   gap: 9px;
 
 }
 
-
 .brands-list b {
 
   padding:
-    11px 14px;
+    10px 14px;
 
   border:
-    1px solid
-    #e4dae5;
+    1px solid #e5dce6;
 
   border-radius: 10px;
 
-  background: white;
+  background:
+    #fbf9fb;
 
   font-size: 11px;
-
-  box-shadow:
-
-    0 7px 20px
-    rgba(38,15,43,.04);
 
 }
 
@@ -1786,7 +1407,7 @@ h2 {
 
     radial-gradient(
       circle at 84% 42%,
-      rgba(246,164,40,.15),
+      rgba(244,166,42,.15),
       transparent 27%
     ),
 
@@ -1798,7 +1419,6 @@ h2 {
     );
 
 }
-
 
 .company-grid {
 
@@ -1813,25 +1433,17 @@ h2 {
 
 }
 
-
-.company
-.section-kicker {
-
-  color:
-    var(--orange);
-
+.company .section-kicker {
+  color: var(--orange);
 }
-
 
 .company p {
 
-  color:
-    #d1c5d4;
+  color: #d1c5d4;
 
   line-height: 1.75;
 
 }
-
 
 .values {
 
@@ -1846,49 +1458,40 @@ h2 {
 
 }
 
-
 .values div {
 
   padding-top: 18px;
 
   border-top:
-    1px solid
-    rgba(255,255,255,.15);
+    1px solid rgba(255,255,255,.15);
 
 }
-
 
 .values strong {
 
   display: block;
 
-  color:
-    var(--orange);
+  color: var(--orange);
 
-  font-family:
-    "Manrope";
+  font-family: "Manrope";
 
-  font-size:
-    19px;
+  font-size: 19px;
 
 }
 
-
 .values span {
 
-  color:
-    #c8bacc;
+  color: #c8bacc;
 
   font-size: 11px;
 
 }
 
-
 .van {
 
   position: relative;
 
-  min-height: 430px;
+  min-height: 420px;
 
   display: flex;
 
@@ -1898,7 +1501,6 @@ h2 {
 
 }
 
-
 .van::before {
 
   content: "";
@@ -1906,22 +1508,19 @@ h2 {
   position: absolute;
 
   width: 520px;
-
   height: 300px;
 
   border-radius: 50%;
 
   background:
-
     radial-gradient(
       circle,
-      rgba(246,164,40,.23),
+      rgba(244,166,42,.23),
       rgba(142,45,130,.15),
       transparent 70%
     );
 
 }
-
 
 .van img {
 
@@ -1936,7 +1535,6 @@ h2 {
   object-fit: contain;
 
   filter:
-
     drop-shadow(
       0 35px 55px
       rgba(0,0,0,.42)
@@ -1961,57 +1559,46 @@ h2 {
   overflow: hidden;
 
   border:
-    1px solid
-    var(--line);
+    1px solid var(--border);
 
   border-radius: 24px;
 
-  background:
-    var(--line);
+  background: var(--border);
 
 }
-
 
 .step {
 
   min-height: 270px;
 
-  padding:
-    30px 27px;
+  padding: 30px 27px;
 
   background: white;
 
 }
 
-
 .step b {
 
-  color:
-    #ded2df;
+  color: #ddd1de;
 
-  font-family:
-    "Manrope";
+  font-family: "Manrope";
 
-  font-size: 40px;
+  font-size: 39px;
 
 }
-
 
 .step h3 {
 
   margin:
-    30px 0 10px;
+    29px 0 10px;
 
-  font-family:
-    "Manrope";
+  font-family: "Manrope";
 
 }
 
-
 .step p {
 
-  color:
-    var(--muted);
+  color: var(--muted);
 
   font-size: 13px;
 
@@ -2027,27 +1614,24 @@ h2 {
 .team {
 
   background:
-
     linear-gradient(
       180deg,
-      #fbf7fb,
+      #faf6fa,
       white
     );
 
 }
-
 
 .team-grid {
 
   display: grid;
 
   grid-template-columns:
-    repeat(3,minmax(0,1fr));
+    repeat(2,1fr);
 
   gap: 18px;
 
 }
-
 
 .team-card {
 
@@ -2055,174 +1639,107 @@ h2 {
 
   display: grid;
 
-  grid-template-rows:
-    minmax(350px,1fr)
-    auto;
+  grid-template-columns:
+    .95fr 1.05fr;
 
-  min-height: 520px;
-
-  padding: 0;
+  min-height: 390px;
 
   overflow: hidden;
 
+  padding: 0;
+
   border:
-    1px solid
-    #e7dde7;
+    1px solid var(--border);
 
   border-radius: 26px;
-
-  color:
-    var(--text);
 
   background: white;
 
   text-align: left;
 
-  cursor: pointer;
-
   box-shadow:
-
-    0 18px 50px
-    rgba(39,15,48,.09);
+    0 17px 50px rgba(40,15,46,.09);
 
   transition:
-    .4s ease;
+    transform .4s ease,
+    box-shadow .4s ease;
 
 }
-
 
 .team-card:hover {
 
-  transform:
-    translateY(-7px);
-
-  border-color:
-    rgba(142,45,130,.28);
+  transform: translateY(-7px);
 
   box-shadow:
-
-    0 30px 78px
-    rgba(45,14,52,.17);
+    0 30px 75px rgba(40,15,46,.17);
 
 }
 
-
-.team-featured {
+.team-card:first-child {
 
   grid-column:
-    span 2;
+    1 / -1;
 
-  grid-template-columns:
-    1.05fr .95fr;
-
-  grid-template-rows:
-    none;
-
-  min-height: 530px;
+  min-height: 500px;
 
 }
 
-
-.team-image {
+.team-photo {
 
   position: relative;
 
+  min-height: 100%;
+
   display: flex;
 
-  justify-content: center;
+  align-items: center;
 
-  align-items: flex-end;
+  justify-content: center;
 
   overflow: hidden;
 
   background:
 
     radial-gradient(
-      circle at 50% 35%,
-      rgba(246,164,40,.16),
-      transparent 28%
+      circle at center,
+      rgba(244,166,42,.12),
+      transparent 35%
     ),
 
     linear-gradient(
       145deg,
-      #f7eff7,
-      #eaddea 45%,
+      #f4eaf4,
       #fff
     );
 
 }
 
-
-.team-image::after {
-
-  content: "";
-
-  position: absolute;
-
-  left: 10%;
-
-  right: 10%;
-
-  bottom: 0;
-
-  height: 25%;
-
-  border-radius: 50%;
-
-  background:
-
-    radial-gradient(
-      ellipse,
-      rgba(142,45,130,.16),
-      transparent 68%
-    );
-
-  filter:
-    blur(12px);
-
-}
-
-
-.team-image img {
-
-  position: relative;
-
-  z-index: 2;
+.team-photo img {
 
   width: 100%;
-
   height: 100%;
 
-  padding:
-    10px 8px 0;
+  min-height: 370px;
+
+  padding: 8px;
 
   object-fit: contain;
 
   object-position:
-    center bottom;
+    center center;
 
-  transition:
-    .65s
-    cubic-bezier(.2,.7,.2,1);
+  transition: .6s ease;
 
 }
-
 
 .team-card:hover
-.team-image img {
+.team-photo img {
 
-  transform:
-    translateY(-4px)
-    scale(1.025);
+  transform: scale(1.025);
 
 }
 
-
 .team-info {
-
-  position: relative;
-
-  z-index: 3;
 
   display: flex;
 
@@ -2230,110 +1747,88 @@ h2 {
 
   justify-content: center;
 
-  padding:
-    24px 25px;
-
-  background: white;
+  padding: 32px;
 
 }
 
-
 .team-info small {
 
-  color:
-    var(--violet);
+  color: var(--violet);
 
   font-size: 9px;
 
   font-weight: 800;
 
-  letter-spacing: .12em;
+  letter-spacing: .13em;
 
   text-transform: uppercase;
 
 }
 
-
 .team-info strong {
 
   margin-top: 8px;
 
-  font-family:
-    "Manrope";
+  font-family: "Manrope";
 
-  font-size: 24px;
+  font-size: 27px;
 
 }
 
-
 .team-info em {
 
-  margin-top: 6px;
+  margin-top: 7px;
 
-  color:
-    var(--muted);
+  color: var(--muted);
 
-  font-size: 12px;
+  font-size: 13px;
 
   font-style: normal;
 
 }
 
-
 .team-info b {
 
-  margin-top: 18px;
+  margin-top: 20px;
 
-  color:
-    var(--orange);
+  color: var(--orange);
 
   font-size: 11px;
 
 }
 
-
-.team-featured
+.team-card:first-child
 .team-info {
 
   color: white;
 
   background:
-
     linear-gradient(
       145deg,
-      #24102e,
-      #5b1b58
+      var(--violet-dark),
+      #5d1b58
     );
 
 }
 
-
-.team-featured
+.team-card:first-child
 .team-info small {
-
-  color:
-    var(--orange);
-
+  color: var(--orange);
 }
 
-
-.team-featured
+.team-card:first-child
 .team-info strong {
 
-  font-size:
-    37px;
+  font-size: 37px;
 
 }
 
-
-.team-featured
+.team-card:first-child
 .team-info em {
 
-  color:
-    #e4d8e5;
+  color: #e6dae8;
 
 }
-
 
 .team-placeholder {
 
@@ -2345,12 +1840,7 @@ h2 {
 
   place-items: center;
 
-  padding: 30px;
-
-  color:
-    var(--violet);
-
-  text-align: center;
+  color: var(--violet);
 
   font-weight: 800;
 
@@ -2368,8 +1858,8 @@ h2 {
   background:
 
     radial-gradient(
-      circle at 80% 25%,
-      rgba(142,45,130,.26),
+      circle at 78% 20%,
+      rgba(142,45,130,.27),
       transparent 30%
     ),
 
@@ -2377,31 +1867,43 @@ h2 {
 
 }
 
-
-.reviews
-.section-kicker {
-
-  color:
-    var(--orange);
-
+.reviews .section-kicker {
+  color: var(--orange);
 }
 
-
-.review-top {
+.review-heading {
 
   display: flex;
 
-  justify-content:
-    space-between;
-
-  gap: 30px;
+  justify-content: space-between;
 
   align-items: center;
+
+  gap: 30px;
 
   margin-bottom: 35px;
 
 }
 
+.review-button-main {
+
+  min-width: 245px;
+
+  color: var(--violet-dark);
+
+  background: white;
+
+  border:
+    2px solid rgba(142,45,130,.18);
+
+}
+
+.review-button-main:hover {
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,.18);
+
+}
 
 .review-slider {
 
@@ -2412,8 +1914,7 @@ h2 {
   overflow: hidden;
 
   border:
-    1px solid
-    rgba(255,255,255,.10);
+    1px solid rgba(255,255,255,.1);
 
   border-radius: 28px;
 
@@ -2421,7 +1922,6 @@ h2 {
     rgba(255,255,255,.06);
 
 }
-
 
 .review {
 
@@ -2436,13 +1936,11 @@ h2 {
 
   pointer-events: none;
 
-  transform:
-    translateX(40px);
+  transform: translateX(40px);
 
   transition: .55s;
 
 }
-
 
 .review.active {
 
@@ -2454,20 +1952,17 @@ h2 {
 
 }
 
-
 .review p {
 
   max-width: 850px;
 
-  font-family:
-    "Manrope";
+  font-family: "Manrope";
 
-  font-size: 26px;
+  font-size: 25px;
 
   line-height: 1.45;
 
 }
-
 
 .review strong {
 
@@ -2477,16 +1972,13 @@ h2 {
 
 }
 
-
 .review small {
 
-  color:
-    #bbaebf;
+  color: #bbaebf;
 
 }
 
-
-.slider-button {
+.slider-btn {
 
   position: absolute;
 
@@ -2495,15 +1987,12 @@ h2 {
   top: 50%;
 
   width: 45px;
-
   height: 45px;
 
-  transform:
-    translateY(-50%);
+  transform: translateY(-50%);
 
   border:
-    1px solid
-    rgba(255,255,255,.2);
+    1px solid rgba(255,255,255,.2);
 
   border-radius: 50%;
 
@@ -2516,18 +2005,12 @@ h2 {
 
 }
 
-
 .prev {
-
   left: 20px;
-
 }
 
-
 .next {
-
   right: 20px;
-
 }
 
 
@@ -2543,7 +2026,7 @@ h2 {
 
     radial-gradient(
       circle at 15% 20%,
-      rgba(246,164,40,.12),
+      rgba(244,166,42,.12),
       transparent 25%
     ),
 
@@ -2554,7 +2037,6 @@ h2 {
     );
 
 }
-
 
 .recruit-grid {
 
@@ -2567,25 +2049,20 @@ h2 {
 
 }
 
-
 .recruitment
 .section-kicker {
 
-  color:
-    var(--orange);
+  color: var(--orange);
 
 }
 
-
 .recruit-copy p {
 
-  color:
-    #d7cad9;
+  color: #d7cad9;
 
   line-height: 1.7;
 
 }
-
 
 .recruit-copy ul {
 
@@ -2597,13 +2074,11 @@ h2 {
 
 }
 
-
 .recruit-copy li {
 
   margin: 13px 0;
 
 }
-
 
 .recruit-copy li::before {
 
@@ -2611,11 +2086,9 @@ h2 {
 
   margin-right: 10px;
 
-  color:
-    var(--orange);
+  color: var(--orange);
 
 }
-
 
 .form-box {
 
@@ -2623,30 +2096,24 @@ h2 {
 
   border-radius: 25px;
 
-  color:
-    var(--text);
+  color: var(--text);
 
   background: white;
 
   box-shadow:
-
-    0 40px 100px
-    rgba(0,0,0,.22);
+    0 40px 100px rgba(0,0,0,.22);
 
 }
-
 
 .form-header {
 
   display: flex;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
   font-weight: 800;
 
 }
-
 
 .form-progress {
 
@@ -2659,11 +2126,9 @@ h2 {
 
   border-radius: 10px;
 
-  background:
-    #eee8ef;
+  background: #eee8ef;
 
 }
-
 
 .form-progress span {
 
@@ -2674,7 +2139,6 @@ h2 {
   height: 100%;
 
   background:
-
     linear-gradient(
       90deg,
       var(--orange),
@@ -2685,25 +2149,20 @@ h2 {
 
 }
 
-
 .form-step {
-
   display: none;
-
 }
-
 
 .form-step.active {
 
   display: block;
 
   animation:
-    fadeForm .4s ease;
+    formAppear .4s ease;
 
 }
 
-
-@keyframes fadeForm {
+@keyframes formAppear {
 
   from {
 
@@ -2716,19 +2175,16 @@ h2 {
 
 }
 
-
 .form-step h3,
 .contact-form h3 {
 
   margin-top: 0;
 
-  font-family:
-    "Manrope";
+  font-family: "Manrope";
 
   font-size: 27px;
 
 }
-
 
 label {
 
@@ -2744,7 +2200,6 @@ label {
 
 }
 
-
 input,
 select,
 textarea {
@@ -2756,8 +2211,7 @@ textarea {
   outline: none;
 
   border:
-    1px solid
-    #ded5df;
+    1px solid #ded5df;
 
   border-radius: 10px;
 
@@ -2765,28 +2219,20 @@ textarea {
 
 }
 
-
 input:focus,
 select:focus,
 textarea:focus {
 
-  border-color:
-    var(--violet);
+  border-color: var(--violet);
 
   box-shadow:
-
-    0 0 0 4px
-    rgba(142,45,130,.08);
+    0 0 0 4px rgba(142,45,130,.08);
 
 }
-
 
 textarea {
-
   resize: vertical;
-
 }
-
 
 .fields-two {
 
@@ -2799,7 +2245,6 @@ textarea {
 
 }
 
-
 .choices {
 
   display: grid;
@@ -2811,13 +2256,11 @@ textarea {
 
 }
 
-
 .choice {
 
   margin: 0;
 
 }
-
 
 .choice input {
 
@@ -2827,7 +2270,6 @@ textarea {
 
 }
 
-
 .choice span {
 
   display: block;
@@ -2835,8 +2277,7 @@ textarea {
   padding: 14px;
 
   border:
-    1px solid
-    #ddd2dd;
+    1px solid #ddd2dd;
 
   border-radius: 11px;
 
@@ -2844,28 +2285,21 @@ textarea {
 
 }
 
+.choice input:checked + span {
 
-.choice input:checked
-+ span {
+  color: var(--violet);
 
-  color:
-    var(--violet);
+  border-color: var(--violet);
 
-  border-color:
-    var(--violet);
-
-  background:
-    #f7edf6;
+  background: #f7edf6;
 
 }
-
 
 .form-buttons {
 
   display: flex;
 
-  justify-content:
-    flex-end;
+  justify-content: flex-end;
 
   gap: 10px;
 
@@ -2873,29 +2307,21 @@ textarea {
 
 }
 
-
 .back-button {
 
   border:
-    1px solid
-    var(--line);
+    1px solid var(--border);
 
   background: white;
 
 }
 
-
 #backButton {
-
   visibility: hidden;
-
 }
 
-
 #submitButton {
-
   display: none;
-
 }
 
 
@@ -2905,11 +2331,9 @@ textarea {
 
 .contact {
 
-  background:
-    #f6f1f6;
+  background: #f6f1f6;
 
 }
-
 
 .contact-grid {
 
@@ -2922,16 +2346,13 @@ textarea {
 
 }
 
-
 .contact-copy > p {
 
-  color:
-    var(--muted);
+  color: var(--muted);
 
   line-height: 1.7;
 
 }
-
 
 .contact-links {
 
@@ -2943,19 +2364,16 @@ textarea {
 
 }
 
-
 .contact-links a {
 
   display: grid;
 
   gap: 4px;
 
-  padding:
-    17px 19px;
+  padding: 17px 19px;
 
   border:
-    1px solid
-    var(--line);
+    1px solid var(--border);
 
   border-radius: 14px;
 
@@ -2965,19 +2383,15 @@ textarea {
 
 }
 
-
 .contact-links a:hover {
 
-  transform:
-    translateX(7px);
+  transform: translateX(7px);
 
 }
 
-
 .contact-links small {
 
-  color:
-    var(--violet);
+  color: var(--violet);
 
   font-size: 9px;
 
@@ -2987,21 +2401,18 @@ textarea {
 
 }
 
-
 .contact-form {
 
   padding: 30px;
 
   border:
-    1px solid
-    var(--line);
+    1px solid var(--border);
 
   border-radius: 25px;
 
   background: white;
 
-  box-shadow:
-    var(--shadow);
+  box-shadow: var(--shadow);
 
 }
 
@@ -3020,21 +2431,17 @@ textarea {
 
   display: none;
 
-  justify-content: center;
-
   align-items: center;
+
+  justify-content: center;
 
   padding: 22px;
 
 }
 
-
 .modal.open {
-
   display: flex;
-
 }
-
 
 .modal-bg {
 
@@ -3045,11 +2452,9 @@ textarea {
   background:
     rgba(12,5,16,.78);
 
-  backdrop-filter:
-    blur(12px);
+  backdrop-filter: blur(12px);
 
 }
-
 
 .modal-window {
 
@@ -3070,15 +2475,12 @@ textarea {
   background: white;
 
   box-shadow:
-
-    0 40px 120px
-    rgba(0,0,0,.4);
+    0 40px 120px rgba(0,0,0,.4);
 
   animation:
     modalAppear .3s ease;
 
 }
-
 
 @keyframes modalAppear {
 
@@ -3094,7 +2496,6 @@ textarea {
 
 }
 
-
 .modal-grid {
 
   display: grid;
@@ -3104,8 +2505,9 @@ textarea {
 
 }
 
-
 .modal-media {
+
+  min-height: 520px;
 
   display: flex;
 
@@ -3113,19 +2515,16 @@ textarea {
 
   justify-content: center;
 
-  min-height: 520px;
-
   overflow: hidden;
 
   background:
     linear-gradient(
       145deg,
-      #f2e6f2,
+      #f1e6f1,
       #fff
     );
 
 }
-
 
 .modal-media img {
 
@@ -3137,7 +2536,6 @@ textarea {
 
 }
 
-
 .service-modal
 .modal-media img {
 
@@ -3145,49 +2543,40 @@ textarea {
 
 }
 
-
 .modal-content {
 
-  padding:
-    42px;
+  padding: 42px;
 
 }
-
 
 .modal-content h3 {
 
   margin:
     8px 0 16px;
 
-  font-family:
-    "Manrope";
+  font-family: "Manrope";
 
   font-size: 33px;
 
 }
 
-
 .modal-content p {
 
-  color:
-    var(--muted);
+  color: var(--muted);
 
   line-height: 1.7;
 
 }
 
-
 .modal-content ul {
 
   padding-left: 20px;
 
-  color:
-    #504753;
+  color: #504753;
 
   line-height: 1.75;
 
 }
-
 
 .modal-close {
 
@@ -3196,11 +2585,9 @@ textarea {
   z-index: 5;
 
   top: 15px;
-
   right: 15px;
 
   width: 43px;
-
   height: 43px;
 
   border: none;
@@ -3210,16 +2597,13 @@ textarea {
   background: white;
 
   box-shadow:
-
-    0 10px 30px
-    rgba(0,0,0,.17);
+    0 10px 30px rgba(0,0,0,.17);
 
   font-size: 24px;
 
 }
 
-
-.profile-info {
+.profile-grid {
 
   display: grid;
 
@@ -3233,23 +2617,19 @@ textarea {
 
 }
 
-
-.profile-info div {
+.profile-grid div {
 
   padding: 15px;
 
   border-radius: 14px;
 
-  background:
-    #f8f2f8;
+  background: #f8f2f8;
 
 }
 
+.profile-grid small {
 
-.profile-info small {
-
-  color:
-    var(--violet);
+  color: var(--violet);
 
   font-size: 9px;
 
@@ -3259,15 +2639,13 @@ textarea {
 
 }
 
-
-.profile-info strong {
+.profile-grid strong {
 
   display: block;
 
   margin-top: 5px;
 
-  font-family:
-    "Manrope";
+  font-family: "Manrope";
 
 }
 
@@ -3283,7 +2661,6 @@ textarea {
   z-index: 850;
 
   top: 50%;
-
   right: 17px;
 
   display: grid;
@@ -3300,17 +2677,13 @@ textarea {
   background: white;
 
   box-shadow:
-
-    0 15px 40px
-    rgba(30,10,35,.18);
+    0 15px 40px rgba(30,10,35,.18);
 
 }
-
 
 .social {
 
   width: 40px;
-
   height: 40px;
 
   display: grid;
@@ -3319,8 +2692,7 @@ textarea {
 
   border-radius: 50%;
 
-  background:
-    #f4eef4;
+  background: #f4eef4;
 
   font-weight: 800;
 
@@ -3328,29 +2700,19 @@ textarea {
 
 }
 
-
 .social:hover {
 
-  transform:
-    scale(1.12);
+  transform: scale(1.12);
 
 }
-
 
 .social-google {
-
-  color:
-    #4285f4;
-
+  color: #4285f4;
 }
-
 
 .social-instagram,
 .social-facebook {
-
-  color:
-    var(--violet);
-
+  color: var(--violet);
 }
 
 
@@ -3363,14 +2725,11 @@ footer {
   padding:
     65px 0 25px;
 
-  color:
-    #d7cad9;
+  color: #d7cad9;
 
-  background:
-    #100716;
+  background: #100716;
 
 }
-
 
 .footer-grid {
 
@@ -3382,7 +2741,6 @@ footer {
   gap: 45px;
 
 }
-
 
 .footer-logo {
 
@@ -3396,26 +2754,20 @@ footer {
 
 }
 
-
 footer h4 {
-
   color: white;
-
 }
-
 
 footer p,
 footer a {
 
-  color:
-    #ad9eb0;
+  color: #ad9eb0;
 
   font-size: 12px;
 
   line-height: 1.7;
 
 }
-
 
 footer a {
 
@@ -3425,24 +2777,20 @@ footer a {
 
 }
 
-
 .footer-bottom {
 
   display: flex;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
   margin-top: 45px;
 
   padding-top: 20px;
 
   border-top:
-    1px solid
-    rgba(255,255,255,.09);
+    1px solid rgba(255,255,255,.09);
 
-  color:
-    #8f8094;
+  color: #8f8094;
 
   font-size: 11px;
 
@@ -3450,7 +2798,7 @@ footer a {
 
 
 /* =========================================================
-   SCROLL ANIMATION
+   SCROLL
 ========================================================= */
 
 .reveal {
@@ -3469,7 +2817,6 @@ footer a {
 
 }
 
-
 .reveal.visible {
 
   opacity: 1;
@@ -3483,39 +2830,27 @@ footer a {
    TABLETTE
 ========================================================= */
 
-@media(max-width: 1050px) {
-
+@media(max-width:1050px) {
 
   .nav-links {
-
     display: none;
-
   }
-
 
   .mobile-menu {
-
     display: block;
-
   }
-
 
   .phone-header {
-
     margin-left: auto;
-
   }
-
 
   .nav-links.open {
 
     position: fixed;
 
     top: 72px;
-
-    right: 0;
-
     left: 0;
+    right: 0;
 
     display: flex;
 
@@ -3528,14 +2863,10 @@ footer a {
     background: white;
 
     box-shadow:
-
-      0 30px 70px
-      rgba(20,10,25,.15);
+      0 30px 70px rgba(20,10,25,.15);
 
   }
 
-
-  .hero-layout,
   .company-grid,
   .recruit-grid,
   .contact-grid {
@@ -3544,43 +2875,19 @@ footer a {
 
   }
 
+  .hero-stage {
 
-  .hero-copy {
-
-    text-align: center;
-
-  }
-
-
-  .hero-description {
-
-    margin: auto;
+    min-height: 600px;
 
   }
 
+  .hero-content {
 
-  .hero-buttons,
-  .hero-trust {
+    min-height: 600px;
 
-    justify-content: center;
-
-  }
-
-
-  .hero-person {
-
-    order: -1;
-
-    width: 100%;
-
-    max-width: 700px;
-
-    min-height: 530px;
-
-    margin: auto;
+    max-width: 560px;
 
   }
-
 
   .hero-proof {
 
@@ -3589,17 +2896,7 @@ footer a {
 
   }
 
-
-  .hero-proof > * {
-
-    border-top:
-      1px solid
-      var(--line);
-
-  }
-
-
-  .service-showcase {
+  .service-grid {
 
     grid-template-columns:
       repeat(2,1fr);
@@ -3608,14 +2905,13 @@ footer a {
 
   }
 
-
-  .service-tile,
-  .service-main,
+  .service-card,
+  .service-electric,
   .service-security,
   .service-network,
   .service-climate,
   .service-gate,
-  .service-home {
+  .service-domotic {
 
     grid-column: span 1;
 
@@ -3623,48 +2919,25 @@ footer a {
 
   }
 
-
-  .service-main {
+  .service-electric {
 
     grid-column: span 2;
 
   }
 
-
   .brands {
 
-    align-items:
-      flex-start;
+    flex-direction: column;
 
-    flex-direction:
-      column;
+    align-items: flex-start;
 
   }
-
 
   .brands-list {
 
-    justify-content:
-      flex-start;
+    justify-content: flex-start;
 
   }
-
-
-  .team-grid {
-
-    grid-template-columns:
-      1fr 1fr;
-
-  }
-
-
-  .team-featured {
-
-    grid-column:
-      span 2;
-
-  }
-
 
   .steps {
 
@@ -3673,7 +2946,6 @@ footer a {
 
   }
 
-
 }
 
 
@@ -3681,8 +2953,7 @@ footer a {
    MOBILE
 ========================================================= */
 
-@media(max-width: 720px) {
-
+@media(max-width:720px) {
 
   .container {
 
@@ -3691,177 +2962,99 @@ footer a {
 
   }
 
-
   .header {
-
     height: 72px;
-
   }
-
 
   .logo {
-
     width: 145px;
-
   }
-
 
   .phone-header {
-
     display: none;
-
   }
 
-
   .hero {
+
+    min-height: 0;
 
     padding:
       92px 0 45px;
 
   }
 
-
-  .hero-layout {
+  .hero-stage {
 
     display: flex;
 
     flex-direction: column;
 
-  }
-
-
-  .hero-copy {
-
-    order: 2;
-
-  }
-
-
-  .hero-person {
-
-    order: 1;
-
-    width: 100%;
-
     min-height: 0;
 
-    padding:
-      15px 0;
+    border-radius: 24px;
 
   }
 
+  .hero-stage-image {
 
-  .hero-person::before {
-
-    inset:
-      5px -3px;
-
-    border-radius: 28px;
-
-  }
-
-
-  .hero-decoration {
-
-    inset:
-      25px 10px;
-
-  }
-
-
-  .hero-photo {
-
-    width: 100%;
-
-    border-radius:
-      25px;
-
-  }
-
-
-  .hero-photo img {
+    position: relative;
 
     width: 100%;
 
     height: auto;
 
-    max-height: none;
+    background: #16071d;
+
+  }
+
+  .hero-stage-image img {
+
+    width: 100%;
+
+    height: auto;
 
     object-fit: contain;
 
-  }
-
-
-  .hero-badge {
-
-    right: 10px;
-
-    bottom: 25px;
+    object-position: center;
 
   }
 
+  .hero-stage::after {
 
-  .quality {
+    background:
+      linear-gradient(
+        to bottom,
+        transparent 40%,
+        rgba(17,5,22,.15) 100%
+      );
+
+    pointer-events: none;
+
+  }
+
+  .hero-content {
+
+    min-height: 0;
+
+    max-width: none;
 
     padding:
-      7px 9px;
+      28px 22px 33px;
 
-    font-size: 10px;
-
-  }
-
-
-  .q1 {
-
-    left: 4px;
-
-    top: 45px;
+    background:
+      linear-gradient(
+        145deg,
+        #18071f,
+        #44133f
+      );
 
   }
-
-
-  .q2 {
-
-    right: 4px;
-
-    top: 80px;
-
-  }
-
-
-  .q3 {
-
-    left: 2px;
-
-    top: 42%;
-
-  }
-
-
-  .q4 {
-
-    right: 2px;
-
-    top: 50%;
-
-  }
-
-
-  .q5 {
-
-    left: 12px;
-
-    bottom: 28px;
-
-  }
-
 
   .hero h1 {
 
-    font-size: 46px;
+    font-size: 43px;
 
   }
-
 
   .hero-description {
 
@@ -3869,13 +3062,31 @@ footer a {
 
   }
 
-
   .hero-buttons {
 
     flex-direction: column;
 
   }
 
+  .hero-points {
+
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 15px;
+
+  }
+
+  .hero-badge {
+
+    top: 18px;
+    right: 15px;
+
+    bottom: auto;
+
+  }
 
   .hero-proof {
 
@@ -3883,17 +3094,14 @@ footer a {
 
   }
 
-
   .hero-proof > * + * {
 
     border-left: none;
 
     border-top:
-      1px solid
-      var(--line);
+      1px solid var(--border);
 
   }
-
 
   .section {
 
@@ -3902,15 +3110,13 @@ footer a {
 
   }
 
-
   .section-head {
 
     display: block;
 
   }
 
-
-  .service-showcase {
+  .service-grid {
 
     display: grid;
 
@@ -3920,38 +3126,28 @@ footer a {
 
   }
 
-
-  .service-tile,
-  .service-main,
+  .service-card,
+  .service-electric,
   .service-security,
   .service-network,
   .service-climate,
   .service-gate,
-  .service-home {
+  .service-domotic {
 
     grid-column: 1;
 
     grid-row: auto;
 
-    min-height: 285px;
+    min-height: 300px;
 
   }
 
+  .service-electric
+  .service-content strong {
 
-  .service-main
-  .service-copy strong {
-
-    font-size: 25px;
-
-  }
-
-
-  .service-copy {
-
-    padding: 23px;
+    font-size: 24px;
 
   }
-
 
   .brands {
 
@@ -3959,70 +3155,49 @@ footer a {
 
   }
 
-
   .team-grid {
 
     grid-template-columns: 1fr;
 
   }
 
-
-  .team-featured {
+  .team-card,
+  .team-card:first-child {
 
     grid-column: 1;
 
-    display: grid;
-
     grid-template-columns: 1fr;
 
-    grid-template-rows:
-      minmax(390px, auto)
-      auto;
-
     min-height: 0;
 
   }
 
-
-  .team-card {
-
-    min-height: 0;
-
-    grid-template-rows:
-      minmax(390px,auto)
-      auto;
-
-  }
-
-
-  .team-image {
+  .team-photo {
 
     min-height: 390px;
 
   }
 
-
-  .team-image img {
+  .team-photo img {
 
     width: 100%;
 
     height: 390px;
 
+    min-height: 390px;
+
     object-fit: contain;
 
-    object-position:
-      center bottom;
+    object-position: center;
 
   }
 
-
-  .team-featured
+  .team-card:first-child
   .team-info strong {
 
     font-size: 29px;
 
   }
-
 
   .steps {
 
@@ -4030,29 +3205,26 @@ footer a {
 
   }
 
-
-  .review-top {
+  .review-heading {
 
     display: block;
 
   }
 
+  .review-button-main {
 
-  .review-top
-  .btn {
+    width: 100%;
 
     margin-top: 20px;
 
   }
 
-
   .review {
 
     padding:
-      43px 30px;
+      45px 32px;
 
   }
-
 
   .review p {
 
@@ -4060,13 +3232,11 @@ footer a {
 
   }
 
-
-  .slider-button {
+  .slider-btn {
 
     display: none;
 
   }
-
 
   .fields-two,
   .choices {
@@ -4075,24 +3245,21 @@ footer a {
 
   }
 
-
   .modal-grid {
 
     grid-template-columns: 1fr;
 
   }
 
-
   .modal-media {
 
-    min-height: 300px;
-
-    max-height: 55vh;
+    min-height: 280px;
 
   }
 
-
   .modal-media img {
+
+    width: 100%;
 
     height: auto;
 
@@ -4102,18 +3269,14 @@ footer a {
 
   }
 
-
   .service-modal
   .modal-media img {
-
-    width: 100%;
 
     height: 300px;
 
     object-fit: cover;
 
   }
-
 
   .modal-content {
 
@@ -4122,20 +3285,17 @@ footer a {
 
   }
 
-
-  .profile-info {
+  .profile-grid {
 
     grid-template-columns: 1fr;
 
   }
-
 
   .socials {
 
     top: auto;
 
     right: 10px;
-
     bottom: 15px;
 
     display: flex;
@@ -4144,13 +3304,11 @@ footer a {
 
   }
 
-
   .footer-grid {
 
     grid-template-columns: 1fr;
 
   }
-
 
   .footer-bottom {
 
@@ -4158,41 +3316,29 @@ footer a {
 
   }
 
-
 }
 
 
-/* PETIT MOBILE */
+/* =========================================================
+   PETIT MOBILE
+========================================================= */
 
-@media(max-width: 430px) {
+@media(max-width:430px) {
 
+  .hero h1 {
 
-  .quality {
-
-    display: none;
-
-  }
-
-
-  .hero-badge {
-
-    min-width: 95px;
-
-    padding:
-      10px 12px;
+    font-size: 39px;
 
   }
 
+  .hero-points {
 
-  .hero-badge strong {
-
-    font-size: 22px;
+    grid-template-columns: 1fr;
 
   }
 
-
-  .team-image,
-  .team-image img {
+  .team-photo,
+  .team-photo img {
 
     min-height: 340px;
 
@@ -4200,23 +3346,19 @@ footer a {
 
   }
 
-
 }
-
 
 </style>
 
-
 </head>
+
 
 
 <body>
 
 
 <div class="page-progress">
-
   <span></span>
-
 </div>
 
 
@@ -4230,7 +3372,6 @@ footer a {
   id="top"
 >
 
-
 <div class="container nav">
 
 
@@ -4241,7 +3382,7 @@ footer a {
 
 <img
   src="logo-egt.png"
-  alt="EGT Tahrati"
+  alt="Logo EGT Tahrati"
 >
 
 </a>
@@ -4286,13 +3427,13 @@ Contact
 
 
 <a
-  class="google-review-button"
+  class="review-header"
   href="https://search.google.com/local/writereview?placeid=ChIJIVqOoHfB9EcRzVAehUyg7SQ"
   target="_blank"
   rel="noopener"
 >
 
-★ Noter notre prestation
+★ Évaluer nous
 
 </a>
 
@@ -4325,7 +3466,6 @@ Contact
 
 </div>
 
-
 </header>
 
 
@@ -4333,8 +3473,9 @@ Contact
 <main>
 
 
+
 <!-- =========================================================
-     HERO
+     ACCUEIL
 ========================================================= -->
 
 <section
@@ -4343,45 +3484,68 @@ Contact
 >
 
 
-<div class="hero-grid-bg"></div>
+<div class="container">
 
 
-<div class="container hero-layout">
+<div class="hero-stage reveal">
 
 
-<div class="hero-copy reveal">
+<div class="hero-stage-image">
+
+
+<img
+  src="accueil-egt-premium.jpg"
+  alt="EGT Tahrati - électricité générale à Bron"
+>
+
+
+</div>
+
+
+<div class="hero-glow"></div>
+
+<div class="hero-line"></div>
+
+
+<div class="hero-content">
 
 
 <p class="eyebrow">
 
-Électricité générale • Sécurité • Climatisation • Réseaux • Automatismes
+ÉLECTRICITÉ GÉNÉRALE • SÉCURITÉ • CLIMATISATION • RÉSEAUX
 
 </p>
 
 
 <h1>
 
-Votre électricien
+Des interventions
+
+<br>
+
+qui inspirent
 
 <br>
 
 <span>
-de confiance
+confiance.
 </span>
-
-<br>
-
-à Bron depuis 2003.
 
 </h1>
 
 
 <p class="hero-description">
 
-EGT Tahrati accompagne les particuliers,
-professionnels, régies et bailleurs sociaux
-avec une exigence simple :
-un travail fiable, soigné et réactif.
+Depuis 2003 à Bron,
+EGT Tahrati accompagne
+particuliers, professionnels,
+régies et bailleurs sociaux
+dans leurs projets électriques
+et techniques.
+
+Notre priorité :
+un travail professionnel,
+fiable et durable.
 
 </p>
 
@@ -4416,7 +3580,7 @@ Demander un devis
 </div>
 
 
-<div class="hero-trust">
+<div class="hero-points">
 
 
 <div>
@@ -4435,11 +3599,11 @@ d'expérience
 <div>
 
 <strong>
-Depuis 2003
+Bron
 </strong>
 
 <span>
-à Bron
+entreprise locale
 </span>
 
 </div>
@@ -4448,11 +3612,11 @@ Depuis 2003
 <div>
 
 <strong>
-Équipe qualifiée
+6 expertises
 </strong>
 
 <span>
-expertise de terrain
+pour vos projets
 </span>
 
 </div>
@@ -4464,86 +3628,20 @@ expertise de terrain
 </div>
 
 
-
-<div class="hero-person reveal">
-
-
-<div class="hero-decoration"></div>
-
-
-<div class="hero-photo">
-
-
-<img
-  src="monsieur-tahrati.jpg"
-  alt="Monsieur Tahrati"
->
-
-
-</div>
-
-
 <div class="hero-badge">
 
+
 <small>
-Depuis
-</small>
+EGT Tahrati</small>
 
 <strong>
-2003
+Depuis 2003
 </strong>
 
 <small>
 à Bron
 </small>
 
-</div>
-
-
-<div class="quality q1">
-
-<b>✓</b>
-
-Expertise
-
-</div>
-
-
-<div class="quality q2">
-
-<b>✓</b>
-
-Clarté
-
-</div>
-
-
-<div class="quality q3">
-
-<b>✓</b>
-
-Réactivité
-
-</div>
-
-
-<div class="quality q4">
-
-<b>✓</b>
-
-Fiabilité
-
-</div>
-
-
-<div class="quality q5">
-
-<b>✓</b>
-
-Qualité
-
-</div>
-
 
 </div>
 
@@ -4552,14 +3650,19 @@ Qualité
 
 
 
-<div class="container hero-proof reveal">
+<div class="hero-proof reveal">
 
 
 <a
-  class="google-score"
-  href="https://search.google.com/local/writereview?placeid=ChIJIVqOoHfB9EcRzVAehUyg7SQ"
-  target="_blank"
-  rel="noopener"
+
+class="google-score"
+
+href="https://search.google.com/local/writereview?placeid=ChIJIVqOoHfB9EcRzVAehUyg7SQ"
+
+target="_blank"
+
+rel="noopener"
+
 >
 
 
@@ -4589,6 +3692,7 @@ Avis Google
 
 <div class="proof-stat">
 
+
 <strong
   class="counter"
   data-value="20"
@@ -4596,23 +3700,28 @@ Avis Google
 0
 </strong>
 
+
 <span>
 + années d'expérience
 </span>
+
 
 </div>
 
 
 
 <div class="proof-stat">
+
 
 <strong>
 2003
 </strong>
 
+
 <span>
 année de création
 </span>
+
 
 </div>
 
@@ -4620,13 +3729,19 @@ année de création
 
 <div class="proof-stat">
 
+
 <strong>
 6
 </strong>
 
+
 <span>
 domaines d'expertise
 </span>
+
+
+</div>
+
 
 </div>
 
@@ -4707,7 +3822,7 @@ Ils nous ont fait confiance
 
 <p class="section-kicker">
 
-Nos domaines d'expertise
+NOS DOMAINES D'EXPERTISE
 
 </p>
 
@@ -4728,10 +3843,11 @@ pour tous vos projets.
 
 <p>
 
-Cliquez sur une intervention
-pour découvrir le détail
-des prestations proposées
-par EGT Tahrati.
+Cliquez sur chaque intervention
+pour découvrir les prestations,
+les équipements installés
+et les domaines d'intervention
+d'EGT Tahrati.
 
 </p>
 
@@ -4740,15 +3856,15 @@ par EGT Tahrati.
 
 
 
-<div class="service-showcase">
+<div class="service-grid">
 
 
-<!-- 01 -->
+<!-- RÉNOVATION -->
 
 
 <button
 
-class="service-tile service-main service-trigger reveal"
+class="service-card service-electric service-trigger reveal"
 
 data-service="renovation"
 
@@ -4763,10 +3879,10 @@ type="button"
 >
 
 
-<span class="service-overlay"></span>
+<span class="service-shade"></span>
 
 
-<span class="service-copy">
+<span class="service-content">
 
 
 <small>
@@ -4775,20 +3891,25 @@ type="button"
 
 
 <strong>
-Rénovation & mise aux normes
+
+Rénovation &
+mise aux normes
+
 </strong>
 
 
-<em>
+<p>
 
 Tableaux électriques,
-installations et sécurisation.
+installations,
+mise en sécurité
+et dépannage.
 
-</em>
+</p>
 
 
 <b>
-Découvrir +
+Découvrir la prestation →
 </b>
 
 
@@ -4799,12 +3920,12 @@ Découvrir +
 
 
 
-<!-- 02 -->
+<!-- CONTRÔLE ACCÈS -->
 
 
 <button
 
-class="service-tile service-security service-trigger reveal"
+class="service-card service-security service-trigger reveal"
 
 data-service="securite"
 
@@ -4819,10 +3940,10 @@ type="button"
 >
 
 
-<span class="service-overlay"></span>
+<span class="service-shade"></span>
 
 
-<span class="service-copy">
+<span class="service-content">
 
 
 <small>
@@ -4835,16 +3956,17 @@ Contrôle d'accès
 </strong>
 
 
-<em>
+<p>
 
-Caméras, digicodes,
+Caméras,
+digicodes,
 badges et interphones.
 
-</em>
+</p>
 
 
 <b>
-Découvrir +
+Découvrir →
 </b>
 
 
@@ -4855,12 +3977,12 @@ Découvrir +
 
 
 
-<!-- 03 -->
+<!-- RÉSEAU -->
 
 
 <button
 
-class="service-tile service-network service-trigger reveal"
+class="service-card service-network service-trigger reveal"
 
 data-service="reseaux"
 
@@ -4875,10 +3997,10 @@ type="button"
 >
 
 
-<span class="service-overlay"></span>
+<span class="service-shade"></span>
 
 
-<span class="service-copy">
+<span class="service-content">
 
 
 <small>
@@ -4887,20 +4009,24 @@ RÉSEAUX
 
 
 <strong>
-Installations informatiques
+
+Installations
+informatiques
+
 </strong>
 
 
-<em>
+<p>
 
-Câblage,
-RJ45 et baies réseau.
+RJ45,
+baies informatiques
+et câblage professionnel.
 
-</em>
+</p>
 
 
 <b>
-Découvrir +
+Découvrir →
 </b>
 
 
@@ -4911,12 +4037,12 @@ Découvrir +
 
 
 
-<!-- 04 -->
+<!-- CLIMATISATION -->
 
 
 <button
 
-class="service-tile service-climate service-trigger reveal"
+class="service-card service-climate service-trigger reveal"
 
 data-service="climatisation"
 
@@ -4931,10 +4057,10 @@ type="button"
 >
 
 
-<span class="service-overlay"></span>
+<span class="service-shade"></span>
 
 
-<span class="service-copy">
+<span class="service-content">
 
 
 <small>
@@ -4947,16 +4073,17 @@ Climatisation
 </strong>
 
 
-<em>
+<p>
 
 Installation,
-entretien et dépannage.
+entretien,
+réglage et dépannage.
 
-</em>
+</p>
 
 
 <b>
-Découvrir +
+Découvrir la prestation →
 </b>
 
 
@@ -4967,12 +4094,12 @@ Découvrir +
 
 
 
-<!-- 05 -->
+<!-- PORTAIL -->
 
 
 <button
 
-class="service-tile service-gate service-trigger reveal"
+class="service-card service-gate service-trigger reveal"
 
 data-service="portail"
 
@@ -4987,10 +4114,10 @@ type="button"
 >
 
 
-<span class="service-overlay"></span>
+<span class="service-shade"></span>
 
 
-<span class="service-copy">
+<span class="service-content">
 
 
 <small>
@@ -4999,20 +4126,25 @@ AUTOMATISMES
 
 
 <strong>
-Automatismes de portail
+
+Automatismes
+de portail
+
 </strong>
 
 
-<em>
+<p>
 
 Motorisation,
-commande et maintenance.
+commande,
+maintenance
+et dépannage.
 
-</em>
+</p>
 
 
 <b>
-Découvrir +
+Découvrir →
 </b>
 
 
@@ -5023,12 +4155,12 @@ Découvrir +
 
 
 
-<!-- 06 -->
+<!-- DOMOTIQUE -->
 
 
 <button
 
-class="service-tile service-home service-trigger reveal"
+class="service-card service-domotic service-trigger reveal"
 
 data-service="domotique"
 
@@ -5043,10 +4175,10 @@ type="button"
 >
 
 
-<span class="service-overlay"></span>
+<span class="service-shade"></span>
 
 
-<span class="service-copy">
+<span class="service-content">
 
 
 <small>
@@ -5055,20 +4187,24 @@ DOMOTIQUE
 
 
 <strong>
-Domotique & chauffage
+
+Domotique &
+chauffage
+
 </strong>
 
 
-<em>
+<p>
 
-Régulation,
-pilotage et confort connecté.
+Pilotage,
+régulation
+et confort connecté.
 
-</em>
+</p>
 
 
 <b>
-Découvrir +
+Découvrir →
 </b>
 
 
@@ -5082,8 +4218,9 @@ Découvrir +
 
 
 
-<!-- MARQUES -->
-
+<!-- =========================================================
+     MARQUES
+========================================================= -->
 
 <div class="brands reveal">
 
@@ -5092,7 +4229,7 @@ Découvrir +
 
 
 <span>
-Matériel & partenaires
+MATÉRIEL & PARTENAIRES
 </span>
 
 
@@ -5107,34 +4244,17 @@ Des marques reconnues
 <div class="brands-list">
 
 
-<b>
-HAGER
-</b>
+<b>HAGER</b>
 
+<b>LEGRAND</b>
 
-<b>
-LEGRAND
-</b>
+<b>SCHNEIDER ELECTRIC</b>
 
+<b>ATLANTIC</b>
 
-<b>
-SCHNEIDER ELECTRIC
-</b>
+<b>BFT</b>
 
-
-<b>
-ATLANTIC
-</b>
-
-
-<b>
-BFT
-</b>
-
-
-<b>
-ACOVA
-</b>
+<b>ACOVA</b>
 
 
 </div>
@@ -5168,7 +4288,7 @@ ACOVA
 
 <p class="section-kicker">
 
-À propos d'EGT
+À PROPOS D'EGT
 
 </p>
 
@@ -5179,7 +4299,8 @@ Plus de 20 ans
 
 <br>
 
-d'engagement et de proximité.
+d'engagement
+et de proximité.
 
 </h2>
 
@@ -5187,21 +4308,21 @@ d'engagement et de proximité.
 <p>
 
 Créée à Bron en 2003,
-EGT Tahrati accompagne
-particuliers, professionnels,
-régies et bailleurs sociaux
-dans leurs projets électriques
-et techniques.
+EGT Tahrati intervient
+auprès des particuliers,
+professionnels,
+régies et bailleurs sociaux.
 
 </p>
 
 
 <p>
 
-Qualité de réalisation,
-disponibilité,
-proximité et suivi
-sont au cœur de l'activité.
+L'entreprise met l'accent
+sur la qualité de réalisation,
+la réactivité,
+la sécurité
+et le suivi des installations.
 
 </p>
 
@@ -5218,7 +4339,7 @@ Qualité
 
 
 <span>
-Travail propre et durable
+Travail professionnel et durable
 </span>
 
 
@@ -5250,7 +4371,7 @@ Sécurité
 
 
 <span>
-Respect des installations
+Des installations maîtrisées
 </span>
 
 
@@ -5300,9 +4421,7 @@ Respect des installations
 
 
 <p class="section-kicker">
-
-Notre méthode
-
+NOTRE MÉTHODE
 </p>
 
 
@@ -5322,10 +4441,10 @@ simple et efficace.
 
 <p>
 
-De l'étude du besoin
+De l'analyse du besoin
 jusqu'au suivi de l'installation,
-EGT accompagne chaque projet
-de façon structurée.
+EGT accompagne chaque client
+à chaque étape du projet.
 
 </p>
 
@@ -5352,9 +4471,9 @@ de façon structurée.
 
 <p>
 
-Compréhension du besoin,
-des contraintes et
-de l'environnement du projet.
+Comprendre vos besoins,
+vos contraintes
+et l'environnement du projet.
 
 </p>
 
@@ -5378,9 +4497,9 @@ de l'environnement du projet.
 
 <p>
 
-Une proposition
-adaptée aux travaux
-et aux équipements nécessaires.
+Une proposition adaptée
+et une organisation claire
+de l'intervention.
 
 </p>
 
@@ -5404,9 +4523,9 @@ Réalisation
 
 <p>
 
-Intervention avec
-rigueur, organisation
-et professionnalisme.
+Une intervention
+professionnelle,
+organisée et soignée.
 
 </p>
 
@@ -5431,8 +4550,9 @@ Suivi & maintenance
 <p>
 
 EGT reste disponible
-pour le suivi et
-l'entretien des installations.
+pour l'entretien,
+la maintenance
+et le dépannage.
 
 </p>
 
@@ -5470,9 +4590,7 @@ l'entretien des installations.
 
 
 <p class="section-kicker">
-
-Notre équipe
-
+NOTRE ÉQUIPE
 </p>
 
 
@@ -5492,12 +4610,11 @@ des profils complémentaires.
 
 <p>
 
-Les photos sont affichées
-en entier pour éviter
-de couper les personnes.
-
-Cliquez sur un membre
-pour découvrir son profil.
+Cliquez sur une photo
+pour découvrir le profil,
+l'expérience
+et la spécialité
+de chaque membre.
 
 </p>
 
@@ -5509,12 +4626,12 @@ pour découvrir son profil.
 <div class="team-grid">
 
 
-<!-- TAHRATI -->
+<!-- GÉRANT -->
 
 
 <button
 
-class="team-card team-featured team-trigger reveal"
+class="team-card team-trigger reveal"
 
 data-name="M. Tahrati"
 
@@ -5527,11 +4644,11 @@ type="button"
 >
 
 
-<div class="team-image">
+<div class="team-photo">
 
 
 <img
-  src="monsieur-tahrati.jpg"
+  src="accueil-egt-premium.jpg"
   alt="Monsieur Tahrati"
 >
 
@@ -5554,7 +4671,8 @@ M. Tahrati
 
 <em>
 
-Plus de 20 ans d'expérience
+Plus de 20 ans
+d'expérience
 
 </em>
 
@@ -5589,7 +4707,7 @@ type="button"
 >
 
 
-<div class="team-image">
+<div class="team-photo">
 
 
 <img
@@ -5665,7 +4783,7 @@ type="button"
 >
 
 
-<div class="team-image">
+<div class="team-photo">
 
 
 <img
@@ -5741,7 +4859,7 @@ type="button"
 >
 
 
-<div class="team-image">
+<div class="team-photo">
 
 
 <img
@@ -5817,7 +4935,7 @@ type="button"
 >
 
 
-<div class="team-image">
+<div class="team-photo">
 
 
 <img
@@ -5897,28 +5015,32 @@ Découvrir le profil →
 <div class="container">
 
 
-<div class="review-top reveal">
+<div class="review-heading reveal">
 
 
 <div>
 
 
 <p class="section-kicker">
-Avis clients
+AVIS CLIENTS
 </p>
 
 
 <h2>
-Ils parlent de nous.
+
+Ils parlent
+de nous.
+
 </h2>
 
 
 </div>
 
 
+
 <a
 
-class="btn btn-white"
+class="btn review-button-main"
 
 href="https://search.google.com/local/writereview?placeid=ChIJIVqOoHfB9EcRzVAehUyg7SQ"
 
@@ -5928,7 +5050,7 @@ rel="noopener"
 
 >
 
-★ Noter notre prestation
+⭐ Évaluer nous
 
 </a>
 
@@ -5941,7 +5063,7 @@ rel="noopener"
 
 
 <button
-  class="slider-button prev"
+  class="slider-btn prev"
   type="button"
 >
 
@@ -6048,7 +5170,7 @@ Client EGT
 
 
 <button
-  class="slider-button next"
+  class="slider-btn next"
   type="button"
 >
 
@@ -6085,7 +5207,7 @@ Client EGT
 
 <p class="section-kicker">
 
-EGT recrute
+EGT RECRUTE
 
 </p>
 
@@ -6213,12 +5335,10 @@ Votre candidature
 
 
 
-<!-- ÉTAPE 1 -->
+<!-- ETAPE 1 -->
 
 
-<div
-  class="form-step active"
->
+<div class="form-step active">
 
 
 <h3>
@@ -6258,7 +5378,7 @@ Nom
 
 <label>
 
-E-mail
+Adresse e-mail
 
 <input
   required
@@ -6286,14 +5406,17 @@ Téléphone
 
 
 
-<!-- ÉTAPE 2 -->
+<!-- ETAPE 2 -->
 
 
 <div class="form-step">
 
 
 <h3>
-Quel poste recherchez-vous ?
+
+Quel poste
+recherchez-vous ?
+
 </h3>
 
 
@@ -6395,20 +5518,25 @@ Plus de 5 ans
 
 
 
-<!-- ÉTAPE 3 -->
+<!-- ETAPE 3 -->
 
 
 <div class="form-step">
 
 
 <h3>
-Votre profil technique.
+
+Votre profil
+technique.
+
 </h3>
 
 
 <label>
 
-Diplômes / habilitations / spécialités
+Diplômes /
+habilitations /
+spécialités
 
 <textarea
   name="Qualifications"
@@ -6463,7 +5591,7 @@ Disponibilité
 
 
 
-<!-- ÉTAPE 4 -->
+<!-- ETAPE 4 -->
 
 
 <div class="form-step">
@@ -6476,7 +5604,8 @@ Dernière étape.
 
 <label>
 
-Pourquoi souhaitez-vous rejoindre EGT ?
+Pourquoi souhaitez-vous
+rejoindre EGT ?
 
 <textarea
   required
@@ -6489,7 +5618,7 @@ Pourquoi souhaitez-vous rejoindre EGT ?
 
 <label>
 
-Votre CV
+CV
 
 <input
   type="file"
@@ -6586,7 +5715,9 @@ Envoyer ma candidature →
 
 
 <p class="section-kicker">
-Contact
+
+CONTACT
+
 </p>
 
 
@@ -6604,7 +5735,7 @@ un besoin technique ?
 <p>
 
 Contactez EGT Tahrati
-pour étudier votre projet
+pour présenter votre projet
 et obtenir une réponse adaptée.
 
 </p>
@@ -6615,39 +5746,48 @@ et obtenir une réponse adaptée.
 
 <a href="tel:+33472378357">
 
+
 <small>
 Téléphone
 </small>
 
+
 <strong>
 04 72 37 83 57
 </strong>
+
 
 </a>
 
 
 <a href="tel:+33660616104">
 
+
 <small>
 Mobile
 </small>
 
+
 <strong>
 06 60 61 61 04
 </strong>
+
 
 </a>
 
 
 <a href="mailto:contact@egt-tahrati.fr">
 
+
 <small>
 E-mail
 </small>
 
+
 <strong>
 contact@egt-tahrati.fr
 </strong>
+
 
 </a>
 
@@ -6660,9 +5800,11 @@ target="_blank"
 
 >
 
+
 <small>
 Adresse
 </small>
+
 
 <strong>
 
@@ -6673,6 +5815,7 @@ Adresse
 69500 Bron
 
 </strong>
+
 
 </a>
 
@@ -6706,6 +5849,13 @@ method="POST"
   type="hidden"
   name="_captcha"
   value="false"
+>
+
+
+<input
+  type="hidden"
+  name="_template"
+  value="table"
 >
 
 
@@ -6834,7 +5984,7 @@ Envoyer ma demande →
 
 
 <!-- =========================================================
-     MODALE SERVICE
+     MODALE SERVICES
 ========================================================= -->
 
 <div
@@ -6843,9 +5993,7 @@ Envoyer ma demande →
 >
 
 
-<div
-  class="modal-bg service-close"
-></div>
+<div class="modal-bg service-close"></div>
 
 
 <div class="modal-window">
@@ -6884,7 +6032,9 @@ Envoyer ma demande →
   class="section-kicker"
   id="serviceModalCategory"
 >
-Prestation
+
+PRESTATION
+
 </p>
 
 
@@ -6934,9 +6084,7 @@ Demander un devis
 >
 
 
-<div
-  class="modal-bg team-close"
-></div>
+<div class="modal-bg team-close"></div>
 
 
 <div class="modal-window">
@@ -6960,7 +6108,7 @@ Demander un devis
 
 <img
   id="teamModalImage"
-  src="monsieur-tahrati.jpg"
+  src="accueil-egt-premium.jpg"
   alt=""
 >
 
@@ -6973,7 +6121,7 @@ Demander un devis
 
 <p class="section-kicker">
 
-Notre équipe
+NOTRE ÉQUIPE
 
 </p>
 
@@ -6983,32 +6131,39 @@ Notre équipe
 
 <p>
 
-Membre de l'équipe EGT Tahrati.
+Membre de l'équipe
+EGT Tahrati.
 
 </p>
 
 
-<div class="profile-info">
+<div class="profile-grid">
 
 
 <div>
+
 
 <small>
 Expérience
 </small>
 
+
 <strong id="teamModalExperience"></strong>
+
 
 </div>
 
 
 <div>
 
+
 <small>
 Spécialité
 </small>
 
+
 <strong id="teamModalSpeciality"></strong>
+
 
 </div>
 
@@ -7044,7 +6199,7 @@ Contacter EGT
 
 
 <!-- =========================================================
-     SOCIAL
+     RÉSEAUX
 ========================================================= -->
 
 <div class="socials">
@@ -7135,7 +6290,8 @@ f
 <br>
 
 Qualité,
-proximité et professionnalisme.
+proximité
+et professionnalisme.
 
 </p>
 
@@ -7220,6 +6376,7 @@ contact@egt-tahrati.fr
 </div>
 
 
+
 <div class="container footer-bottom">
 
 
@@ -7233,12 +6390,16 @@ EGT Tahrati
 
 
 <span>
+
 Tous droits réservés
+
 </span>
 
 
 <a href="#top">
+
 Retour en haut ↑
+
 </a>
 
 
@@ -7257,46 +6418,32 @@ Retour en haut ↑
 ========================================================= */
 
 const header =
-document.querySelector(
-  ".header"
-);
+document.querySelector(".header");
 
 
-const navigation =
-document.querySelector(
-  ".nav-links"
-);
+const nav =
+document.querySelector(".nav-links");
 
 
-const menuButton =
-document.querySelector(
-  ".mobile-menu"
-);
+const mobileMenu =
+document.querySelector(".mobile-menu");
 
 
-const pageProgress =
-document.querySelector(
-  ".page-progress span"
-);
+const progress =
+document.querySelector(".page-progress span");
 
 
-menuButton.addEventListener(
+mobileMenu.addEventListener(
   "click",
   () => {
 
 
-    navigation
-    .classList
-    .toggle(
-      "open"
-    );
+    nav.classList.toggle("open");
 
 
     document.body
     .classList
-    .toggle(
-      "menu-open"
-    );
+    .toggle("menu-open");
 
 
   }
@@ -7304,9 +6451,7 @@ menuButton.addEventListener(
 
 
 document
-.querySelectorAll(
-  ".nav-links a"
-)
+.querySelectorAll(".nav-links a")
 .forEach(
   link => {
 
@@ -7316,18 +6461,12 @@ document
       () => {
 
 
-        navigation
-        .classList
-        .remove(
-          "open"
-        );
+        nav.classList.remove("open");
 
 
         document.body
         .classList
-        .remove(
-          "menu-open"
-        );
+        .remove("menu-open");
 
 
       }
@@ -7343,12 +6482,10 @@ document
    SCROLL
 ========================================================= */
 
-function handleScroll() {
+function updateScroll() {
 
 
-  header
-  .classList
-  .toggle(
+  header.classList.toggle(
 
     "scrolled",
 
@@ -7359,9 +6496,7 @@ function handleScroll() {
 
   const maximum =
 
-    document
-    .documentElement
-    .scrollHeight
+    document.documentElement.scrollHeight
 
     -
 
@@ -7374,44 +6509,34 @@ function handleScroll() {
 
     ?
 
-    (
-      window.scrollY
-      /
-      maximum
-      *
-      100
-    )
+    window.scrollY
+    /
+    maximum
+    *
+    100
 
     :
 
     0;
 
 
-  pageProgress
-  .style
-  .width =
-
-    percentage
-    + "%";
+  progress.style.width =
+    percentage + "%";
 
 
 }
 
 
 window.addEventListener(
-
   "scroll",
-
-  handleScroll,
-
+  updateScroll,
   {
     passive: true
   }
-
 );
 
 
-handleScroll();
+updateScroll();
 
 
 
@@ -7419,7 +6544,7 @@ handleScroll();
    APPARITION
 ========================================================= */
 
-const revealObserver =
+const observer =
 
 new IntersectionObserver(
 
@@ -7435,12 +6560,9 @@ new IntersectionObserver(
         ) {
 
 
-          entry
-          .target
+          entry.target
           .classList
-          .add(
-            "visible"
-          );
+          .add("visible");
 
 
         }
@@ -7453,24 +6575,19 @@ new IntersectionObserver(
   },
 
   {
-    threshold: .11
+    threshold: .1
   }
 
 );
 
 
 document
-.querySelectorAll(
-  ".reveal"
-)
+.querySelectorAll(".reveal")
 .forEach(
-  element => {
+  item => {
 
 
-    revealObserver
-    .observe(
-      element
-    );
+    observer.observe(item);
 
 
   }
@@ -7512,8 +6629,7 @@ new IntersectionObserver(
           );
 
 
-        let value =
-          0;
+        let value = 0;
 
 
         const timer =
@@ -7534,9 +6650,7 @@ new IntersectionObserver(
             ) {
 
 
-              clearInterval(
-                timer
-              );
+              clearInterval(timer);
 
 
             }
@@ -7550,9 +6664,7 @@ new IntersectionObserver(
 
 
         counterObserver
-        .unobserve(
-          element
-        );
+        .unobserve(element);
 
 
       }
@@ -7562,24 +6674,20 @@ new IntersectionObserver(
   },
 
   {
-    threshold: .6
+    threshold: .5
   }
 
 );
 
 
 document
-.querySelectorAll(
-  ".counter"
-)
+.querySelectorAll(".counter")
 .forEach(
-  counter => {
+  element => {
 
 
     counterObserver
-    .observe(
-      counter
-    );
+    .observe(element);
 
 
   }
@@ -7588,255 +6696,255 @@ document
 
 
 /* =========================================================
-   DONNÉES PRESTATIONS
+   DONNÉES SERVICES
 ========================================================= */
 
 const services = {
 
 
-renovation: {
+  renovation: {
 
 
-  category:
-    "Électricité",
+    category:
+      "ÉLECTRICITÉ",
 
 
-  title:
-    "Rénovation électrique & mise aux normes",
+    title:
+      "Rénovation électrique & mise aux normes",
 
 
-  image:
-    "renovation-electrique.jpg",
+    image:
+      "renovation-electrique.jpg",
 
 
-  text:
+    text:
 
-    "EGT Tahrati intervient sur les installations électriques existantes afin de les moderniser, les sécuriser et les adapter aux besoins du bâtiment.",
+      "EGT Tahrati intervient sur les installations électriques existantes afin de les moderniser, les sécuriser et les adapter aux besoins du bâtiment.",
 
 
-  details: [
+    details: [
 
-    "Rénovation des tableaux électriques",
+      "Rénovation de tableaux électriques",
 
-    "Mise aux normes des installations",
+      "Mise aux normes des installations",
 
-    "Création et modification de circuits",
+      "Création ou modification de circuits",
 
-    "Installation de prises et éclairages",
+      "Installation de prises et éclairages",
 
-    "Diagnostic et recherche de panne",
+      "Diagnostic et recherche de panne",
 
-    "Rénovation complète ou partielle"
+      "Rénovation complète ou partielle"
 
-  ]
+    ]
 
 
-},
+  },
 
 
 
-securite: {
+  securite: {
 
 
-  category:
-    "Sécurité",
+    category:
+      "SÉCURITÉ",
 
 
-  title:
-    "Sécurité & contrôle d'accès",
+    title:
+      "Sécurité & contrôle d'accès",
 
 
-  image:
-    "securite-controle-acces.jpg",
+    image:
+      "securite-controle-acces.jpg",
 
 
-  text:
+    text:
 
-    "Des équipements permettant de contrôler les accès, identifier les visiteurs et renforcer la sécurité des bâtiments.",
+      "Des équipements destinés à contrôler les accès, identifier les visiteurs et renforcer la sécurité des bâtiments.",
 
 
-  details: [
+    details: [
 
-    "Caméras de vidéosurveillance",
+      "Caméras de vidéosurveillance",
 
-    "Digicodes",
+      "Digicodes",
 
-    "Badges et lecteurs d'accès",
+      "Badges et lecteurs d'accès",
 
-    "Portiers vidéo",
+      "Portiers vidéo",
 
-    "Interphones",
+      "Interphones",
 
-    "Alarmes intrusion"
+      "Alarmes intrusion"
 
-  ]
+    ]
 
 
-},
+  },
 
 
 
-climatisation: {
+  climatisation: {
 
 
-  category:
-    "Confort",
+    category:
+      "CONFORT",
 
 
-  title:
-    "Climatisation",
+    title:
+      "Climatisation",
 
 
-  image:
-    "climatisation.jpg",
+    image:
+      "climatisation.jpg",
 
 
-  text:
+    text:
 
-    "Installation et entretien de solutions de climatisation adaptées aux logements et espaces professionnels.",
+      "Installation et entretien de solutions de climatisation adaptées aux logements et aux espaces professionnels.",
 
 
-  details: [
+    details: [
 
-    "Étude des besoins",
+      "Étude des besoins",
 
-    "Installation des unités",
+      "Installation des équipements",
 
-    "Mise en service",
+      "Mise en service",
 
-    "Réglages",
+      "Réglages",
 
-    "Entretien",
+      "Entretien",
 
-    "Diagnostic et dépannage"
+      "Diagnostic et dépannage"
 
-  ]
+    ]
 
 
-},
+  },
 
 
 
-reseaux: {
+  reseaux: {
 
 
-  category:
-    "Réseaux",
+    category:
+      "RÉSEAUX",
 
 
-  title:
-    "Réseaux informatiques",
+    title:
+      "Réseaux informatiques",
 
 
-  image:
-    "reseaux-informatiques.jpg",
+    image:
+      "reseaux-informatiques.jpg",
 
 
-  text:
+    text:
 
-    "Installation d'infrastructures réseau fiables et organisées pour les environnements professionnels.",
+      "Installation d'infrastructures réseau fiables et organisées pour les environnements professionnels.",
 
 
-  details: [
+    details: [
 
-    "Câblage informatique",
+      "Câblage informatique",
 
-    "Prises RJ45",
+      "Prises RJ45",
 
-    "Baies de brassage",
+      "Baies de brassage",
 
-    "Switchs",
+      "Switchs",
 
-    "Organisation du câblage",
+      "Organisation du câblage",
 
-    "Infrastructure réseau"
+      "Infrastructure réseau"
 
-  ]
+    ]
 
 
-},
+  },
 
 
 
-portail: {
+  portail: {
 
 
-  category:
-    "Automatismes",
+    category:
+      "AUTOMATISMES",
 
 
-  title:
-    "Automatismes de portail",
+    title:
+      "Automatismes de portail",
 
 
-  image:
-    "automatismes-portail.jpg",
+    image:
+      "automatismes-portail.jpg",
 
 
-  text:
+    text:
 
-    "Motorisation et automatisation des accès afin d'améliorer le confort, la sécurité et la facilité d'utilisation.",
+      "Motorisation et automatisation des accès afin d'améliorer le confort, la sécurité et la facilité d'utilisation.",
 
 
-  details: [
+    details: [
 
-    "Portails battants",
+      "Portails battants",
 
-    "Portails coulissants",
+      "Portails coulissants",
 
-    "Motorisation",
+      "Motorisation",
 
-    "Télécommandes",
+      "Télécommandes",
 
-    "Maintenance",
+      "Maintenance",
 
-    "Dépannage des automatismes"
+      "Dépannage"
 
-  ]
+    ]
 
 
-},
+  },
 
 
 
-domotique: {
+  domotique: {
 
 
-  category:
-    "Domotique",
+    category:
+      "DOMOTIQUE",
 
 
-  title:
-    "Domotique & chauffage",
+    title:
+      "Domotique & chauffage",
 
 
-  image:
-    "domotique-chauffage.jpg",
+    image:
+      "domotique-chauffage.jpg",
 
 
-  text:
+    text:
 
-    "Solutions de commande et de régulation permettant d'améliorer le confort et le pilotage des équipements.",
+      "Solutions de commande, de chauffage et de régulation permettant d'améliorer le confort et le pilotage des équipements.",
 
 
-  details: [
+    details: [
 
-    "Chauffage électrique",
+      "Chauffage électrique",
 
-    "Thermostats",
+      "Thermostats",
 
-    "Régulation",
+      "Régulation",
 
-    "Commandes intelligentes",
+      "Commandes intelligentes",
 
-    "Pilotage des équipements",
+      "Pilotage des équipements",
 
-    "Solutions connectées"
+      "Solutions connectées"
 
-  ]
+    ]
 
 
-}
+  }
 
 
 };
@@ -7844,108 +6952,77 @@ domotique: {
 
 
 /* =========================================================
-   MODALE SERVICE
+   MODALE SERVICES
 ========================================================= */
 
 const serviceModal =
-document.getElementById(
-  "serviceModal"
-);
+document.getElementById("serviceModal");
 
 
-const serviceImage =
-document.getElementById(
-  "serviceModalImage"
-);
+const serviceModalImage =
+document.getElementById("serviceModalImage");
 
 
-const serviceCategory =
-document.getElementById(
-  "serviceModalCategory"
-);
+const serviceModalCategory =
+document.getElementById("serviceModalCategory");
 
 
-const serviceTitle =
-document.getElementById(
-  "serviceModalTitle"
-);
+const serviceModalTitle =
+document.getElementById("serviceModalTitle");
 
 
-const serviceText =
-document.getElementById(
-  "serviceModalText"
-);
+const serviceModalText =
+document.getElementById("serviceModalText");
 
 
-const serviceList =
-document.getElementById(
-  "serviceModalList"
-);
+const serviceModalList =
+document.getElementById("serviceModalList");
 
 
-function openService(
-  name
-) {
+function openService(name) {
 
 
   const service =
     services[name];
 
 
-  if(
-    !service
-  ) {
-
+  if(!service) {
     return;
-
   }
 
 
-  serviceImage.src =
+  serviceModalImage.src =
     service.image;
 
 
-  serviceCategory
-  .textContent =
+  serviceModalCategory.textContent =
     service.category;
 
 
-  serviceTitle
-  .textContent =
+  serviceModalTitle.textContent =
     service.title;
 
 
-  serviceText
-  .textContent =
+  serviceModalText.textContent =
     service.text;
 
 
-  serviceList
-  .innerHTML =
+  serviceModalList.innerHTML =
 
-    service
-    .details
+    service.details
     .map(
-
       item =>
       `<li>${item}</li>`
-
     )
     .join("");
 
 
-  serviceModal
-  .classList
-  .add(
-    "open"
-  );
+  serviceModal.classList.add("open");
 
 
   document.body
   .classList
-  .add(
-    "modal-open"
-  );
+  .add("modal-open");
 
 
 }
@@ -7956,37 +7033,30 @@ function closeService() {
 
   serviceModal
   .classList
-  .remove(
-    "open"
-  );
+  .remove("open");
 
 
   document.body
   .classList
-  .remove(
-    "modal-open"
-  );
+  .remove("modal-open");
 
 
 }
 
 
 document
-.querySelectorAll(
-  ".service-trigger"
-)
+.querySelectorAll(".service-trigger")
 .forEach(
-  element => {
+  button => {
 
 
-    element
-    .addEventListener(
+    button.addEventListener(
       "click",
       () => {
 
 
         openService(
-          element.dataset.service
+          button.dataset.service
         );
 
 
@@ -7999,15 +7069,12 @@ document
 
 
 document
-.querySelectorAll(
-  ".service-close"
-)
+.querySelectorAll(".service-close")
 .forEach(
-  element => {
+  button => {
 
 
-    element
-    .addEventListener(
+    button.addEventListener(
       "click",
       closeService
     );
@@ -8023,71 +7090,49 @@ document
 ========================================================= */
 
 const teamModal =
-document.getElementById(
-  "teamModal"
-);
+document.getElementById("teamModal");
 
 
 const teamModalImage =
-document.getElementById(
-  "teamModalImage"
-);
+document.getElementById("teamModalImage");
 
 
 const teamModalName =
-document.getElementById(
-  "teamModalName"
-);
+document.getElementById("teamModalName");
 
 
 const teamModalExperience =
-document.getElementById(
-  "teamModalExperience"
-);
+document.getElementById("teamModalExperience");
 
 
 const teamModalSpeciality =
-document.getElementById(
-  "teamModalSpeciality"
-);
+document.getElementById("teamModalSpeciality");
 
 
 document
-.querySelectorAll(
-  ".team-trigger"
-)
+.querySelectorAll(".team-trigger")
 .forEach(
   card => {
 
 
-    card
-    .addEventListener(
+    card.addEventListener(
       "click",
       () => {
 
 
         const image =
-          card
-          .querySelector(
-            "img"
-          );
+          card.querySelector("img");
 
 
         if(
-
           image
-
           &&
-
           image.style.display
           !== "none"
-
         ) {
 
 
-          teamModalImage
-          .style
-          .display =
+          teamModalImage.style.display =
             "block";
 
 
@@ -8101,42 +7146,33 @@ document
         else {
 
 
-          teamModalImage
-          .style
-          .display =
+          teamModalImage.style.display =
             "none";
 
 
         }
 
 
-        teamModalName
-        .textContent =
+        teamModalName.textContent =
           card.dataset.name;
 
 
-        teamModalExperience
-        .textContent =
+        teamModalExperience.textContent =
           card.dataset.experience;
 
 
-        teamModalSpeciality
-        .textContent =
+        teamModalSpeciality.textContent =
           card.dataset.speciality;
 
 
         teamModal
         .classList
-        .add(
-          "open"
-        );
+        .add("open");
 
 
         document.body
         .classList
-        .add(
-          "modal-open"
-        );
+        .add("modal-open");
 
 
       }
@@ -8152,31 +7188,24 @@ function closeTeam() {
 
   teamModal
   .classList
-  .remove(
-    "open"
-  );
+  .remove("open");
 
 
   document.body
   .classList
-  .remove(
-    "modal-open"
-  );
+  .remove("modal-open");
 
 
 }
 
 
 document
-.querySelectorAll(
-  ".team-close"
-)
+.querySelectorAll(".team-close")
 .forEach(
-  element => {
+  button => {
 
 
-    element
-    .addEventListener(
+    button.addEventListener(
       "click",
       closeTeam
     );
@@ -8194,9 +7223,7 @@ document
 const reviews =
 [
   ...document
-  .querySelectorAll(
-    ".review"
-  )
+  .querySelectorAll(".review")
 ];
 
 
@@ -8204,13 +7231,10 @@ let currentReview =
   0;
 
 
-function showReview(
-  index
-) {
+function showReview(index) {
 
 
-  reviews
-  .forEach(
+  reviews.forEach(
     (
       review,
       reviewIndex
@@ -8223,9 +7247,7 @@ function showReview(
 
         "active",
 
-        reviewIndex
-        ===
-        index
+        reviewIndex === index
 
       );
 
@@ -8242,9 +7264,7 @@ function showReview(
 
 
 document
-.querySelector(
-  ".next"
-)
+.querySelector(".next")
 .addEventListener(
   "click",
   () => {
@@ -8268,9 +7288,7 @@ document
 
 
 document
-.querySelector(
-  ".prev"
-)
+.querySelector(".prev")
 .addEventListener(
   "click",
   () => {
@@ -8326,57 +7344,42 @@ setInterval(
 const formSteps =
 [
   ...document
-  .querySelectorAll(
-    ".form-step"
-  )
+  .querySelectorAll(".form-step")
 ];
 
 
 const backButton =
-document.getElementById(
-  "backButton"
-);
+document.getElementById("backButton");
 
 
 const nextButton =
-document.getElementById(
-  "nextButton"
-);
+document.getElementById("nextButton");
 
 
 const submitButton =
-document.getElementById(
-  "submitButton"
-);
+document.getElementById("submitButton");
 
 
 const stepText =
-document.getElementById(
-  "stepText"
-);
+document.getElementById("stepText");
 
 
 const formProgress =
-document.getElementById(
-  "formProgress"
-);
+document.getElementById("formProgress");
 
 
 let currentStep =
   0;
 
 
-function validateStep() {
+function validateCurrentStep() {
 
 
   const fields =
 
-    formSteps[
-      currentStep
-    ]
-
+    formSteps[currentStep]
     .querySelectorAll(
-      "input, select, textarea"
+      "input,select,textarea"
     );
 
 
@@ -8391,8 +7394,7 @@ function validateStep() {
     ) {
 
 
-      field
-      .reportValidity();
+      field.reportValidity();
 
 
       return false;
@@ -8410,11 +7412,10 @@ function validateStep() {
 }
 
 
-function displayStep() {
+function showStep() {
 
 
-  formSteps
-  .forEach(
+  formSteps.forEach(
     (
       step,
       index
@@ -8427,9 +7428,7 @@ function displayStep() {
 
         "active",
 
-        index
-        ===
-        currentStep
+        index === currentStep
 
       );
 
@@ -8438,15 +7437,12 @@ function displayStep() {
   );
 
 
-  stepText
-  .textContent =
+  stepText.textContent =
 
     `Étape ${currentStep + 1} / ${formSteps.length}`;
 
 
-  formProgress
-  .style
-  .width =
+  formProgress.style.width =
 
     (
       (
@@ -8465,9 +7461,7 @@ function displayStep() {
     + "%";
 
 
-  backButton
-  .style
-  .visibility =
+  backButton.style.visibility =
 
     currentStep === 0
 
@@ -8480,9 +7474,7 @@ function displayStep() {
     "visible";
 
 
-  nextButton
-  .style
-  .display =
+  nextButton.style.display =
 
     currentStep
     ===
@@ -8497,9 +7489,7 @@ function displayStep() {
     "inline-flex";
 
 
-  submitButton
-  .style
-  .display =
+  submitButton.style.display =
 
     currentStep
     ===
@@ -8517,29 +7507,24 @@ function displayStep() {
 }
 
 
-nextButton
-.addEventListener(
+nextButton.addEventListener(
   "click",
   () => {
 
 
     if(
-
-      validateStep()
-
+      validateCurrentStep()
       &&
-
       currentStep
       <
       formSteps.length - 1
-
     ) {
 
 
       currentStep++;
 
 
-      displayStep();
+      showStep();
 
 
     }
@@ -8549,8 +7534,7 @@ nextButton
 );
 
 
-backButton
-.addEventListener(
+backButton.addEventListener(
   "click",
   () => {
 
@@ -8563,7 +7547,7 @@ backButton
       currentStep--;
 
 
-      displayStep();
+      showStep();
 
 
     }
@@ -8573,7 +7557,7 @@ backButton
 );
 
 
-displayStep();
+showStep();
 
 
 
@@ -8593,6 +7577,7 @@ window.addEventListener(
 
       closeService();
 
+
       closeTeam();
 
 
@@ -8609,9 +7594,7 @@ window.addEventListener(
 ========================================================= */
 
 document
-.getElementById(
-  "year"
-)
+.getElementById("year")
 .textContent =
 
   new Date()
