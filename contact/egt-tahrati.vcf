@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:EGT Tahrati
+N:Tahrati;EGT;;;
+ORG:EGT Tahrati
+TITLE:Électricité générale
+TEL;TYPE=CELL:+33660616104
+TEL;TYPE=WORK,VOICE:+33472378357
+EMAIL;TYPE=WORK:egt.tahrati@egt-tahrati.fr
+URL:https://eahconform.github.io/egt-tahrati/
+ADR;TYPE=WORK:;;6 Allée des Sorbiers;Bron;;69500;France
+NOTE:EGT Tahrati - Entreprise d'électricité générale à Bron et Lyon.
+END:VCARD
