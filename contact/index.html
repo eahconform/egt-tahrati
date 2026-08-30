@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <title>EGT Tahrati | Carte de contact</title>
+
+  <meta
+    name="description"
+    content="Carte de contact EGT Tahrati - Électricité générale à Bron."
+  >
+
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+
+    /* ======================================================
+       RESET
+    ====================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :root {
+      --violet: #93008f;
+      --violet-dark: #72006f;
+      --orange: #ff8a00;
+      --orange-dark: #ec7900;
+      --white: #ffffff;
+      --background: #f5f5f7;
+      --text: #29242d;
+      --text-light: #77717b;
+    }
+
+    html {
+      min-height: 100%;
+      background: var(--background);
+    }
+
+    body {
+
+      min-height: 100vh;
+      min-height: 100dvh;
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      background:
+        linear-gradient(
+          180deg,
+          #ffffff 0%,
+          #f5f5f7 100%
+        );
+
+      color: var(--text);
+
+      display: flex;
+      justify-content: center;
+
+      padding:
+        max(16px, env(safe-area-inset-top))
+        14px
+        max(30px, env(safe-area-inset-bottom));
+
+      overflow-x: hidden;
+    }
+
+
+    /* ======================================================
+       CONTENEUR
+    ====================================================== */
+
+    .page {
+
+      width: 100%;
+      max-width: 460px;
+
+      position: relative;
+
+    }
+
+
+    /* ======================================================
+       CARTE PRINCIPALE
+    ====================================================== */
+
+    .card {
+
+      width: 100%;
+
+      position: relative;
+
+      background: #ffffff;
+
+      border-radius: 28px;
+
+      overflow: hidden;
+
+      border: 1px solid #dedde0;
+
+      box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.10);
+
+      padding:
+        52px 22px
+        27px 22px;
+
+    }
+
+
+    /* ======================================================
+       DÉCOR HAUT GAUCHE
+       Inspiré de ta carte de visite
+    ====================================================== */
+
+    .line-purple-1 {
+
+      position: absolute;
+
+      top: -25px;
+      left: -35px;
+
+      width: 210px;
+      height: 105px;
+
+      border:
+        4px solid var(--violet);
+
+      border-right: none;
+      border-bottom: none;
+
+      border-radius:
+        75px 0 0 0;
+
+      transform: rotate(-2deg);
+
+      pointer-events: none;
+
+    }
+
+    .line-orange-1 {
+
+      position: absolute;
+
+      top: 22px;
+      left: -18px;
+
+      width: 190px;
+      height: 74px;
+
+      border:
+        4px solid var(--orange);
+
+      border-right: none;
+      border-bottom: none;
+
+      border-radius:
+        60px 0 0 0;
+
+      pointer-events: none;
+
+    }
+
+
+    .purple-dot-top {
+
+      position: absolute;
+
+      width: 15px;
+      height: 15px;
+
+      border-radius: 50%;
+
+      background: var(--violet);
+
+      top: 44px;
+      left: 113px;
+
+    }
+
+
+    /* ======================================================
+       POINTS DÉCORATIFS
+    ====================================================== */
+
+    .dots-right {
+
+      position: absolute;
+
+      right: -16px;
+      top: 145px;
+
+      width: 100px;
+      height: 185px;
+
+      opacity: .9;
+
+      background-image:
+        radial-gradient(
+          circle,
+          var(--orange) 2.3px,
+          transparent 2.7px
+        );
+
+      background-size: 14px 14px;
+
+      transform: rotate(-8deg);
+
+      mask-image:
+        linear-gradient(
+          to left,
+          black,
+          transparent
+        );
+
+      -webkit-mask-image:
+        linear-gradient(
+          to left,
+          black,
+          transparent
+        );
+
+      pointer-events: none;
+
+    }
+
+
+    .dots-left {
+
+      position: absolute;
+
+      left: -18px;
+      bottom: 90px;
+
+      width: 95px;
+      height: 160px;
+
+      opacity: .75;
+
+      background-image:
+        radial-gradient(
+          circle,
+          var(--violet) 2.3px,
+          transparent 2.7px
+        );
+
+      background-size: 14px 14px;
+
+      transform: rotate(7deg);
+
+      mask-image:
+        linear-gradient(
+          to right,
+          black,
+          transparent
+        );
+
+      -webkit-mask-image:
+        linear-gradient(
+          to right,
+          black,
+          transparent
+        );
+
+      pointer-events: none;
+
+    }
+
+
+    /* ======================================================
+       LOGO
+    ====================================================== */
+
+    .logo-area {
+
+      position: relative;
+
+      width: 100%;
+
+      display: flex;
+
+      justify-content: center;
+
+      margin-top: 18px;
+
+      z-index: 2;
+
+    }
+
+
+    .logo {
+
+      width: 190px;
+      max-width: 62%;
+
+      height: auto;
+
+      display: block;
+
+      object-fit: contain;
+
+    }
+
+
+    .logo-fallback {
+
+      display: none;
+
+      text-align: center;
+
+      font-weight: 900;
+
+      font-size: 58px;
+
+      line-height: 1;
+
+      color: var(--violet);
+
+      letter-spacing: -5px;
+
+    }
+
+
+    .logo-fallback span {
+      color: var(--orange);
+    }
+
+
+    /* ======================================================
+       TITRES
+    ====================================================== */
+
+    .identity {
+
+      text-align: center;
+
+      position: relative;
+
+      z-index: 2;
+
+      margin-top: 25px;
+
+    }
+
+
+    .identity h1 {
+
+      color: var(--violet);
+
+      font-size: 29px;
+
+      font-weight: 850;
+
+      letter-spacing: .2px;
+
+    }
+
+
+    .identity h2 {
+
+      color: var(--orange);
+
+      font-size: 20px;
+
+      font-weight: 500;
+
+      margin-top: 3px;
+
+    }
+
+
+    .location {
+
+      color: var(--text-light);
+
+      font-size: 13px;
+
+      margin-top: 10px;
+
+      font-weight: 500;
+
+    }
+
+
+    /* ======================================================
+       PETIT SÉPARATEUR COMME SUR LA CARTE
+    ====================================================== */
+
+    .separator {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 9px;
+
+      margin:
+        20px auto
+        23px;
+
+      max-width: 220px;
+
+    }
+
+
+    .separator-line {
+
+      height: 2px;
+
+      flex: 1;
+
+      background: var(--violet);
+
+      border-radius: 20px;
+
+    }
+
+
+    .separator-dot {
+
+      width: 10px;
+      height: 10px;
+
+      background: var(--orange);
+
+      border-radius: 50%;
+
+    }
+
+
+    /* ======================================================
+       INTRO
+    ====================================================== */
+
+    .intro {
+
+      position: relative;
+
+      z-index: 2;
+
+      text-align: center;
+
+      color: #666169;
+
+      font-size: 13px;
+
+      line-height: 1.5;
+
+      margin:
+        0 auto
+        20px;
+
+      max-width: 315px;
+
+    }
+
+
+    /* ======================================================
+       BOUTONS
+    ====================================================== */
+
+    .buttons {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 12px;
+
+      position: relative;
+
+      z-index: 5;
+
+    }
+
+
+    .btn {
+
+      width: 100%;
+
+      min-height: 66px;
+
+      border-radius: 16px;
+
+      display: flex;
+
+      align-items: center;
+
+      padding:
+        10px
+        16px;
+
+      text-decoration: none;
+
+      border: none;
+
+      font-family: inherit;
+
+      cursor: pointer;
+
+      transition:
+        transform .15s ease,
+        box-shadow .15s ease;
+
+    }
+
+
+    .btn:active {
+
+      transform:
+        scale(.975);
+
+    }
+
+
+    .btn-icon {
+
+      width: 42px;
+      height: 42px;
+
+      flex:
+        0 0
+        42px;
+
+      border-radius: 12px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      margin-right: 13px;
+
+      font-size: 21px;
+
+    }
+
+
+    .btn-content {
+
+      flex: 1;
+
+      text-align: left;
+
+    }
+
+
+    .btn-title {
+
+      display: block;
+
+      font-size: 14px;
+
+      font-weight: 850;
+
+      line-height: 1.2;
+
+    }
+
+
+    .btn-description {
+
+      display: block;
+
+      font-size: 10px;
+
+      margin-top: 4px;
+
+      font-weight: 550;
+
+      opacity: .78;
+
+    }
+
+
+    .arrow {
+
+      margin-left: 8px;
+
+      font-size: 23px;
+
+      line-height: 1;
+
+      opacity: .75;
+
+    }
+
+
+    /* CONTACT */
+
+    .btn-contact {
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--orange),
+          #ff9f1f
+        );
+
+      color: white;
+
+      box-shadow:
+        0 9px 23px
+        rgba(255, 138, 0, .26);
+
+    }
+
+
+    .btn-contact .btn-icon {
+
+      background:
+        rgba(255, 255, 255, .22);
+
+    }
+
+
+    /* SITE */
+
+    .btn-site {
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--violet),
+          var(--violet-dark)
+        );
+
+      color: white;
+
+      box-shadow:
+        0 9px 23px
+        rgba(147, 0, 143, .20);
+
+    }
+
+
+    .btn-site .btn-icon {
+
+      background:
+        rgba(255, 255, 255, .15);
+
+    }
+
+
+    /* AVIS GOOGLE */
+
+    .btn-google {
+
+      background: white;
+
+      color: #342f35;
+
+      border:
+        2px solid
+        var(--violet);
+
+      box-shadow:
+        0 7px 18px
+        rgba(0, 0, 0, .06);
+
+    }
+
+
+    .btn-google .btn-icon {
+
+      background:
+        #fff5e8;
+
+    }
+
+
+    .stars {
+
+      color: #f4ad00;
+
+      letter-spacing: 1px;
+
+    }
+
+
+    /* ======================================================
+       CONTACT RAPIDE
+    ====================================================== */
+
+    .contact-area {
+
+      position: relative;
+
+      z-index: 5;
+
+      margin-top: 25px;
+
+      padding-top: 21px;
+
+      border-top:
+        1px solid #eceaec;
+
+    }
+
+
+    .contact-label {
+
+      text-align: center;
+
+      font-size: 10px;
+
+      letter-spacing: 1.4px;
+
+      font-weight: 800;
+
+      color: #aaa5aa;
+
+      text-transform: uppercase;
+
+      margin-bottom: 13px;
+
+    }
+
+
+    .quick-actions {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 10px;
+
+    }
+
+
+    .quick {
+
+      min-height: 54px;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      gap: 7px;
+
+      border-radius: 14px;
+
+      background: #f7f6f8;
+
+      border:
+        1px solid
+        #e9e7ea;
+
+      color: var(--violet);
+
+      text-decoration: none;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+    }
+
+
+    /* ======================================================
+       ADRESSE
+    ====================================================== */
+
+    .address {
+
+      margin-top: 16px;
+
+      text-align: center;
+
+      color: #8a858c;
+
+      font-size: 12px;
+
+      line-height: 1.55;
+
+    }
+
+
+    .address a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+
+    /* ======================================================
+       BAS DROITE DÉCOR
+    ====================================================== */
+
+    .bottom-lines {
+
+      position: absolute;
+
+      right: -45px;
+      bottom: -43px;
+
+      width: 185px;
+      height: 110px;
+
+      border:
+        4px solid var(--violet);
+
+      border-left: none;
+      border-top: none;
+
+      border-radius:
+        0 0 0 80px;
+
+      pointer-events: none;
+
+    }
+
+
+    .bottom-lines::after {
+
+      content: "";
+
+      position: absolute;
+
+      right: 22px;
+      bottom: 20px;
+
+      width: 150px;
+      height: 75px;
+
+      border:
+        4px solid var(--orange);
+
+      border-left: none;
+      border-top: none;
+
+      border-radius:
+        0 0 0 65px;
+
+    }
+
+
+    .bottom-dot {
+
+      position: absolute;
+
+      right: 81px;
+      bottom: 24px;
+
+      width: 14px;
+      height: 14px;
+
+      border-radius: 50%;
+
+      background: var(--violet);
+
+      z-index: 2;
+
+    }
+
+
+    /* ======================================================
+       FOOTER
+    ====================================================== */
+
+    .footer {
+
+      text-align: center;
+
+      padding:
+        17px 10px
+        4px;
+
+      font-size: 10px;
+
+      color: #aaa6ab;
+
+      line-height: 1.5;
+
+    }
+
+
+    .footer strong {
+
+      color: var(--violet);
+
+    }
+
+
+    /* ======================================================
+       PETITS TÉLÉPHONES
+    ====================================================== */
+
+    @media (max-width: 360px) {
+
+      .card {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .identity h1 {
+        font-size: 26px;
+      }
+
+      .identity h2 {
+        font-size: 18px;
+      }
+
+      .btn-title {
+        font-size: 12px;
+      }
+
+      .logo {
+        width: 165px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <main class="page">
+
+
+    <section class="card">
+
+
+      <!-- ===============================
+           ÉLÉMENTS DÉCORATIFS
+      ================================ -->
+
+      <div class="line-purple-1"></div>
+
+      <div class="line-orange-1"></div>
+
+      <div class="purple-dot-top"></div>
+
+      <div class="dots-right"></div>
+
+      <div class="dots-left"></div>
+
+
+      <!-- ===============================
+           LOGO EGT
+      ================================ -->
+
+      <div class="logo-area">
+
+        <img
+          src="../logo-egt.png"
+          alt="Logo EGT Tahrati"
+          class="logo"
+          id="logo"
+        >
+
+        <div
+          class="logo-fallback"
+          id="logoFallback"
+        >
+          e<span>.</span>g<span>.</span>t<span>.</span>
+        </div>
+
+      </div>
+
+
+      <!-- ===============================
+           IDENTITÉ
+      ================================ -->
+
+      <div class="identity">
+
+        <h1>
+          EGT Tahrati
+        </h1>
+
+        <h2>
+          Électricité générale
+        </h2>
+
+        <div class="location">
+          Bron • Lyon et alentours
+        </div>
+
+      </div>
+
+
+      <!-- Séparateur -->
+
+      <div class="separator">
+
+        <div class="separator-line"></div>
+
+        <div class="separator-dot"></div>
+
+        <div class="separator-line"></div>
+
+      </div>
+
+
+      <!-- ===============================
+           INTRO
+      ================================ -->
+
+      <p class="intro">
+
+        Retrouvez toutes nos coordonnées,
+        enregistrez notre contact ou
+        accédez directement à nos services.
+
+      </p>
+
+
+      <!-- ===============================
+           BOUTONS PRINCIPAUX
+      ================================ -->
+
+      <div class="buttons">
+
+
+        <!-- ENREGISTRER LE CONTACT -->
+
+        <a
+          href="./egt-tahrati.vcf"
+          class="btn btn-contact"
+        >
+
+          <div class="btn-icon">
+            👤
+          </div>
+
+          <div class="btn-content">
+
+            <span class="btn-title">
+              ENREGISTRER LE CONTACT
+            </span>
+
+            <span class="btn-description">
+              Ajouter EGT Tahrati à vos contacts
+            </span>
+
+          </div>
+
+          <div class="arrow">
+            ›
+          </div>
+
+        </a>
+
+
+        <!-- SITE INTERNET -->
+
+        <a
+          href="https://eahconform.github.io/egt-tahrati/"
+          class="btn btn-site"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <div class="btn-icon">
+            🌐
+          </div>
+
+          <div class="btn-content">
+
+            <span class="btn-title">
+              VISITER NOTRE SITE INTERNET
+            </span>
+
+            <span class="btn-description">
+              Découvrir EGT Tahrati
+            </span>
+
+          </div>
+
+          <div class="arrow">
+            ›
+          </div>
+
+        </a>
+
+
+        <!-- AVIS GOOGLE -->
+
+        <a
+          href="https://search.google.com/local/writereview?placeid=ChIJIVqOoHfB9EcRzVAehUyg7SQ"
+          class="btn btn-google"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <div class="btn-icon">
+            ⭐
+          </div>
+
+          <div class="btn-content">
+
+            <span class="btn-title">
+              LAISSER UN AVIS GOOGLE
+            </span>
+
+            <span class="btn-description stars">
+              ★★★★★
+            </span>
+
+          </div>
+
+          <div class="arrow">
+            ›
+          </div>
+
+        </a>
+
+
+      </div>
+
+
+      <!-- ===============================
+           CONTACT RAPIDE
+      ================================ -->
+
+      <div class="contact-area">
+
+        <div class="contact-label">
+          Contact rapide
+        </div>
+
+
+        <div class="quick-actions">
+
+
+          <!-- Téléphone -->
+
+          <a
+            href="tel:+33660616104"
+            class="quick"
+          >
+            📞 Appeler
+          </a>
+
+
+          <!-- E-mail -->
+
+          <a
+            href="mailto:egt.tahrati@egt-tahrati.fr"
+            class="quick"
+          >
+            ✉️ E-mail
+          </a>
+
+
+        </div>
+
+
+        <!-- ADRESSE -->
+
+        <div class="address">
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=EGT+TAHRATI+6+Allee+des+Sorbiers+69500+Bron"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            📍 Parc Activillage<br>
+
+            6 Allée des Sorbiers<br>
+
+            69500 Bron
+
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- DÉCOR DU BAS -->
+
+      <div class="bottom-lines"></div>
+
+      <div class="bottom-dot"></div>
+
+
+    </section>
+
+
+    <!-- ===============================
+         FOOTER
+    ================================ -->
+
+    <div class="footer">
+
+      <strong>
+        EGT Tahrati
+      </strong>
+
+      <br>
+
+      Électricité générale • Bron
+
+    </div>
+
+
+  </main>
+
+
+  <script>
+
+    /*
+    =====================================================
+    SI LE LOGO N'EST PAS TROUVÉ
+    ON AFFICHE AUTOMATIQUEMENT LE LOGO TEXTE
+    =====================================================
+    */
+
+    const logo =
+      document.getElementById("logo");
+
+    const fallback =
+      document.getElementById("logoFallback");
+
+
+    logo.addEventListener(
+      "error",
+      function () {
+
+        logo.style.display =
+          "none";
+
+        fallback.style.display =
+          "block";
+
+      }
+    );
+
+  </script>
+
+
+</body>
+
+</html>
