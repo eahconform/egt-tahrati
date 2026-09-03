@@ -1013,12 +1013,16 @@ button {
 
 
 /* =========================================================
-   CLIENTS
+   CLIENTS / PARTENAIRES
 ========================================================= */
 
 .clients {
 
-  padding: 37px 0;
+  width: 100%;
+
+  padding: 45px 0 38px;
+
+  overflow: hidden;
 
   background: white;
 
@@ -1027,40 +1031,132 @@ button {
 
 }
 
+
+/* Titre affiché UNE SEULE FOIS */
+
 .clients-title {
 
-  margin-bottom: 20px;
+  margin:
+    0 0 28px;
 
   text-align: center;
 
+  color: var(--violet);
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: .14em;
+
+  text-transform: uppercase;
+
 }
+
+
+/* Zone de défilement sur toute la largeur */
 
 .marquee {
 
+  position: relative;
+
+  width: 100vw;
+
   overflow: hidden;
 
-  mask-image:
+  left: 50%;
+
+  transform: translateX(-50%);
+
+}
+
+
+/* Petit fondu sur les côtés */
+
+.marquee::before,
+.marquee::after {
+
+  content: "";
+
+  position: absolute;
+
+  z-index: 3;
+
+  top: 0;
+  bottom: 0;
+
+  width: 70px;
+
+  pointer-events: none;
+
+}
+
+.marquee::before {
+
+  left: 0;
+
+  background:
     linear-gradient(
       90deg,
-      transparent,
-      black 7%,
-      black 93%,
+      white,
       transparent
     );
 
 }
 
+.marquee::after {
+
+  right: 0;
+
+  background:
+    linear-gradient(
+      270deg,
+      white,
+      transparent
+    );
+
+}
+
+
+/* Bande contenant les logos */
+
 .marquee-track {
 
   display: flex;
 
+  align-items: center;
+
   width: max-content;
 
   animation:
-    marquee 28s
+    marquee 24s
     linear infinite;
 
+  will-change: transform;
+
 }
+
+
+/* Image des partenaires plus grande */
+
+.marquee img {
+
+  display: block;
+
+  width: auto;
+
+  height: 155px;
+
+  max-width: none;
+
+  flex-shrink: 0;
+
+  object-fit: contain;
+
+}
+
+
+/* Pause lorsque la souris passe dessus */
 
 .marquee:hover
 .marquee-track {
@@ -1069,21 +1165,77 @@ button {
 
 }
 
-.marquee img {
 
-  width: auto;
-  height: 105px;
-
-  flex-shrink: 0;
-
-  object-fit: contain;
-
-}
+/* Défilement parfaitement continu */
 
 @keyframes marquee {
 
+  from {
+
+    transform:
+      translateX(0);
+
+  }
+
   to {
-    transform: translateX(-33.333%);
+
+    transform:
+      translateX(-50%);
+
+  }
+
+}
+
+
+/* TABLETTE */
+
+@media(max-width:900px) {
+
+  .marquee img {
+
+    height: 135px;
+
+  }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:720px) {
+
+  .clients {
+
+    padding:
+      35px 0 30px;
+
+  }
+
+  .clients-title {
+
+    margin-bottom: 20px;
+
+    font-size: 11px;
+
+  }
+
+  .marquee img {
+
+    height: 115px;
+
+  }
+
+  .marquee-track {
+
+    animation-duration: 18s;
+
+  }
+
+  .marquee::before,
+  .marquee::after {
+
+    width: 30px;
+
   }
 
 }
@@ -4088,7 +4240,7 @@ domaines d'expertise
 
 
 <!-- =========================================================
-     CLIENTS
+     CLIENTS / PARTENAIRES
 ========================================================= -->
 
 <section class="clients">
@@ -4107,21 +4259,20 @@ Ils nous ont fait confiance
 <div class="marquee-track">
 
 
+<!-- PREMIÈRE COPIE -->
+
 <img
   src="clients-egt.jpg"
-  alt="Clients EGT Tahrati"
+  alt="Partenaires et clients EGT Tahrati"
 >
 
+
+<!-- DEUXIÈME COPIE POUR LE DÉFILEMENT CONTINU -->
 
 <img
   src="clients-egt.jpg"
   alt=""
->
-
-
-<img
-  src="clients-egt.jpg"
-  alt=""
+  aria-hidden="true"
 >
 
 
@@ -4132,7 +4283,6 @@ Ils nous ont fait confiance
 
 
 </section>
-
 
 
 <!-- =========================================================
