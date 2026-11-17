@@ -196,11 +196,11 @@ button {
     value="table"
   >
 
-  <input
-    type="hidden"
-    name="_captcha"
-    value="true"
-  >
+<input
+  type="hidden"
+  name="_captcha"
+  value="false"
+>
 
   <input
     type="text"
@@ -412,9 +412,19 @@ button {
 
   <!-- ENVOI -->
 
-  <button type="submit">
-    ENVOYER MON AVIS →
-  </button>
+  <button type="submit" id="submitButton">
+  ENVOYER MON AVIS →
+</button>
+
+<script>
+const form = document.querySelector("form");
+const button = document.getElementById("submitButton");
+
+form.addEventListener("submit", function () {
+  button.disabled = true;
+  button.textContent = "ENVOI EN COURS...";
+});
+</script>
 
 </form>
 
