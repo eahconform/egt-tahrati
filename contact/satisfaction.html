@@ -14,6 +14,7 @@
   --text:#29242d;
 }
 * { box-sizing:border-box; }
+
 body {
   margin:0;
   padding:24px 14px;
@@ -21,6 +22,7 @@ body {
   background:linear-gradient(145deg,#fff,#f7eef7);
   color:var(--text);
 }
+
 .container {
   max-width:600px;
   margin:auto;
@@ -29,30 +31,36 @@ body {
   padding:28px 22px;
   box-shadow:0 12px 35px rgba(0,0,0,.09);
 }
+
 header {
   text-align:center;
   margin-bottom:28px;
 }
+
 .logo {
   width:160px;
   max-width:70%;
 }
+
 h1 {
   color:var(--violet);
   font-size:27px;
   margin:20px 0 10px;
 }
+
 .intro {
   color:#706a73;
   font-size:14px;
   line-height:1.6;
 }
+
 label.field-label {
   display:block;
   font-weight:bold;
   font-size:14px;
   margin:19px 0 8px;
 }
+
 input[type=text],
 input[type=email],
 select,
@@ -64,26 +72,31 @@ textarea {
   font:inherit;
   background:white;
 }
+
 textarea {
   min-height:110px;
   resize:vertical;
 }
+
 fieldset {
   border:1px solid #eee3ee;
   border-radius:14px;
   padding:15px;
   margin:18px 0;
 }
+
 legend {
   color:var(--violet);
   font-size:14px;
   font-weight:bold;
   padding:0 6px;
 }
+
 .rating {
   display:flex;
   gap:6px;
 }
+
 .rating label {
   flex:1;
   display:flex;
@@ -96,9 +109,11 @@ legend {
   cursor:pointer;
   font-weight:bold;
 }
+
 .rating input {
   accent-color:var(--violet);
 }
+
 .hint {
   display:flex;
   justify-content:space-between;
@@ -106,6 +121,7 @@ legend {
   color:#888;
   margin-top:9px;
 }
+
 button {
   width:100%;
   border:0;
@@ -118,6 +134,7 @@ button {
   font-weight:bold;
   cursor:pointer;
 }
+
 .back {
   display:block;
   text-align:center;
@@ -126,12 +143,14 @@ button {
   text-decoration:none;
   font-size:14px;
 }
+
 .privacy {
   font-size:12px;
   color:#777;
   line-height:1.6;
   margin-top:20px;
 }
+
 .optional {
   color:#888;
   font-weight:normal;
@@ -148,7 +167,9 @@ button {
     alt="EGT Tahrati"
     class="logo"
   >
+
   <h1>Votre avis nous intéresse</h1>
+
   <p class="intro">
     Merci d'avoir fait confiance à EGT Tahrati.
     Votre retour nous aide à améliorer
@@ -160,16 +181,13 @@ button {
   action="https://formsubmit.co/goin.eah@gmail.com"
   method="POST"
 >
-<input
-  type="hidden"
-  name="_url"
-  value="https://eahconform.github.io/egt-tahrati/contact/satisfaction.html"
->
-  <!-- CONFIGURATION ENVOI EMAIL -->
+
+  <!-- CONFIGURATION FORMSUBMIT -->
+
   <input
     type="hidden"
     name="_subject"
-    value="EGT Tahrati - Nouveau questionnaire de satisfaction"
+    value="EGT TAHRATI | Nouveau questionnaire de satisfaction"
   >
 
   <input
@@ -192,10 +210,32 @@ button {
     autocomplete="off"
   >
 
+  <!-- IDENTIFICATION EGT DANS LE MAIL -->
+
+  <input
+    type="hidden"
+    name="Entreprise concernée"
+    value="EGT Tahrati"
+  >
+
+  <input
+    type="hidden"
+    name="Site concerné"
+    value="https://www.egt-tahrati.fr/"
+  >
+
+  <input
+    type="hidden"
+    name="Page du questionnaire"
+    value="https://eahconform.github.io/egt-tahrati/contact/satisfaction.html"
+  >
+
   <!-- IDENTITÉ CLIENT -->
+
   <label class="field-label" for="nom">
     Votre nom (facultatif)
   </label>
+
   <input
     id="nom"
     type="text"
@@ -206,6 +246,7 @@ button {
   <label class="field-label" for="email">
     Votre e-mail (facultatif)
   </label>
+
   <input
     id="email"
     type="email"
@@ -214,12 +255,19 @@ button {
   >
 
   <!-- PRESTATION -->
+
   <label class="field-label" for="prestation">
     Quelle prestation avons-nous réalisée ?
   </label>
 
-  <select id="prestation" name="Prestation" required>
-    <option value="">Sélectionnez une prestation</option>
+  <select
+    id="prestation"
+    name="Prestation"
+    required
+  >
+    <option value="">
+      Sélectionnez une prestation
+    </option>
     <option>Installation électrique</option>
     <option>Rénovation électrique</option>
     <option>Dépannage électrique</option>
@@ -232,15 +280,33 @@ button {
   </select>
 
   <!-- SATISFACTION GLOBALE -->
+
   <fieldset>
     <legend>1. Satisfaction globale *</legend>
+
     <div class="rating">
-      <label><input type="radio" name="Satisfaction globale" value="1/5" required>1</label>
-      <label><input type="radio" name="Satisfaction globale" value="2/5">2</label>
-      <label><input type="radio" name="Satisfaction globale" value="3/5">3</label>
-      <label><input type="radio" name="Satisfaction globale" value="4/5">4</label>
-      <label><input type="radio" name="Satisfaction globale" value="5/5">5</label>
+      <label>
+        <input type="radio" name="Satisfaction globale" value="1/5" required>
+        1
+      </label>
+      <label>
+        <input type="radio" name="Satisfaction globale" value="2/5">
+        2
+      </label>
+      <label>
+        <input type="radio" name="Satisfaction globale" value="3/5">
+        3
+      </label>
+      <label>
+        <input type="radio" name="Satisfaction globale" value="4/5">
+        4
+      </label>
+      <label>
+        <input type="radio" name="Satisfaction globale" value="5/5">
+        5
+      </label>
     </div>
+
     <div class="hint">
       <span>Très insatisfait</span>
       <span>Très satisfait</span>
@@ -248,8 +314,10 @@ button {
   </fieldset>
 
   <!-- QUALITÉ -->
+
   <fieldset>
     <legend>2. Qualité des travaux *</legend>
+
     <div class="rating">
       <label><input type="radio" name="Qualité des travaux" value="1/5" required>1</label>
       <label><input type="radio" name="Qualité des travaux" value="2/5">2</label>
@@ -260,8 +328,10 @@ button {
   </fieldset>
 
   <!-- PONCTUALITÉ -->
+
   <fieldset>
     <legend>3. Respect des délais et ponctualité *</legend>
+
     <div class="rating">
       <label><input type="radio" name="Ponctualité" value="1/5" required>1</label>
       <label><input type="radio" name="Ponctualité" value="2/5">2</label>
@@ -272,8 +342,10 @@ button {
   </fieldset>
 
   <!-- PROFESSIONNALISME -->
+
   <fieldset>
     <legend>4. Professionnalisme et communication *</legend>
+
     <div class="rating">
       <label><input type="radio" name="Professionnalisme" value="1/5" required>1</label>
       <label><input type="radio" name="Professionnalisme" value="2/5">2</label>
@@ -284,8 +356,10 @@ button {
   </fieldset>
 
   <!-- PROPRETÉ -->
+
   <fieldset>
     <legend>5. Propreté du chantier *</legend>
+
     <div class="rating">
       <label><input type="radio" name="Propreté du chantier" value="1/5" required>1</label>
       <label><input type="radio" name="Propreté du chantier" value="2/5">2</label>
@@ -296,6 +370,7 @@ button {
   </fieldset>
 
   <!-- RECOMMANDATION -->
+
   <label class="field-label" for="recommandation">
     Recommanderiez-vous EGT Tahrati ?
   </label>
@@ -312,6 +387,7 @@ button {
   </select>
 
   <!-- COMMENTAIRE -->
+
   <label class="field-label" for="commentaire">
     Vos remarques ou suggestions
     <span class="optional">(facultatif)</span>
@@ -324,6 +400,8 @@ button {
     placeholder="Qu'avez-vous apprécié ? Que pouvons-nous améliorer ?"
   ></textarea>
 
+  <!-- CONFIDENTIALITÉ -->
+
   <p class="privacy">
     Les réponses sont transmises à l'adresse
     de suivi qualité d'EGT Tahrati.
@@ -331,6 +409,8 @@ button {
     servent uniquement à vous recontacter
     si nécessaire.
   </p>
+
+  <!-- ENVOI -->
 
   <button type="submit">
     ENVOYER MON AVIS →
